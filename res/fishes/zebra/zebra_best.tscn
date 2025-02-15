@@ -1,0 +1,382 @@
+[gd_scene load_steps=24 format=3 uid="uid://0mccbcbo865d"]
+
+[ext_resource type="Shader" path="res://src/shader/bestiary.gdshader" id="1_uvoci"]
+[ext_resource type="Texture2D" uid="uid://cyunqf0qxciq6" path="res://res/fishes/zebra/zebra_icon.png" id="2_pe1ai"]
+[ext_resource type="FontFile" uid="uid://j364g1d5bwm4" path="res://res/fonts/Bold.ttf" id="3_40fpt"]
+[ext_resource type="FontFile" uid="uid://c11kcqv0xwtq8" path="res://res/fonts/Normal.ttf" id="4_yf2yq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jcy50"]
+bg_color = Color(0.905882, 0.835294, 0.701961, 1)
+border_color = Color(0.203922, 0.109804, 0.152941, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+corner_detail = 20
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ylp7e"]
+shader = ExtResource("1_uvoci")
+shader_parameter/silhoutteColor = Color(0.203922, 0.109804, 0.152941, 1)
+shader_parameter/mixT = 1.0
+
+[sub_resource type="Animation" id="Animation_r8svp"]
+resource_name = "disable"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Title:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["???"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Panel/Icon/Icon:material")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("ShaderMaterial_ylp7e")]
+}
+
+[sub_resource type="Animation" id="Animation_2imon"]
+resource_name = "enabled"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Title:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Zebra Pleco"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Panel/Icon/Icon:material")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [null]
+}
+
+[sub_resource type="Animation" id="Animation_p4p5e"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Panel/Icon/Icon:material")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [null]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8du6e"]
+_data = {
+"RESET": SubResource("Animation_p4p5e"),
+"disable": SubResource("Animation_r8svp"),
+"enabled": SubResource("Animation_2imon")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5naqq"]
+bg_color = Color(0.905882, 0.835294, 0.701961, 1)
+border_width_left = 12
+border_width_top = 12
+border_width_right = 12
+border_width_bottom = 12
+border_color = Color(0.203922, 0.109804, 0.152941, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_co3f2"]
+bg_color = Color(0.85098, 0.403922, 0.666667, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hcb8u"]
+bg_color = Color(0.847059, 0.709804, 0.580392, 1)
+border_width_bottom = 4
+border_color = Color(0.752941, 0.580392, 0.45098, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="Gradient" id="Gradient_s8ihe"]
+offsets = PackedFloat32Array(0, 0.260204, 0.459184)
+colors = PackedColorArray(0, 0, 0, 0.560784, 0, 0, 0, 0.517168, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_li1y5"]
+gradient = SubResource("Gradient_s8ihe")
+width = 128
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3chpl"]
+font = ExtResource("3_40fpt")
+font_size = 32
+font_color = Color(0.203922, 0.109804, 0.152941, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gwypj"]
+bg_color = Color(0.203922, 0.109804, 0.152941, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_d2bui"]
+font = ExtResource("4_yf2yq")
+font_size = 24
+font_color = Color(0.203922, 0.109804, 0.152941, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_mb8pj"]
+font = ExtResource("4_yf2yq")
+font_size = 24
+font_color = Color(0.745098, 0.466667, 0.168627, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_g1f1w"]
+font = ExtResource("4_yf2yq")
+font_size = 24
+font_color = Color(0.203922, 0.109804, 0.152941, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ge6mb"]
+font = ExtResource("4_yf2yq")
+font_size = 24
+font_color = Color(0.635294, 0.243137, 0.54902, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_rvf7n"]
+font = ExtResource("4_yf2yq")
+font_size = 24
+font_color = Color(0.635294, 0.243137, 0.54902, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_nxgn0"]
+font = ExtResource("4_yf2yq")
+font_size = 18
+font_color = Color(0.203922, 0.109804, 0.152941, 1)
+
+[node name="Best" type="Control"]
+z_index = 1
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Disable" type="Panel" parent="."]
+visible = false
+z_index = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 149.0
+offset_top = -51.0
+offset_right = 414.0
+offset_bottom = 255.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jcy50")
+
+[node name="Disable" type="AnimationPlayer" parent="Disable"]
+libraries = {
+"": SubResource("AnimationLibrary_8du6e")
+}
+autoplay = "enabled"
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 131.0
+offset_top = -267.0
+offset_right = 428.0
+offset_bottom = 267.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5naqq")
+
+[node name="Border" type="Panel" parent="Panel"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -12.0
+offset_top = -12.0
+offset_right = 12.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_co3f2")
+
+[node name="Icon" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 277.0
+offset_bottom = 156.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hcb8u")
+
+[node name="Shadow" type="TextureRect" parent="Panel/Icon"]
+modulate = Color(1, 1, 1, 0.380392)
+layout_mode = 0
+offset_left = 1.5
+offset_top = 55.0
+offset_right = 252.5
+offset_bottom = 119.0
+texture = SubResource("GradientTexture2D_li1y5")
+
+[node name="Icon" type="TextureRect" parent="Panel/Icon"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -59.0
+offset_right = 63.0
+offset_bottom = 5.0
+scale = Vector2(4, 4)
+texture = ExtResource("2_pe1ai")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 154.0
+offset_top = -106.0
+offset_right = 394.0
+offset_bottom = -66.0
+text = "Zebra Pleco"
+label_settings = SubResource("LabelSettings_3chpl")
+
+[node name="Line1" type="Panel" parent="Title"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 43.0
+offset_right = 253.0
+offset_bottom = 48.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_gwypj")
+
+[node name="Line2" type="Panel" parent="Title"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 149.0
+offset_right = 253.0
+offset_bottom = 154.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_gwypj")
+
+[node name="Best" type="Label" parent="."]
+layout_mode = 0
+offset_left = 154.0
+offset_top = -23.0
+offset_right = 217.0
+offset_bottom = 7.0
+text = "Best: "
+label_settings = SubResource("LabelSettings_d2bui")
+
+[node name="Best" type="Label" parent="Best"]
+layout_mode = 0
+offset_left = 84.0
+offset_right = 252.0
+offset_bottom = 30.0
+text = "1.0m"
+label_settings = SubResource("LabelSettings_mb8pj")
+horizontal_alignment = 2
+
+[node name="Rarity" type="Label" parent="."]
+layout_mode = 0
+offset_left = 154.0
+offset_top = 2.0
+offset_right = 238.0
+offset_bottom = 32.0
+text = "Rarity: "
+label_settings = SubResource("LabelSettings_g1f1w")
+
+[node name="Rarity" type="Label" parent="Rarity"]
+layout_mode = 0
+offset_left = 84.0
+offset_right = 252.0
+offset_bottom = 30.0
+text = "Epic"
+label_settings = SubResource("LabelSettings_ge6mb")
+horizontal_alignment = 2
+
+[node name="Caught" type="Label" parent="."]
+layout_mode = 0
+offset_left = 154.0
+offset_top = -48.0
+offset_right = 245.0
+offset_bottom = -18.0
+text = "Caught "
+label_settings = SubResource("LabelSettings_d2bui")
+
+[node name="Caught" type="Label" parent="Caught"]
+layout_mode = 0
+offset_left = 84.0
+offset_right = 252.0
+offset_bottom = 30.0
+text = "0"
+label_settings = SubResource("LabelSettings_rvf7n")
+horizontal_alignment = 2
+
+[node name="Lore" type="Label" parent="."]
+layout_mode = 0
+offset_left = 155.0
+offset_top = 57.0
+offset_right = 405.0
+offset_bottom = 245.0
+text = "These striped fish are notoriously shy so catching one is a big achievement. They can only be found during night time when they come out to search for food."
+label_settings = SubResource("LabelSettings_nxgn0")
+autowrap_mode = 3
+clip_text = true

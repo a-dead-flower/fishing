@@ -1,0 +1,185 @@
+[gd_scene load_steps=18 format=3 uid="uid://bgk80jt0xjgcq"]
+
+[ext_resource type="FontFile" uid="uid://c11kcqv0xwtq8" path="res://res/fonts/Normal.ttf" id="1_df8kr"]
+[ext_resource type="Script" path="res://src/scripts/equip.gd" id="2_dplml"]
+[ext_resource type="Texture2D" uid="uid://bl4u40obl7st0" path="res://res/equip/rods/rod_one/rod_one_icon.png" id="3_ir7s4"]
+[ext_resource type="Texture2D" uid="uid://clhe2hhfb5euu" path="res://res/sprites/stars.png" id="4_4u44s"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t200f"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q1og2"]
+resource_local_to_scene = true
+bg_color = Color(0.905882, 0.835294, 0.701961, 1)
+border_width_bottom = 4
+border_color = Color(0.843137, 0.709804, 0.580392, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_33xli"]
+bg_color = Color(0.905882, 0.835294, 0.701961, 1)
+border_width_top = 4
+border_color = Color(0.843137, 0.709804, 0.580392, 0)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="Gradient" id="Gradient_kmyrw"]
+colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ibvuj"]
+gradient = SubResource("Gradient_kmyrw")
+width = 60
+height = 48
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eewwo"]
+atlas = ExtResource("4_4u44s")
+region = Rect2(0, 36, 54, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v3ogr"]
+atlas = ExtResource("4_4u44s")
+region = Rect2(0, 0, 54, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_msbi8"]
+atlas = ExtResource("4_4u44s")
+region = Rect2(0, 18, 54, 18)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n64yg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eewwo")
+}],
+"loop": true,
+"name": &"one",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v3ogr")
+}],
+"loop": true,
+"name": &"three",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_msbi8")
+}],
+"loop": true,
+"name": &"two",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_eq15u"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Down:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(199, 26.8507)]
+}
+
+[sub_resource type="Animation" id="Animation_o5ts8"]
+resource_name = "down"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Down:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(199, 31)]
+}
+
+[sub_resource type="Animation" id="Animation_4shhy"]
+resource_name = "up"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Down:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(199, 27)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_aqh1x"]
+_data = {
+"RESET": SubResource("Animation_eq15u"),
+"down": SubResource("Animation_o5ts8"),
+"up": SubResource("Animation_4shhy")
+}
+
+[node name="Rod" type="Button" groups=["Button"]]
+offset_right = 239.0
+offset_bottom = 52.0
+theme_override_colors/font_hover_pressed_color = Color(0.203922, 0.109804, 0.152941, 1)
+theme_override_colors/font_hover_color = Color(0.203922, 0.109804, 0.152941, 1)
+theme_override_colors/font_pressed_color = Color(0.203922, 0.109804, 0.152941, 1)
+theme_override_colors/font_focus_color = Color(0.203922, 0.109804, 0.152941, 1)
+theme_override_colors/font_color = Color(0.203922, 0.109804, 0.152941, 1)
+theme_override_fonts/font = ExtResource("1_df8kr")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/focus = SubResource("StyleBoxEmpty_t200f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_q1og2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_33xli")
+theme_override_styles/normal = SubResource("StyleBoxFlat_q1og2")
+toggle_mode = true
+keep_pressed_outside = true
+text = "Rod One"
+icon = SubResource("GradientTexture2D_ibvuj")
+alignment = 0
+script = ExtResource("2_dplml")
+item_name = "One"
+type = "Rod"
+
+[node name="Down" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 199.0
+offset_top = 26.8507
+offset_right = 239.0
+offset_bottom = 66.8507
+mouse_filter = 2
+
+[node name="Icon" type="TextureRect" parent="Down"]
+layout_mode = 0
+offset_left = -187.0
+offset_top = -21.8507
+offset_right = -168.0
+offset_bottom = -2.85074
+scale = Vector2(2, 2)
+texture = ExtResource("3_ir7s4")
+expand_mode = 1
+
+[node name="Stars" type="AnimatedSprite2D" parent="Down"]
+position = Vector2(4, -3.8507)
+scale = Vector2(-0.929216, 0.929216)
+sprite_frames = SubResource("SpriteFrames_n64yg")
+animation = &"one"
+
+[node name="Press" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_aqh1x")
+}
+autoplay = "RESET"
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]
+[connection signal="button_up" from="." to="." method="_on_button_up"]
+[connection signal="pressed" from="." to="." method="_on_pressed"]

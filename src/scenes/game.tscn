@@ -1,0 +1,467 @@
+[gd_scene load_steps=42 format=3 uid="uid://db6333qjh00cd"]
+
+[ext_resource type="Script" path="res://src/scripts/game.gd" id="1_g0r3g"]
+[ext_resource type="Texture2D" uid="uid://cssstuea15l5m" path="res://res/sprites/rod.png" id="2_7jjqa"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sklwb"]
+bg_color = Color(0.905882, 0.835294, 0.701961, 1)
+draw_center = false
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0.203922, 0.109804, 0.152941, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="Gradient" id="Gradient_340g1"]
+colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ubl51"]
+gradient = SubResource("Gradient_340g1")
+width = 1
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_er2qw"]
+color = Color(0.478431, 0.282353, 0.254902, 1)
+thickness = 12
+vertical = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_351x6"]
+bg_color = Color(0.658824, 0.792157, 0.345098, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b3req"]
+bg_color = Color(0.905882, 0.835294, 0.701961, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(0, 0, 0, 0.247059)
+shadow_size = 14
+
+[sub_resource type="Gradient" id="Gradient_qhvqv"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_bmk2v"]
+gradient = SubResource("Gradient_qhvqv")
+width = 27
+height = 15
+
+[sub_resource type="Gradient" id="Gradient_qcutd"]
+offsets = PackedFloat32Array(0, 0.390038, 0.390977, 0.609962, 0.610902, 1)
+colors = PackedColorArray(0.647059, 0.188235, 0.188235, 1, 0.647059, 0.188235, 0.188235, 1, 0.658824, 0.792157, 0.345098, 1, 0.658824, 0.792157, 0.345098, 1, 0.647059, 0.188235, 0.188235, 1, 0.647059, 0.188235, 0.188235, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_nquya"]
+gradient = SubResource("Gradient_qcutd")
+fill_from = Vector2(1, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_evk4n"]
+texture = SubResource("GradientTexture2D_nquya")
+texture_margin_left = 26.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tpnrr"]
+
+[sub_resource type="Gradient" id="Gradient_imgd2"]
+offsets = PackedFloat32Array(0, 0.370651, 0.372163, 0.623298, 0.627837, 1)
+colors = PackedColorArray(0.647059, 0.188235, 0.188235, 1, 0.647059, 0.188235, 0.188235, 1, 0.658824, 0.792157, 0.345098, 1, 0.658824, 0.792157, 0.345098, 1, 0.647059, 0.188235, 0.188235, 1, 0.647059, 0.188235, 0.188235, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_axvu6"]
+gradient = SubResource("Gradient_imgd2")
+fill_from = Vector2(1, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gkdq4"]
+texture = SubResource("GradientTexture2D_axvu6")
+texture_margin_left = 26.0
+
+[sub_resource type="Gradient" id="Gradient_hexym"]
+offsets = PackedFloat32Array(0, 0.320726, 0.323752, 0.67171, 0.676248, 1)
+colors = PackedColorArray(0.647059, 0.188235, 0.188235, 1, 0.647059, 0.188235, 0.188235, 1, 0.658824, 0.792157, 0.345098, 1, 0.658824, 0.792157, 0.345098, 1, 0.647059, 0.188235, 0.188235, 1, 0.647059, 0.188235, 0.188235, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_15jfd"]
+gradient = SubResource("Gradient_hexym")
+fill_from = Vector2(1, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hov0m"]
+texture = SubResource("GradientTexture2D_15jfd")
+texture_margin_left = 26.0
+
+[sub_resource type="Gradient" id="Gradient_r0mea"]
+offsets = PackedFloat32Array(0, 0.310136, 0.313162, 0.695915, 0.697428, 1)
+colors = PackedColorArray(0.647059, 0.188235, 0.188235, 1, 0.647059, 0.188235, 0.188235, 1, 0.658824, 0.792157, 0.345098, 1, 0.658824, 0.792157, 0.345098, 1, 0.647059, 0.188235, 0.188235, 1, 0.647059, 0.188235, 0.188235, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ymcu8"]
+gradient = SubResource("Gradient_r0mea")
+fill_from = Vector2(1, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6nppl"]
+texture = SubResource("GradientTexture2D_ymcu8")
+texture_margin_left = 26.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pub7k"]
+atlas = ExtResource("2_7jjqa")
+region = Rect2(0, 0, 16, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0waoc"]
+atlas = ExtResource("2_7jjqa")
+region = Rect2(16, 0, 16, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hskat"]
+atlas = ExtResource("2_7jjqa")
+region = Rect2(32, 0, 16, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l5dk1"]
+atlas = ExtResource("2_7jjqa")
+region = Rect2(48, 0, 16, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ibb3b"]
+atlas = ExtResource("2_7jjqa")
+region = Rect2(64, 0, 16, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v6xj5"]
+atlas = ExtResource("2_7jjqa")
+region = Rect2(80, 0, 16, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6jndk"]
+atlas = ExtResource("2_7jjqa")
+region = Rect2(96, 0, 16, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d0jas"]
+atlas = ExtResource("2_7jjqa")
+region = Rect2(112, 0, 16, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_724ld"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pub7k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0waoc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hskat")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l5dk1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ibb3b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v6xj5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6jndk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d0jas")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[sub_resource type="Animation" id="Animation_fghrp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_6s80f"]
+resource_name = "open"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.6, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8s6pd"]
+_data = {
+"RESET": SubResource("Animation_fghrp"),
+"open": SubResource("Animation_6s80f")
+}
+
+[sub_resource type="Animation" id="Animation_odr27"]
+resource_name = "Bass"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:fish_strength")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.533333, 1.23333, 1.8, 2.03333, 2.8, 3.46667, 3.73333, 4.16667, 5.23333, 6.23333, 7.4, 8.4, 9.33333, 9.76667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.8, 1.0, 0.63, 1.0, 0.52, 0.2, 0.63, 1.0, 0.63, 0.9, 0.6, 0.21, 0.18, 0.57, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_87lah"]
+resource_name = "Minnow"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:fish_strength")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.1, 3.56667, 6.1, 9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.5, 0.73, 0.33, 0.81, 0.36]
+}
+
+[sub_resource type="Animation" id="Animation_k7xai"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:fish_strength")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+
+[sub_resource type="Animation" id="Animation_k4w2e"]
+resource_name = "Sturgeon"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:fish_strength")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.4, 0.9, 0.933333, 1, 1.43333, 1.83333, 1.86667, 1.93333, 2.4, 2.7, 3.2, 3.76667, 4.03333, 4.6, 4.83333, 5.53333, 5.83333, 6.36667, 6.93333, 7.96667, 9, 9.83333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [3.0, 0.2, 1.0, 0.1, 1.0, 0.2, 0.5, 0.0, 1.0, 0.0, 1.0, 0.419, 0.236, 1.286, 1.0, 0.63, 0.33, 0.312, 0.633, 1.0, 0.552, 0.387, 0.645, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_e2mbh"]
+resource_name = "Zebra"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:fish_strength")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.533333, 0.8, 1, 1.46667, 1.9, 2.3, 2.46667, 2.83333, 3, 3.46667, 3.76667, 4.4, 4.76667, 4.93333, 5.13333, 6, 6.53333, 7.46667, 7.86667, 8.06667, 8.3, 9.16667, 9.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.8, 0.5, 2.0, 1.0, 0.54, 1.0, 0.1, 0.266667, 0.26, -0.4, 1.0, 0.361, 0.066, 1.0, 1.744, 0.157, 0.66, 0.269, 0.952, -0.232, 1.89, 0.258, 1.0, 0.326]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4i2u4"]
+_data = {
+"Bass": SubResource("Animation_odr27"),
+"Minnow": SubResource("Animation_87lah"),
+"RESET": SubResource("Animation_k7xai"),
+"Sturgeon": SubResource("Animation_k4w2e"),
+"Zebra": SubResource("Animation_e2mbh")
+}
+
+[node name="Game" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_g0r3g")
+fish_strength = 2.0
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 86.0
+offset_right = 86.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(129, -1)
+
+[node name="Prog" type="Panel" parent="Control"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 157.0
+offset_top = -165.0
+offset_right = 179.0
+offset_bottom = 165.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_sklwb")
+
+[node name="Prog" type="VSlider" parent="Control/Prog"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 3.0
+offset_top = 6.0
+offset_right = 19.0
+offset_bottom = 325.0
+theme_override_icons/grabber_disabled = SubResource("GradientTexture1D_ubl51")
+theme_override_styles/slider = SubResource("StyleBoxLine_er2qw")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_351x6")
+max_value = 8000.0
+step = 0.0
+value = 4000.0
+editable = false
+scrollable = false
+
+[node name="Game" type="Panel" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 111.0
+offset_top = -165.0
+offset_right = 147.0
+offset_bottom = 165.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_sklwb")
+
+[node name="Panel" type="Panel" parent="Control/Game"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -67.0
+offset_top = -6.0
+offset_right = 40.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_b3req")
+
+[node name="Game0" type="VSlider" parent="Control/Game"]
+visible = false
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_icons/grabber_disabled = SubResource("GradientTexture2D_bmk2v")
+theme_override_styles/slider = SubResource("StyleBoxTexture_evk4n")
+theme_override_styles/grabber_area = SubResource("StyleBoxEmpty_tpnrr")
+step = 0.0
+value = 50.0
+editable = false
+scrollable = false
+
+[node name="Game1" type="VSlider" parent="Control/Game"]
+visible = false
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_icons/grabber_disabled = SubResource("GradientTexture2D_bmk2v")
+theme_override_styles/slider = SubResource("StyleBoxTexture_gkdq4")
+theme_override_styles/grabber_area = SubResource("StyleBoxEmpty_tpnrr")
+step = 0.0
+value = 50.0
+editable = false
+scrollable = false
+
+[node name="Game2" type="VSlider" parent="Control/Game"]
+visible = false
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_icons/grabber_disabled = SubResource("GradientTexture2D_bmk2v")
+theme_override_styles/slider = SubResource("StyleBoxTexture_hov0m")
+theme_override_styles/grabber_area = SubResource("StyleBoxEmpty_tpnrr")
+step = 0.0
+value = 50.0
+editable = false
+scrollable = false
+
+[node name="Game3" type="VSlider" parent="Control/Game"]
+visible = false
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_icons/grabber_disabled = SubResource("GradientTexture2D_bmk2v")
+theme_override_styles/slider = SubResource("StyleBoxTexture_6nppl")
+theme_override_styles/grabber_area = SubResource("StyleBoxEmpty_tpnrr")
+step = 0.0
+value = 50.0
+editable = false
+scrollable = false
+
+[node name="Rod" type="AnimatedSprite2D" parent="Control/Game"]
+position = Vector2(-32, 166)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_724ld")
+
+[node name="Open" type="AnimationPlayer" parent="Control"]
+libraries = {
+"": SubResource("AnimationLibrary_8s6pd")
+}
+autoplay = "open"
+
+[node name="Animation" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_4i2u4")
+}
+
+[connection signal="animation_finished" from="Control/Open" to="." method="_on_open"]

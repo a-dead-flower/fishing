@@ -1,0 +1,10 @@
+res://res/sounds/layout.tres
+res://res/player/main.tscn
+res://res/tilesets/tileset.tres
+res://src/scenes/setup.tscn
+res://res/equip/bait/grub/grub_sell.tscn
+res://res/equip/bait/worm/worm_sell.tscn
+res://res/equip/lure/blue/blue_sell.tscn
+res://res/equip/rods/rod_one/rod_one_inv.tscn
+res://res/player/bestiary.tscn
+res://res/fishes/zebra/zebra_entity.tscn

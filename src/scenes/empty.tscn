@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3y72cmivyqxm"]
+
+[ext_resource type="FontFile" uid="uid://c11kcqv0xwtq8" path="res://res/fonts/Normal.ttf" id="1_akdna"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xnhnn"]
+draw_center = false
+border_width_top = 7
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0p3u3"]
+font = ExtResource("1_akdna")
+font_size = 24
+font_color = Color(0.203922, 0.109804, 0.152941, 1)
+
+[node name="Empty" type="Label"]
+theme_override_colors/font_color = Color(0.203922, 0.109804, 0.152941, 1)
+theme_override_fonts/font = ExtResource("1_akdna")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_xnhnn")
+text = "Empty..."
+label_settings = SubResource("LabelSettings_0p3u3")
+horizontal_alignment = 1
