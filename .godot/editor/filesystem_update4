@@ -1,3 +1,15 @@
 res://res/sounds/layout.tres
 res://res/player/main.tscn
 res://res/tilesets/tileset.tres
+res://res/player/player.tscn
+res://src/shader/vignette.gdshader
+res://readme.md
+res://res/player/shops.tscn
+res://src/scripts/shops.gd
+res://res/player/inventory.tscn
+res://src/scripts/globals.gd
+res://res/player/upgrade.tscn
+res://src/scripts/inform.gd
+res://res/equip/lure/blue/blue_sell.tscn
+res://res/equip/bait/worm/worm_sell.tscn
+res://res/equip/bait/grub/grub_sell.tscn

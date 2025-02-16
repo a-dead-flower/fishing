@@ -28,7 +28,7 @@ const rod_one_inv = preload("res://res/equip/rods/rod_one/rod_one_inv.tscn")
 const rod_one_icon = preload("res://res/equip/rods/rod_one/rod_one_icon.tscn")
 
 
-var money = 1000000
+var money = 500000
 var speed = 450
 var stop_cast = false
 var time_of_day = 900

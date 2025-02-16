@@ -886,6 +886,7 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_h8csu")
 
 [node name="Icon" type="TextureRect" parent="Display/Control/Missing/Panel/Icon"]
+layout_mode = 0
 offset_left = 11.0
 offset_top = 7.0
 offset_right = 54.0
@@ -1010,7 +1011,7 @@ offset_top = -20.0
 offset_right = -2.0
 grow_horizontal = 0
 grow_vertical = 0
-text = "0.0.12"
+text = "0.0.13"
 label_settings = SubResource("LabelSettings_kl0uw")
 
 [node name="Time" type="Panel" parent="Display/Control"]

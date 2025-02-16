@@ -2,9 +2,12 @@
 
 ## Known Bugs
 - Using all bait of a specific kind without resetting the global "current_bait" and then visiting the shop will result in the bait being displayed at a value of 0
-- Sorting fish by price in the shop does not work due to the lack of separation between fish and tackle using the amount value to determine item value (set to 0)
 
-## 0.0.12 (development)
+## 0.0.13 WIP
+- Fixed fish sorting by price and name in shops bug
+- Added stats info to shop items instead of only for upgrades
+
+## 0.0.12
 - Added repository to GitHub!
 - New inventory space limitations
 - Created tooltips for shop and menu items

@@ -1286,7 +1286,7 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i05lx"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sdbm0"]
 resource_local_to_scene = true
 content_margin_top = 2.0
 bg_color = Color(0.847059, 0.709804, 0.580392, 1)
@@ -2226,7 +2226,7 @@ ammount = 10
 
 [node name="Worm" parent="Menu/Shop/List/VBox" instance=ExtResource("8_56b1m")]
 layout_mode = 2
-theme_override_styles/disabled = SubResource("StyleBoxFlat_i05lx")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_sdbm0")
 theme_override_styles/hover = SubResource("StyleBoxFlat_exfve")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_s413e")
 theme_override_styles/normal = SubResource("StyleBoxFlat_3h3ji")

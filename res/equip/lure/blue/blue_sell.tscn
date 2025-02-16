@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=4 uid="uid://cia5jjkqjluos"]
+[gd_scene load_steps=45 format=4 uid="uid://cia5jjkqjluos"]
 
 [ext_resource type="Script" path="res://src/scripts/sellitem.gd" id="1_wctcr"]
 [ext_resource type="FontFile" uid="uid://j364g1d5bwm4" path="res://res/fonts/Bold.ttf" id="2_pj8vv"]
@@ -1025,7 +1025,7 @@ corner_radius_bottom_right = 1
 corner_radius_bottom_left = 1
 anti_aliasing = false
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_713f2"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bx373"]
 bg_color = Color(0.905882, 0.835294, 0.701961, 1)
 border_width_left = 6
 border_width_top = 6
@@ -1037,38 +1037,53 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nlhb1"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f0mp3"]
 bg_color = Color(0.905882, 0.835294, 0.701961, 1)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ex5cs"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0m8ff"]
 bg_color = Color(0, 0, 0, 0.156863)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[sub_resource type="LabelSettings" id="LabelSettings_e0kun"]
-line_spacing = -5.183
+[sub_resource type="LabelSettings" id="LabelSettings_yyiou"]
+line_spacing = -4.0
 font = ExtResource("5_jthna")
-font_size = 20
+font_size = 19
 font_color = Color(0.203922, 0.109804, 0.152941, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_hjmmg"]
+[sub_resource type="LabelSettings" id="LabelSettings_uk7os"]
 line_spacing = -5.183
 font = ExtResource("2_pj8vv")
 font_size = 24
 font_color = Color(0.203922, 0.109804, 0.152941, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0exee"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4oxic"]
 bg_color = Color(0.203922, 0.109804, 0.152941, 1)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lq2gi"]
+bg_color = Color(0.658824, 0.792157, 0.345098, 1)
+border_width_bottom = 2
+border_color = Color(0.458824, 0.654902, 0.262745, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="LabelSettings" id="LabelSettings_r7bru"]
+line_spacing = -5.183
+font = ExtResource("5_jthna")
+font_size = 20
+font_color = Color(0.0980392, 0.2, 0.176471, 1)
 
 [sub_resource type="Animation" id="Animation_pnqg3"]
 length = 0.001
@@ -1264,12 +1279,11 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_4x1fw")
 visible = false
 top_level = true
 z_index = 4
-layout_mode = 0
 offset_top = 100.0
-offset_right = 225.0
-offset_bottom = 272.0
+offset_right = 270.0
+offset_bottom = 304.0
 mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_713f2")
+theme_override_styles/panel = SubResource("StyleBoxFlat_bx373")
 script = ExtResource("6_wcb3h")
 
 [node name="Border" type="Panel" parent="Inform"]
@@ -1286,7 +1300,7 @@ offset_bottom = 5.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_nlhb1")
+theme_override_styles/panel = SubResource("StyleBoxFlat_f0mp3")
 
 [node name="Dark" type="Panel" parent="Inform/Border"]
 show_behind_parent = true
@@ -1303,16 +1317,16 @@ offset_bottom = 7.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_ex5cs")
+theme_override_styles/panel = SubResource("StyleBoxFlat_0m8ff")
 
 [node name="Info" type="Label" parent="Inform"]
 layout_mode = 1
-offset_left = 19.0
-offset_top = 61.0
-offset_right = 208.0
-offset_bottom = 146.0
-text = "A shiny blue lure made to attract nocturnal fish at any time of day"
-label_settings = SubResource("LabelSettings_e0kun")
+offset_left = 17.0
+offset_top = 120.0
+offset_right = 257.0
+offset_bottom = 204.0
+text = "A brightly coloured jig that attracts nocturnal fish even during the day"
+label_settings = SubResource("LabelSettings_yyiou")
 autowrap_mode = 2
 
 [node name="Title" type="Label" parent="Inform"]
@@ -1322,16 +1336,35 @@ offset_top = 16.0
 offset_right = 205.0
 offset_bottom = 47.0
 text = "BLUE JIG"
-label_settings = SubResource("LabelSettings_hjmmg")
+label_settings = SubResource("LabelSettings_uk7os")
 autowrap_mode = 2
 
 [node name="Panel" type="Panel" parent="Inform/Title"]
 layout_mode = 0
 offset_left = -4.0
 offset_top = 34.0
-offset_right = 192.0
+offset_right = 237.0
 offset_bottom = 38.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_0exee")
+theme_override_styles/panel = SubResource("StyleBoxFlat_4oxic")
+
+[node name="Desc" type="Label" parent="Inform"]
+layout_mode = 1
+offset_left = 14.0
+offset_top = 65.0
+offset_right = 255.0
+offset_bottom = 96.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_lq2gi")
+text = "  Catch night fish"
+label_settings = SubResource("LabelSettings_r7bru")
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Panel" type="Panel" parent="Inform/Desc"]
+layout_mode = 0
+offset_top = 41.0
+offset_right = 241.0
+offset_bottom = 45.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_4oxic")
 
 [node name="Hover" type="ColorRect" parent="."]
 layout_mode = 0

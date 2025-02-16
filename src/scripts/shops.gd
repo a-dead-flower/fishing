@@ -118,66 +118,57 @@ func _on_animate(anim_name: StringName) -> void:
 func _on_sort_name_player():
 	if $Menu/Player/Name/Label/Arrow.scale.x == 1:
 		$Menu/Player/Name/Label/Arrow.scale.x = -1
-		_sort_nodes("alpha-lh", true, "Bait")
-		_sort_nodes("alpha-lh", true, "Lure")
+		_sort_nodes("alpha-lh", true)
 	elif $Menu/Player/Name/Label/Arrow.scale.x == -1:
 		$Menu/Player/Name/Label/Arrow.scale.x = 1
-		_sort_nodes("alpha-hl", true, "Bait")
-		_sort_nodes("alpha-hl", true, "Lure")
+		_sort_nodes("alpha-hl", true)
 
 
 ## Change sort type price player
 func _on_sort_price_player():
 	if $Menu/Player/Price/Label/Arrow.scale.x == 1:
 		$Menu/Player/Price/Label/Arrow.scale.x = -1
-		_sort_nodes("price-lh", true, "Bait")
-		_sort_nodes("price-lh", true, "Lure")
+		_sort_nodes("price-lh", true)
 	elif $Menu/Player/Price/Label/Arrow.scale.x == -1:
 		$Menu/Player/Price/Label/Arrow.scale.x = 1
-		_sort_nodes("price-hl", true, "Bait")
-		_sort_nodes("price-hl", true, "Lure")
+		_sort_nodes("price-hl", true)
 
 
 ## Change sort type name shop
 func _on_sort_name_shop():
 	if $Menu/Shop/Name/Label/Arrow.scale.x == 1:
 		$Menu/Shop/Name/Label/Arrow.scale.x = -1
-		_sort_nodes("alpha-lh", false, "Bait")
-		_sort_nodes("alpha-lh", false, "Lure")
+		_sort_nodes("alpha-lh", false)
 	elif $Menu/Shop/Name/Label/Arrow.scale.x == -1:
 		$Menu/Shop/Name/Label/Arrow.scale.x = 1
-		_sort_nodes("alpha-hl", false, "Bait")
-		_sort_nodes("alpha-hl", false, "Lure")
-
+		_sort_nodes("alpha-hl", false)
 
 ## Change sort type price shop
 func _on_sort_price_shop():
 	if $Menu/Shop/Price/Label/Arrow.scale.x == 1:
 		$Menu/Shop/Price/Label/Arrow.scale.x = -1
-		_sort_nodes("price-lh", false, "Bait")
-		_sort_nodes("price-lh", false, "Lure")
+		_sort_nodes("price-lh", false)
 	elif $Menu/Shop/Price/Label/Arrow.scale.x == -1:
 		$Menu/Shop/Price/Label/Arrow.scale.x = 1
-		_sort_nodes("price-hl", false, "Bait")
-		_sort_nodes("price-hl", false, "Lure")
+		_sort_nodes("price-hl", false)
 
 
 
 ## Sort nodes by type
-func _sort_nodes(type, player, place):
+func _sort_nodes(type, player):
 	var sorted_nodes
 	var item_list
 	
 	if player: ## Sort player
 		sorted_nodes = []
 		for child in $Menu/Player/List/VBox.get_children():
-			if child.item_type == place: sorted_nodes.append(child)
+			if child.item_type == Globals.shop_type: sorted_nodes.append(child)
 		item_list = $Menu/Player/List/VBox
 		
 	else: ## Sort shop
 		sorted_nodes = []
 		for child in $Menu/Shop/List/VBox.get_children():
-			if child.item_type == place: sorted_nodes.append(child)
+			if child.item_type == Globals.shop_type: sorted_nodes.append(child)
 		item_list = $Menu/Shop/List/VBox
 	
 	if type == "alpha-hl":
@@ -193,7 +184,7 @@ func _sort_nodes(type, player, place):
 			if Globals.shop_type == "Bait":
 				return int(a.text.split("x")[-1]) * \
 				a.item_price > int(b.text.split("x")[-1]) * b.item_price
-			if Globals.shop_type == "Fish":
+			elif Globals.shop_type == "Fish":
 				return a.item_price > b.item_price)
 			
 	elif type == "price-lh":
@@ -201,12 +192,12 @@ func _sort_nodes(type, player, place):
 			if Globals.shop_type == "Bait":
 				return int(a.text.split("x")[-1]) * \
 				a.item_price < int(b.text.split("x")[-1]) * b.item_price
-			if Globals.shop_type == "Fish":
+			elif Globals.shop_type == "Fish":
 				return a.item_price < b.item_price)
 	
 	## Sort nodes but not rect
 	for node in item_list.get_children():
-		if node.item_type == place:
+		if node.item_type == Globals.shop_type:
 			item_list.remove_child(node)
 	for node in sorted_nodes:
 		item_list.add_child(node)

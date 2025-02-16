@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=4 uid="uid://dgpmjxl1i3qj4"]
+[gd_scene load_steps=42 format=4 uid="uid://dgpmjxl1i3qj4"]
 
 [ext_resource type="Script" path="res://src/scripts/sellitem.gd" id="1_gqau8"]
 [ext_resource type="FontFile" uid="uid://j364g1d5bwm4" path="res://res/fonts/Bold.ttf" id="2_myx7c"]
@@ -971,7 +971,7 @@ animations = [{
 "speed": 15.0
 }]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x53bc"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8fi87"]
 bg_color = Color(0.905882, 0.835294, 0.701961, 1)
 border_width_left = 6
 border_width_top = 6
@@ -983,38 +983,53 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8i6wu"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c5efs"]
 bg_color = Color(0.905882, 0.835294, 0.701961, 1)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cpcny"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_034e0"]
 bg_color = Color(0, 0, 0, 0.156863)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[sub_resource type="LabelSettings" id="LabelSettings_2xjhy"]
-line_spacing = -5.183
+[sub_resource type="LabelSettings" id="LabelSettings_51w5q"]
+line_spacing = -4.0
 font = ExtResource("3_y85dq")
-font_size = 20
+font_size = 19
 font_color = Color(0.203922, 0.109804, 0.152941, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_mwrt7"]
+[sub_resource type="LabelSettings" id="LabelSettings_ytv2c"]
 line_spacing = -5.183
 font = ExtResource("2_myx7c")
 font_size = 24
 font_color = Color(0.203922, 0.109804, 0.152941, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jp5f2"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sdivv"]
 bg_color = Color(0.203922, 0.109804, 0.152941, 1)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m0jp1"]
+bg_color = Color(0.658824, 0.792157, 0.345098, 1)
+border_width_bottom = 2
+border_color = Color(0.458824, 0.654902, 0.262745, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="LabelSettings" id="LabelSettings_7xmj5"]
+line_spacing = -5.183
+font = ExtResource("3_y85dq")
+font_size = 20
+font_color = Color(0.0980392, 0.2, 0.176471, 1)
 
 [sub_resource type="Animation" id="Animation_pnqg3"]
 length = 0.001
@@ -1181,12 +1196,11 @@ frame_progress = 0.0238692
 visible = false
 top_level = true
 z_index = 4
-layout_mode = 0
 offset_top = 100.0
-offset_right = 225.0
-offset_bottom = 303.0
+offset_right = 270.0
+offset_bottom = 318.0
 mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_x53bc")
+theme_override_styles/panel = SubResource("StyleBoxFlat_8fi87")
 script = ExtResource("6_v5a2l")
 
 [node name="Border" type="Panel" parent="Inform"]
@@ -1203,7 +1217,7 @@ offset_bottom = 5.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_8i6wu")
+theme_override_styles/panel = SubResource("StyleBoxFlat_c5efs")
 
 [node name="Dark" type="Panel" parent="Inform/Border"]
 show_behind_parent = true
@@ -1220,17 +1234,16 @@ offset_bottom = 7.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_cpcny")
+theme_override_styles/panel = SubResource("StyleBoxFlat_034e0")
 
 [node name="Info" type="Label" parent="Inform"]
 layout_mode = 1
-offset_left = 19.0
-offset_top = 61.0
-offset_right = 208.0
-offset_bottom = 146.0
-text = "One of the most basic types of bait.
-Won't help much but they are delicious to almost every fish"
-label_settings = SubResource("LabelSettings_2xjhy")
+offset_left = 17.0
+offset_top = 120.0
+offset_right = 257.0
+offset_bottom = 191.0
+text = "In total, beatles make up 25% of known species. These creatures are its larvae."
+label_settings = SubResource("LabelSettings_51w5q")
 autowrap_mode = 2
 
 [node name="Title" type="Label" parent="Inform"]
@@ -1240,16 +1253,35 @@ offset_top = 16.0
 offset_right = 205.0
 offset_bottom = 47.0
 text = "GRUB"
-label_settings = SubResource("LabelSettings_mwrt7")
+label_settings = SubResource("LabelSettings_ytv2c")
 autowrap_mode = 2
 
 [node name="Panel" type="Panel" parent="Inform/Title"]
 layout_mode = 0
 offset_left = -4.0
 offset_top = 34.0
-offset_right = 192.0
+offset_right = 237.0
 offset_bottom = 38.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_jp5f2")
+theme_override_styles/panel = SubResource("StyleBoxFlat_sdivv")
+
+[node name="Desc" type="Label" parent="Inform"]
+layout_mode = 1
+offset_left = 14.0
+offset_top = 65.0
+offset_right = 255.0
+offset_bottom = 96.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_m0jp1")
+text = "  +5% Fishing power"
+label_settings = SubResource("LabelSettings_7xmj5")
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Panel" type="Panel" parent="Inform/Desc"]
+layout_mode = 0
+offset_top = 41.0
+offset_right = 241.0
+offset_bottom = 45.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_sdivv")
 
 [node name="Hover" type="ColorRect" parent="."]
 layout_mode = 0
