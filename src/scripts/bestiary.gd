@@ -10,11 +10,12 @@ func _ready():
 	for i in Globals.pond_caught:
 		for j in children:
 			if i[0] == j.name:
-				j.best_size = i[1]
-				j.num_caught = i[2]
-				j.fish_found = true
-				j.get_node("Icon/Icon").visible = true
-				j.get_node("Active").play("enabled")
+				var button = j.get_node(str(j.name))
+				button.best_size = i[1]
+				button.num_caught = i[2]
+				button.fish_found = true
+				button.get_node("Icon/Icon").visible = true
+				button.get_node("Active").play("enabled")
 
 
 ## Process function

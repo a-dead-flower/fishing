@@ -75,7 +75,6 @@ var upgrade_loss = 0
 var upgrade_pack = 0
 
 var pond_caught = [
-	["Minnow","7cm",1],
 	["Bass","57cm",1],
 	["Sturgeon","1.8m",1],
 	["Zebra","4cm",1]]

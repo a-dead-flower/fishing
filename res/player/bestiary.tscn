@@ -1,4 +1,4 @@
-[gd_scene load_steps=98 format=4 uid="uid://dxm0eckleoe0y"]
+[gd_scene load_steps=106 format=4 uid="uid://dxm0eckleoe0y"]
 
 [ext_resource type="Script" path="res://src/scripts/bestiary.gd" id="1_6v264"]
 [ext_resource type="Shader" path="res://src/shader/blur.gdshader" id="2_k66q4"]
@@ -10,6 +10,7 @@
 [ext_resource type="Shader" path="res://src/shader/bestiary.gdshader" id="6_bfhu2"]
 [ext_resource type="PackedScene" uid="uid://m6r1uucyp713" path="res://res/fishes/minnow/minnow_best.tscn" id="6_t5nj3"]
 [ext_resource type="Texture2D" uid="uid://usyxt166m0tr" path="res://res/fishes/bass/bass_icon.png" id="7_sou7x"]
+[ext_resource type="Texture2D" uid="uid://clhe2hhfb5euu" path="res://res/sprites/stars.png" id="8_8p26q"]
 [ext_resource type="Texture2D" uid="uid://bs17bkrv5afli" path="res://res/fishes/minnow/minnow_icon.png" id="8_mrf14"]
 [ext_resource type="Texture2D" uid="uid://dnltkqaybvd2i" path="res://res/sprites/arrow.png" id="8_wdbe7"]
 [ext_resource type="PackedScene" uid="uid://bb8fwib3e5d4s" path="res://res/fishes/sturgeon/sturgeon_best.tscn" id="9_7scty"]
@@ -285,27 +286,98 @@ colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 0)
 gradient = SubResource("Gradient_66ey4")
 height = 54
 
-[sub_resource type="LabelSettings" id="LabelSettings_hkxo6"]
-font = ExtResource("3_60aye")
-font_size = 32
-font_color = Color(0.203922, 0.109804, 0.152941, 1)
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t7cre"]
-bg_color = Color(0.203922, 0.109804, 0.152941, 1)
+bg_color = Color(0.843137, 0.709804, 0.580392, 1)
+border_width_bottom = 4
+border_color = Color(0.556863, 0.368627, 0.309804, 1)
 corner_radius_top_left = 8
 corner_radius_bottom_left = 8
 expand_margin_top = 3.0
 expand_margin_bottom = 3.0
 anti_aliasing = false
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_du1su"]
-bg_color = Color(0.203922, 0.109804, 0.152941, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5egpt"]
+bg_color = Color(0.905882, 0.835294, 0.701961, 1)
+border_width_bottom = 4
+border_color = Color(0.752941, 0.580392, 0.45098, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+anti_aliasing = false
+
+[sub_resource type="LabelSettings" id="LabelSettings_hkxo6"]
+font = ExtResource("3_60aye")
+font_size = 24
+font_color = Color(0.203922, 0.109804, 0.152941, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4em5y"]
+atlas = ExtResource("8_8p26q")
+region = Rect2(0, 36, 54, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xql20"]
+atlas = ExtResource("8_8p26q")
+region = Rect2(0, 18, 54, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gaky4"]
+atlas = ExtResource("8_8p26q")
+region = Rect2(0, 0, 54, 18)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w6o5f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4em5y")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xql20")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gaky4")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o65sc"]
+bg_color = Color(0.843137, 0.709804, 0.580392, 1)
+border_width_bottom = 4
+border_color = Color(0.556863, 0.368627, 0.309804, 1)
 expand_margin_top = 3.0
 expand_margin_bottom = 3.0
 anti_aliasing = false
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ls8q2"]
-bg_color = Color(0.203922, 0.109804, 0.152941, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dfla3"]
+bg_color = Color(0.843137, 0.709804, 0.580392, 1)
+border_width_bottom = 4
+border_color = Color(0.556863, 0.368627, 0.309804, 1)
+expand_margin_top = 3.0
+expand_margin_bottom = 3.0
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4m2da"]
+bg_color = Color(0.843137, 0.709804, 0.580392, 1)
+border_width_bottom = 4
+border_color = Color(0.556863, 0.368627, 0.309804, 1)
+expand_margin_top = 3.0
+expand_margin_bottom = 3.0
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kk6bw"]
+bg_color = Color(0.843137, 0.709804, 0.580392, 1)
+border_width_bottom = 4
+border_color = Color(0.556863, 0.368627, 0.309804, 1)
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 expand_margin_top = 3.0
@@ -1076,12 +1148,12 @@ func _on_button_up() -> void: $Press.play(\"up\")
 func _on_button_down() -> void: $Press.play(\"down\")
 
 func _on_pressed() -> void:
-	get_node(\"../../../../Best\").name = \"DELETE\"
-	get_node(\"../../../../DELETE\").queue_free()
+	get_node(\"../../../../../Best\").name = \"DELETE\"
+	get_node(\"../../../../../DELETE\").queue_free()
 	var panel = item_best.instantiate()
 	panel.get_node(\"Best/Best\").text = str(best_size)
 	panel.get_node(\"Caught/Caught\").text = str(num_caught)
-	get_node(\"../../../..\").add_child(panel)
+	get_node(\"../../../../../\").add_child(panel)
 	if !fish_found:
 		panel.get_node(\"Disable/Disable\").play(\"disable\")
 "
@@ -2085,12 +2157,12 @@ func _on_button_up() -> void: $Press.play(\"up\")
 func _on_button_down() -> void: $Press.play(\"down\")
 
 func _on_pressed() -> void:
-	get_node(\"../../../../Best\").name = \"DELETE\"
-	get_node(\"../../../../DELETE\").queue_free()
+	get_node(\"../../../../../Best\").name = \"DELETE\"
+	get_node(\"../../../../../DELETE\").queue_free()
 	var panel = item_best.instantiate()
 	panel.get_node(\"Best/Best\").text = str(best_size)
 	panel.get_node(\"Caught/Caught\").text = str(num_caught)
-	get_node(\"../../../..\").add_child(panel)
+	get_node(\"../../../../../\").add_child(panel)
 	if !fish_found:
 		panel.get_node(\"Disable/Disable\").play(\"disable\")
 "
@@ -3054,12 +3126,12 @@ func _on_button_up() -> void: $Press.play(\"up\")
 func _on_button_down() -> void: $Press.play(\"down\")
 
 func _on_pressed() -> void:
-	get_node(\"../../../../Best\").name = \"DELETE\"
-	get_node(\"../../../../DELETE\").queue_free()
+	get_node(\"../../../../../Best\").name = \"DELETE\"
+	get_node(\"../../../../../DELETE\").queue_free()
 	var panel = item_best.instantiate()
 	panel.get_node(\"Best/Best\").text = str(best_size)
 	panel.get_node(\"Caught/Caught\").text = str(num_caught)
-	get_node(\"../../../..\").add_child(panel)
+	get_node(\"../../../../../\").add_child(panel)
 	if !fish_found:
 		panel.get_node(\"Disable/Disable\").play(\"disable\")
 "
@@ -4095,12 +4167,12 @@ func _on_button_up() -> void: $Press.play(\"up\")
 func _on_button_down() -> void: $Press.play(\"down\")
 
 func _on_pressed() -> void:
-	get_node(\"../../../../Best\").name = \"DELETE\"
-	get_node(\"../../../../DELETE\").queue_free()
+	get_node(\"../../../../../Best\").name = \"DELETE\"
+	get_node(\"../../../../../DELETE\").queue_free()
 	var panel = item_best.instantiate()
 	panel.get_node(\"Best/Best\").text = str(best_size)
 	panel.get_node(\"Caught/Caught\").text = str(num_caught)
-	get_node(\"../../../..\").add_child(panel)
+	get_node(\"../../../../../\").add_child(panel)
 	if !fish_found:
 		panel.get_node(\"Disable/Disable\").play(\"disable\")
 "
@@ -4680,90 +4752,102 @@ expand_icon = true
 
 [node name="Pond" type="ScrollContainer" parent="Menu/Fish"]
 layout_mode = 0
-offset_left = 2.0
-offset_top = 129.0
-offset_right = 465.0
-offset_bottom = 491.0
+offset_left = -1.0
+offset_top = 128.0
+offset_right = 469.0
+offset_bottom = 492.0
 vertical_scroll_mode = 3
 
 [node name="Grid" type="GridContainer" parent="Menu/Fish/Pond"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_constants/h_separation = 15
-theme_override_constants/v_separation = 15
+theme_override_constants/h_separation = 11
+theme_override_constants/v_separation = 11
 columns = 5
 
-[node name="Divide1" type="TextureRect" parent="Menu/Fish/Pond/Grid"]
+[node name="Divide01" type="TextureRect" parent="Menu/Fish/Pond/Grid"]
 layout_mode = 2
 texture = SubResource("GradientTexture2D_hdjw0")
 
-[node name="Label" type="Label" parent="Menu/Fish/Pond/Grid/Divide1"]
-layout_mode = 0
-offset_left = -0.5
-offset_top = 4.0
-offset_right = 109.5
-offset_bottom = 44.0
-text = "TIER 1"
-label_settings = SubResource("LabelSettings_hkxo6")
-
-[node name="Line" type="Panel" parent="Menu/Fish/Pond/Grid/Divide1"]
+[node name="Line" type="Panel" parent="Menu/Fish/Pond/Grid/Divide01"]
 layout_mode = 2
-offset_left = -0.5
-offset_top = 47.0
-offset_right = 79.5
-offset_bottom = 47.0
+offset_top = 15.0
+offset_right = 110.0
+offset_bottom = 230.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_t7cre")
 
-[node name="Divide2" type="TextureRect" parent="Menu/Fish/Pond/Grid"]
+[node name="Label" type="Label" parent="Menu/Fish/Pond/Grid/Divide01"]
+z_index = 1
+layout_mode = 0
+offset_top = 10.0
+offset_right = 469.0
+offset_bottom = 54.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_5egpt")
+text = "  TIER 1"
+label_settings = SubResource("LabelSettings_hkxo6")
+vertical_alignment = 1
+
+[node name="Stars" type="AnimatedSprite2D" parent="Menu/Fish/Pond/Grid/Divide01"]
+z_index = 1
+position = Vector2(415.549, 28.3497)
+scale = Vector2(-1.45931, 1.45931)
+sprite_frames = SubResource("SpriteFrames_w6o5f")
+animation = &"1"
+
+[node name="Divide02" type="TextureRect" parent="Menu/Fish/Pond/Grid"]
 layout_mode = 2
 texture = SubResource("GradientTexture2D_hdjw0")
 
-[node name="Line" type="Panel" parent="Menu/Fish/Pond/Grid/Divide2"]
+[node name="Line" type="Panel" parent="Menu/Fish/Pond/Grid/Divide02"]
 layout_mode = 2
-offset_left = -15.0
-offset_top = 47.0
-offset_right = 91.0
-offset_bottom = 47.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_du1su")
+offset_left = -3.0
+offset_top = 15.0
+offset_right = 103.0
+offset_bottom = 230.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_o65sc")
 
-[node name="Divide3" type="TextureRect" parent="Menu/Fish/Pond/Grid"]
-layout_mode = 2
-texture = SubResource("GradientTexture2D_hdjw0")
-
-[node name="Line" type="Panel" parent="Menu/Fish/Pond/Grid/Divide3"]
-layout_mode = 2
-offset_left = -15.0
-offset_top = 47.0
-offset_right = 91.0
-offset_bottom = 47.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_du1su")
-
-[node name="Divide4" type="TextureRect" parent="Menu/Fish/Pond/Grid"]
+[node name="Divide03" type="TextureRect" parent="Menu/Fish/Pond/Grid"]
 layout_mode = 2
 texture = SubResource("GradientTexture2D_hdjw0")
 
-[node name="Line" type="Panel" parent="Menu/Fish/Pond/Grid/Divide4"]
+[node name="Line" type="Panel" parent="Menu/Fish/Pond/Grid/Divide03"]
 layout_mode = 2
-offset_left = -15.0
-offset_top = 47.0
-offset_right = 91.0
-offset_bottom = 47.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_du1su")
+offset_left = 9.0
+offset_top = 15.0
+offset_right = 115.0
+offset_bottom = 230.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_dfla3")
 
-[node name="Divide5" type="TextureRect" parent="Menu/Fish/Pond/Grid"]
+[node name="Divide04" type="TextureRect" parent="Menu/Fish/Pond/Grid"]
 layout_mode = 2
 texture = SubResource("GradientTexture2D_hdjw0")
 
-[node name="Line" type="Panel" parent="Menu/Fish/Pond/Grid/Divide5"]
+[node name="Line" type="Panel" parent="Menu/Fish/Pond/Grid/Divide04"]
 layout_mode = 2
-offset_left = -25.0
-offset_top = 47.0
-offset_right = 83.0
-offset_bottom = 47.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_ls8q2")
+offset_left = 9.0
+offset_top = 15.0
+offset_right = 115.0
+offset_bottom = 230.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_4m2da")
 
-[node name="Minnow" type="Button" parent="Menu/Fish/Pond/Grid" groups=["Button"]]
+[node name="Divide05" type="TextureRect" parent="Menu/Fish/Pond/Grid"]
+layout_mode = 2
+texture = SubResource("GradientTexture2D_hdjw0")
+
+[node name="Line" type="Panel" parent="Menu/Fish/Pond/Grid/Divide05"]
+layout_mode = 2
+offset_left = -1.0
+offset_top = 15.0
+offset_right = 93.0
+offset_bottom = 230.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_kk6bw")
+
+[node name="Minnow" type="MarginContainer" parent="Menu/Fish/Pond/Grid"]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+
+[node name="Minnow" type="Button" parent="Menu/Fish/Pond/Grid/Minnow" groups=["Button"]]
 modulate = Color(1, 1, 1, 0.784314)
 layout_mode = 2
 theme_override_colors/font_hover_pressed_color = Color(0.203922, 0.109804, 0.152941, 1)
@@ -4782,19 +4866,19 @@ icon = SubResource("GradientTexture2D_ctd08")
 script = SubResource("GDScript_ssxdl")
 item_best = ExtResource("6_t5nj3")
 
-[node name="Press" type="AnimationPlayer" parent="Menu/Fish/Pond/Grid/Minnow"]
+[node name="Press" type="AnimationPlayer" parent="Menu/Fish/Pond/Grid/Minnow/Minnow"]
 libraries = {
 "": SubResource("AnimationLibrary_2lsh3")
 }
 autoplay = "RESET"
 
-[node name="Active" type="AnimationPlayer" parent="Menu/Fish/Pond/Grid/Minnow"]
+[node name="Active" type="AnimationPlayer" parent="Menu/Fish/Pond/Grid/Minnow/Minnow"]
 libraries = {
 "": SubResource("AnimationLibrary_jl26m")
 }
 autoplay = "disabled"
 
-[node name="Icon" type="Panel" parent="Menu/Fish/Pond/Grid/Minnow"]
+[node name="Icon" type="Panel" parent="Menu/Fish/Pond/Grid/Minnow/Minnow"]
 layout_mode = 0
 offset_left = 6.0
 offset_top = 5.0
@@ -4803,7 +4887,7 @@ offset_bottom = 62.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_3fkh3")
 
-[node name="Shadow" type="TextureRect" parent="Menu/Fish/Pond/Grid/Minnow/Icon"]
+[node name="Shadow" type="TextureRect" parent="Menu/Fish/Pond/Grid/Minnow/Minnow/Icon"]
 modulate = Color(1, 1, 1, 0.258824)
 layout_mode = 0
 offset_left = 0.531372
@@ -4813,19 +4897,22 @@ offset_bottom = 48.0
 texture = SubResource("GradientTexture2D_cx17w")
 expand_mode = 1
 
-[node name="Dark" type="Sprite2D" parent="Menu/Fish/Pond/Grid/Minnow/Icon"]
+[node name="Dark" type="Sprite2D" parent="Menu/Fish/Pond/Grid/Minnow/Minnow/Icon"]
 material = SubResource("ShaderMaterial_i04l2")
 position = Vector2(35.25, 28.75)
 scale = Vector2(2.58594, 2.58594)
 texture = ExtResource("8_mrf14")
 
-[node name="Icon" type="Sprite2D" parent="Menu/Fish/Pond/Grid/Minnow/Icon"]
+[node name="Icon" type="Sprite2D" parent="Menu/Fish/Pond/Grid/Minnow/Minnow/Icon"]
 visible = false
 position = Vector2(35.25, 28.75)
 scale = Vector2(2.58594, 2.58594)
 texture = ExtResource("8_mrf14")
 
-[node name="Bass" type="Button" parent="Menu/Fish/Pond/Grid" groups=["Button"]]
+[node name="Bass" type="MarginContainer" parent="Menu/Fish/Pond/Grid"]
+layout_mode = 2
+
+[node name="Bass" type="Button" parent="Menu/Fish/Pond/Grid/Bass" groups=["Button"]]
 modulate = Color(1, 1, 1, 0.784314)
 layout_mode = 2
 theme_override_colors/font_hover_pressed_color = Color(0.203922, 0.109804, 0.152941, 1)
@@ -4844,19 +4931,19 @@ icon = SubResource("GradientTexture2D_3gygn")
 script = SubResource("GDScript_lsou6")
 item_best = ExtResource("6_1s63a")
 
-[node name="Press" type="AnimationPlayer" parent="Menu/Fish/Pond/Grid/Bass"]
+[node name="Press" type="AnimationPlayer" parent="Menu/Fish/Pond/Grid/Bass/Bass"]
 libraries = {
 "": SubResource("AnimationLibrary_2lsh3")
 }
 autoplay = "RESET"
 
-[node name="Active" type="AnimationPlayer" parent="Menu/Fish/Pond/Grid/Bass"]
+[node name="Active" type="AnimationPlayer" parent="Menu/Fish/Pond/Grid/Bass/Bass"]
 libraries = {
 "": SubResource("AnimationLibrary_6mw2v")
 }
 autoplay = "disabled"
 
-[node name="Icon" type="Panel" parent="Menu/Fish/Pond/Grid/Bass"]
+[node name="Icon" type="Panel" parent="Menu/Fish/Pond/Grid/Bass/Bass"]
 layout_mode = 0
 offset_left = 6.0
 offset_top = 5.0
@@ -4865,7 +4952,7 @@ offset_bottom = 62.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_yx0ju")
 
-[node name="Shadow" type="TextureRect" parent="Menu/Fish/Pond/Grid/Bass/Icon"]
+[node name="Shadow" type="TextureRect" parent="Menu/Fish/Pond/Grid/Bass/Bass/Icon"]
 modulate = Color(1, 1, 1, 0.258824)
 layout_mode = 0
 offset_left = 0.531372
@@ -4875,19 +4962,22 @@ offset_bottom = 48.0
 texture = SubResource("GradientTexture2D_cx17w")
 expand_mode = 1
 
-[node name="Dark" type="Sprite2D" parent="Menu/Fish/Pond/Grid/Bass/Icon"]
+[node name="Dark" type="Sprite2D" parent="Menu/Fish/Pond/Grid/Bass/Bass/Icon"]
 material = SubResource("ShaderMaterial_i04l2")
 position = Vector2(30.5314, 31.0314)
 scale = Vector2(1.31348, 1.31348)
 texture = ExtResource("7_sou7x")
 
-[node name="Icon" type="Sprite2D" parent="Menu/Fish/Pond/Grid/Bass/Icon"]
+[node name="Icon" type="Sprite2D" parent="Menu/Fish/Pond/Grid/Bass/Bass/Icon"]
 visible = false
 position = Vector2(30.5, 31)
 scale = Vector2(1.31348, 1.31348)
 texture = ExtResource("7_sou7x")
 
-[node name="Sturgeon" type="Button" parent="Menu/Fish/Pond/Grid" groups=["Button"]]
+[node name="Sturgeon" type="MarginContainer" parent="Menu/Fish/Pond/Grid"]
+layout_mode = 2
+
+[node name="Sturgeon" type="Button" parent="Menu/Fish/Pond/Grid/Sturgeon" groups=["Button"]]
 modulate = Color(1, 1, 1, 0.882353)
 layout_mode = 2
 theme_override_colors/font_hover_pressed_color = Color(0.203922, 0.109804, 0.152941, 1)
@@ -4906,19 +4996,19 @@ icon = SubResource("GradientTexture2D_m7oo1")
 script = SubResource("GDScript_a7p1h")
 item_best = ExtResource("9_7scty")
 
-[node name="Press" type="AnimationPlayer" parent="Menu/Fish/Pond/Grid/Sturgeon"]
+[node name="Press" type="AnimationPlayer" parent="Menu/Fish/Pond/Grid/Sturgeon/Sturgeon"]
 libraries = {
 "": SubResource("AnimationLibrary_2lsh3")
 }
 autoplay = "RESET"
 
-[node name="Active" type="AnimationPlayer" parent="Menu/Fish/Pond/Grid/Sturgeon"]
+[node name="Active" type="AnimationPlayer" parent="Menu/Fish/Pond/Grid/Sturgeon/Sturgeon"]
 libraries = {
 "": SubResource("AnimationLibrary_s0ori")
 }
 autoplay = "disabled"
 
-[node name="Icon" type="Panel" parent="Menu/Fish/Pond/Grid/Sturgeon"]
+[node name="Icon" type="Panel" parent="Menu/Fish/Pond/Grid/Sturgeon/Sturgeon"]
 layout_mode = 0
 offset_left = 6.0
 offset_top = 5.0
@@ -4927,7 +5017,7 @@ offset_bottom = 62.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_mk3w7")
 
-[node name="Shadow" type="TextureRect" parent="Menu/Fish/Pond/Grid/Sturgeon/Icon"]
+[node name="Shadow" type="TextureRect" parent="Menu/Fish/Pond/Grid/Sturgeon/Sturgeon/Icon"]
 modulate = Color(1, 1, 1, 0.258824)
 layout_mode = 0
 offset_left = 0.531372
@@ -4937,19 +5027,22 @@ offset_bottom = 48.0
 texture = SubResource("GradientTexture2D_cx17w")
 expand_mode = 1
 
-[node name="Dark" type="Sprite2D" parent="Menu/Fish/Pond/Grid/Sturgeon/Icon"]
+[node name="Dark" type="Sprite2D" parent="Menu/Fish/Pond/Grid/Sturgeon/Sturgeon/Icon"]
 material = SubResource("ShaderMaterial_i04l2")
 position = Vector2(35.5, 32)
 scale = Vector2(1.46826, 1.46826)
 texture = ExtResource("9_h7vqn")
 
-[node name="Icon" type="Sprite2D" parent="Menu/Fish/Pond/Grid/Sturgeon/Icon"]
+[node name="Icon" type="Sprite2D" parent="Menu/Fish/Pond/Grid/Sturgeon/Sturgeon/Icon"]
 visible = false
 position = Vector2(35.5, 32)
 scale = Vector2(1.46826, 1.46826)
 texture = ExtResource("9_h7vqn")
 
-[node name="Zebra" type="Button" parent="Menu/Fish/Pond/Grid" groups=["Button"]]
+[node name="Zebra" type="MarginContainer" parent="Menu/Fish/Pond/Grid"]
+layout_mode = 2
+
+[node name="Zebra" type="Button" parent="Menu/Fish/Pond/Grid/Zebra" groups=["Button"]]
 modulate = Color(1, 1, 1, 0.784314)
 layout_mode = 2
 theme_override_colors/font_hover_pressed_color = Color(0.203922, 0.109804, 0.152941, 1)
@@ -4968,19 +5061,19 @@ icon = SubResource("GradientTexture2D_5gel1")
 script = SubResource("GDScript_p8jp8")
 item_best = ExtResource("13_x78li")
 
-[node name="Press" type="AnimationPlayer" parent="Menu/Fish/Pond/Grid/Zebra"]
+[node name="Press" type="AnimationPlayer" parent="Menu/Fish/Pond/Grid/Zebra/Zebra"]
 libraries = {
 "": SubResource("AnimationLibrary_2lsh3")
 }
 autoplay = "RESET"
 
-[node name="Active" type="AnimationPlayer" parent="Menu/Fish/Pond/Grid/Zebra"]
+[node name="Active" type="AnimationPlayer" parent="Menu/Fish/Pond/Grid/Zebra/Zebra"]
 libraries = {
 "": SubResource("AnimationLibrary_awdxs")
 }
 autoplay = "disabled"
 
-[node name="Icon" type="Panel" parent="Menu/Fish/Pond/Grid/Zebra"]
+[node name="Icon" type="Panel" parent="Menu/Fish/Pond/Grid/Zebra/Zebra"]
 layout_mode = 0
 offset_left = 6.0
 offset_top = 5.0
@@ -4989,7 +5082,7 @@ offset_bottom = 62.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_cahx3")
 
-[node name="Shadow" type="TextureRect" parent="Menu/Fish/Pond/Grid/Zebra/Icon"]
+[node name="Shadow" type="TextureRect" parent="Menu/Fish/Pond/Grid/Zebra/Zebra/Icon"]
 modulate = Color(1, 1, 1, 0.258824)
 layout_mode = 0
 offset_left = 0.531372
@@ -4999,105 +5092,38 @@ offset_bottom = 48.0
 texture = SubResource("GradientTexture2D_cx17w")
 expand_mode = 1
 
-[node name="Dark" type="Sprite2D" parent="Menu/Fish/Pond/Grid/Zebra/Icon"]
+[node name="Dark" type="Sprite2D" parent="Menu/Fish/Pond/Grid/Zebra/Zebra/Icon"]
 material = SubResource("ShaderMaterial_i04l2")
 position = Vector2(33.5, 31)
 scale = Vector2(1.46826, 1.46826)
 texture = ExtResource("14_y6vdo")
 
-[node name="Icon" type="Sprite2D" parent="Menu/Fish/Pond/Grid/Zebra/Icon"]
+[node name="Icon" type="Sprite2D" parent="Menu/Fish/Pond/Grid/Zebra/Zebra/Icon"]
 visible = false
 position = Vector2(33.5, 31)
 scale = Vector2(1.46826, 1.46826)
 texture = ExtResource("14_y6vdo")
 
 [node name="Spacer1" type="TextureButton" parent="Menu/Fish/Pond/Grid"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 2
 disabled = true
 texture_disabled = SubResource("GradientTexture2D_vkpvb")
 
-[node name="Divide6" type="TextureRect" parent="Menu/Fish/Pond/Grid"]
-layout_mode = 2
-texture = SubResource("GradientTexture2D_hdjw0")
-
-[node name="Label" type="Label" parent="Menu/Fish/Pond/Grid/Divide6"]
-layout_mode = 0
-offset_left = -0.5
-offset_top = 4.0
-offset_right = 109.5
-offset_bottom = 44.0
-text = "TIER 2"
-label_settings = SubResource("LabelSettings_hkxo6")
-
-[node name="Line" type="Panel" parent="Menu/Fish/Pond/Grid/Divide6"]
-layout_mode = 2
-offset_top = 47.0
-offset_right = 80.0
-offset_bottom = 47.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_t7cre")
-
-[node name="Divide7" type="TextureRect" parent="Menu/Fish/Pond/Grid"]
-layout_mode = 2
-texture = SubResource("GradientTexture2D_hdjw0")
-
-[node name="Line" type="Panel" parent="Menu/Fish/Pond/Grid/Divide7"]
-layout_mode = 2
-offset_left = -15.0
-offset_top = 47.0
-offset_right = 91.0
-offset_bottom = 47.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_du1su")
-
-[node name="Divide8" type="TextureRect" parent="Menu/Fish/Pond/Grid"]
-layout_mode = 2
-texture = SubResource("GradientTexture2D_hdjw0")
-
-[node name="Line" type="Panel" parent="Menu/Fish/Pond/Grid/Divide8"]
-layout_mode = 2
-offset_left = -15.0
-offset_top = 47.0
-offset_right = 91.0
-offset_bottom = 47.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_du1su")
-
-[node name="Divide9" type="TextureRect" parent="Menu/Fish/Pond/Grid"]
-layout_mode = 2
-texture = SubResource("GradientTexture2D_hdjw0")
-
-[node name="Line" type="Panel" parent="Menu/Fish/Pond/Grid/Divide9"]
-layout_mode = 2
-offset_left = -15.0
-offset_top = 47.0
-offset_right = 91.0
-offset_bottom = 47.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_du1su")
-
-[node name="Divide10" type="TextureRect" parent="Menu/Fish/Pond/Grid"]
-layout_mode = 2
-texture = SubResource("GradientTexture2D_hdjw0")
-
-[node name="Line" type="Panel" parent="Menu/Fish/Pond/Grid/Divide10"]
-layout_mode = 2
-offset_left = -25.0
-offset_top = 47.0
-offset_right = 83.0
-offset_bottom = 47.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_ls8q2")
-
 [connection signal="animation_finished" from="Blur/Animate" to="." method="_on_animate"]
 [connection signal="pressed" from="Menu/Fish/Title/Left" to="." method="_on_left_pressed"]
 [connection signal="pressed" from="Menu/Fish/Title/Right" to="." method="_on_right_pressed"]
-[connection signal="button_down" from="Menu/Fish/Pond/Grid/Minnow" to="Menu/Fish/Pond/Grid/Minnow" method="_on_button_down"]
-[connection signal="button_up" from="Menu/Fish/Pond/Grid/Minnow" to="Menu/Fish/Pond/Grid/Minnow" method="_on_button_up"]
-[connection signal="pressed" from="Menu/Fish/Pond/Grid/Minnow" to="Menu/Fish/Pond/Grid/Minnow" method="_on_pressed"]
-[connection signal="button_down" from="Menu/Fish/Pond/Grid/Bass" to="Menu/Fish/Pond/Grid/Bass" method="_on_button_down"]
-[connection signal="button_up" from="Menu/Fish/Pond/Grid/Bass" to="Menu/Fish/Pond/Grid/Bass" method="_on_button_up"]
-[connection signal="pressed" from="Menu/Fish/Pond/Grid/Bass" to="Menu/Fish/Pond/Grid/Bass" method="_on_pressed"]
-[connection signal="button_down" from="Menu/Fish/Pond/Grid/Sturgeon" to="Menu/Fish/Pond/Grid/Sturgeon" method="_on_button_down"]
-[connection signal="button_up" from="Menu/Fish/Pond/Grid/Sturgeon" to="Menu/Fish/Pond/Grid/Sturgeon" method="_on_button_up"]
-[connection signal="pressed" from="Menu/Fish/Pond/Grid/Sturgeon" to="Menu/Fish/Pond/Grid/Sturgeon" method="_on_pressed"]
-[connection signal="button_down" from="Menu/Fish/Pond/Grid/Zebra" to="Menu/Fish/Pond/Grid/Zebra" method="_on_button_down"]
-[connection signal="button_up" from="Menu/Fish/Pond/Grid/Zebra" to="Menu/Fish/Pond/Grid/Zebra" method="_on_button_up"]
-[connection signal="pressed" from="Menu/Fish/Pond/Grid/Zebra" to="Menu/Fish/Pond/Grid/Zebra" method="_on_pressed"]
+[connection signal="button_down" from="Menu/Fish/Pond/Grid/Minnow/Minnow" to="Menu/Fish/Pond/Grid/Minnow/Minnow" method="_on_button_down"]
+[connection signal="button_up" from="Menu/Fish/Pond/Grid/Minnow/Minnow" to="Menu/Fish/Pond/Grid/Minnow/Minnow" method="_on_button_up"]
+[connection signal="pressed" from="Menu/Fish/Pond/Grid/Minnow/Minnow" to="Menu/Fish/Pond/Grid/Minnow/Minnow" method="_on_pressed"]
+[connection signal="button_down" from="Menu/Fish/Pond/Grid/Bass/Bass" to="Menu/Fish/Pond/Grid/Bass/Bass" method="_on_button_down"]
+[connection signal="button_up" from="Menu/Fish/Pond/Grid/Bass/Bass" to="Menu/Fish/Pond/Grid/Bass/Bass" method="_on_button_up"]
+[connection signal="pressed" from="Menu/Fish/Pond/Grid/Bass/Bass" to="Menu/Fish/Pond/Grid/Bass/Bass" method="_on_pressed"]
+[connection signal="button_down" from="Menu/Fish/Pond/Grid/Sturgeon/Sturgeon" to="Menu/Fish/Pond/Grid/Sturgeon/Sturgeon" method="_on_button_down"]
+[connection signal="button_up" from="Menu/Fish/Pond/Grid/Sturgeon/Sturgeon" to="Menu/Fish/Pond/Grid/Sturgeon/Sturgeon" method="_on_button_up"]
+[connection signal="pressed" from="Menu/Fish/Pond/Grid/Sturgeon/Sturgeon" to="Menu/Fish/Pond/Grid/Sturgeon/Sturgeon" method="_on_pressed"]
+[connection signal="button_down" from="Menu/Fish/Pond/Grid/Zebra/Zebra" to="Menu/Fish/Pond/Grid/Zebra/Zebra" method="_on_button_down"]
+[connection signal="button_up" from="Menu/Fish/Pond/Grid/Zebra/Zebra" to="Menu/Fish/Pond/Grid/Zebra/Zebra" method="_on_button_up"]
+[connection signal="pressed" from="Menu/Fish/Pond/Grid/Zebra/Zebra" to="Menu/Fish/Pond/Grid/Zebra/Zebra" method="_on_pressed"]
