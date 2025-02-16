@@ -2,6 +2,7 @@
 
 ## Known Bugs
 - Using all bait of a specific kind without resetting the global "current_bait" and then visiting the shop will result in the bait being displayed at a value of 0
+- When casting, the cast can be interupted during travel by holding down the left mouse
 
 ## 0.0.13 WIP
 - Fixed Vulkan bug by adding an OpenGL shader ontop of everything (???)

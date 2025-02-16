@@ -371,13 +371,13 @@ _data = {
 "open": SubResource("Animation_1pgr2")
 }
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_3mtug"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0cyk3"]
 shader = ExtResource("5_pssml")
-shader_parameter/inner_radius = 0.0
-shader_parameter/outer_radius = 0.0
-shader_parameter/vignette_strength = 0.0
-shader_parameter/dither_strength = 0.0
-shader_parameter/vignette_color = null
+shader_parameter/inner_radius = 0.5
+shader_parameter/outer_radius = 1.5
+shader_parameter/vignette_strength = 1.0
+shader_parameter/dither_strength = 0.03
+shader_parameter/vignette_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0dktm"]
 bg_color = Color(0.905882, 0.835294, 0.701961, 1)
@@ -6131,7 +6131,7 @@ speed_scale = 1.5
 
 [node name="Vignette" type="ColorRect" parent="Blur"]
 z_index = 100
-material = SubResource("ShaderMaterial_3mtug")
+material = SubResource("ShaderMaterial_0cyk3")
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

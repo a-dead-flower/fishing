@@ -20,13 +20,13 @@ shader_parameter/lod = 2.0
 shader_parameter/red = 0.0
 shader_parameter/mix_percentage = 0.35
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_4rfs6"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xbdje"]
 shader = ExtResource("5_er0x6")
-shader_parameter/inner_radius = 0.0
-shader_parameter/outer_radius = 0.0
-shader_parameter/vignette_strength = 0.0
-shader_parameter/dither_strength = 0.0
-shader_parameter/vignette_color = null
+shader_parameter/inner_radius = 0.5
+shader_parameter/outer_radius = 1.5
+shader_parameter/vignette_strength = 1.0
+shader_parameter/dither_strength = 0.03
+shader_parameter/vignette_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0dktm"]
 bg_color = Color(0.905882, 0.835294, 0.701961, 1)
@@ -1295,7 +1295,7 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0cxm5"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ot27c"]
 resource_local_to_scene = true
 content_margin_top = 2.0
 bg_color = Color(0.847059, 0.709804, 0.580392, 1)
@@ -1887,7 +1887,7 @@ grow_vertical = 2
 
 [node name="Vignette" type="ColorRect" parent="Blur"]
 z_index = 100
-material = SubResource("ShaderMaterial_4rfs6")
+material = SubResource("ShaderMaterial_xbdje")
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -2245,7 +2245,7 @@ ammount = 10
 
 [node name="Worm" parent="Menu/Shop/List/VBox" instance=ExtResource("8_56b1m")]
 layout_mode = 2
-theme_override_styles/disabled = SubResource("StyleBoxFlat_0cxm5")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_ot27c")
 theme_override_styles/hover = SubResource("StyleBoxFlat_exfve")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_s413e")
 theme_override_styles/normal = SubResource("StyleBoxFlat_3h3ji")
