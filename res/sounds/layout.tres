@@ -9,6 +9,7 @@ resource_name = "Filter"
 cutoff_hz = 5000.0
 
 [resource]
+bus/0/mute = true
 bus/0/effect/0/effect = SubResource("AudioEffectAmplify_qpcnn")
 bus/0/effect/0/enabled = true
 bus/1/name = &"Player"

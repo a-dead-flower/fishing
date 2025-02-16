@@ -1,9 +1,13 @@
-[gd_scene load_steps=21 format=3 uid="uid://b0hrq5l8lteaa"]
+[gd_scene load_steps=38 format=3 uid="uid://b0hrq5l8lteaa"]
 
 [ext_resource type="Script" path="res://src/scripts/info.gd" id="1_j7h6i"]
 [ext_resource type="Texture2D" uid="uid://d3gb4qhhmsi30" path="res://res/fishes/sturgeon/sturgeon_icon.png" id="1_o4jn7"]
 [ext_resource type="FontFile" uid="uid://j364g1d5bwm4" path="res://res/fonts/Bold.ttf" id="2_avpf7"]
 [ext_resource type="FontFile" uid="uid://c11kcqv0xwtq8" path="res://res/fonts/Normal.ttf" id="3_ui556"]
+[ext_resource type="Texture2D" uid="uid://dd8eyy1h55330" path="res://res/sprites/close.svg" id="4_om3k2"]
+[ext_resource type="Texture2D" uid="uid://m5hesaeg3d6v" path="res://res/sprites/trash.svg" id="5_0gxca"]
+[ext_resource type="Texture2D" uid="uid://babouoemk4741" path="res://res/sprites/confirm.png" id="6_6y0s8"]
+[ext_resource type="Texture2D" uid="uid://clhe2hhfb5euu" path="res://res/sprites/stars.png" id="7_pycc1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5naqq"]
 bg_color = Color(0.905882, 0.835294, 0.701961, 1)
@@ -44,9 +48,12 @@ width = 128
 fill = 1
 fill_from = Vector2(0.5, 0.5)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n308x"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ci4xd"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1bnlt"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_32f1n"]
+content_margin_left = 1.0
+content_margin_top = 8.0
+content_margin_bottom = 10.0
 bg_color = Color(0.847059, 0.709804, 0.580392, 1)
 border_width_bottom = 4
 border_color = Color(0.752941, 0.580392, 0.45098, 1)
@@ -55,7 +62,10 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lirvx"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o256t"]
+content_margin_left = 1.0
+content_margin_top = 12.0
+content_margin_bottom = 6.0
 bg_color = Color(0.847059, 0.709804, 0.580392, 1)
 border_width_top = 4
 border_color = Color(0.905882, 0.835294, 0.701961, 1)
@@ -64,7 +74,12 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5b83a"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n2qsr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8n0dv"]
+content_margin_left = 1.0
+content_margin_top = 8.0
+content_margin_bottom = 10.0
 bg_color = Color(0.847059, 0.709804, 0.580392, 1)
 border_width_bottom = 4
 border_color = Color(0.752941, 0.580392, 0.45098, 1)
@@ -72,6 +87,255 @@ corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qylde"]
+content_margin_left = 1.0
+content_margin_top = 12.0
+content_margin_bottom = 6.0
+bg_color = Color(0.847059, 0.709804, 0.580392, 1)
+border_width_top = 4
+border_color = Color(0.905882, 0.835294, 0.701961, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="Animation" id="Animation_b0o2l"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:theme_override_styles/normal")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("StyleBoxFlat_8n0dv")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:theme_override_styles/pressed")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("StyleBoxFlat_qylde")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:theme_override_styles/hover")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("StyleBoxFlat_8n0dv")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:icon")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("5_0gxca")]
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0sjh1"]
+content_margin_left = 1.0
+content_margin_top = 8.0
+content_margin_bottom = 10.0
+bg_color = Color(0.647059, 0.188235, 0.188235, 1)
+border_width_bottom = 4
+border_color = Color(0.458824, 0.141176, 0.219608, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gw1k4"]
+content_margin_left = 1.0
+content_margin_top = 12.0
+content_margin_bottom = 6.0
+bg_color = Color(0.647059, 0.188235, 0.188235, 1)
+border_width_top = 4
+border_color = Color(0.905882, 0.835294, 0.701961, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h82rl"]
+content_margin_left = 1.0
+content_margin_top = 8.0
+content_margin_bottom = 10.0
+bg_color = Color(0.647059, 0.188235, 0.188235, 1)
+border_width_bottom = 4
+border_color = Color(0.458824, 0.141176, 0.219608, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="Animation" id="Animation_3ko2v"]
+resource_name = "focus"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:theme_override_styles/normal")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("StyleBoxFlat_0sjh1")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:theme_override_styles/pressed")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("StyleBoxFlat_gw1k4")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:theme_override_styles/hover")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("StyleBoxFlat_h82rl")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:icon")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("6_6y0s8")]
+}
+
+[sub_resource type="Animation" id="Animation_xrr8d"]
+resource_name = "unfocus"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:theme_override_styles/normal")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("StyleBoxFlat_8n0dv")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:theme_override_styles/pressed")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("StyleBoxFlat_qylde")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:theme_override_styles/hover")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("StyleBoxFlat_8n0dv")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:icon")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("5_0gxca")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mb570"]
+_data = {
+"RESET": SubResource("Animation_b0o2l"),
+"focus": SubResource("Animation_3ko2v"),
+"unfocus": SubResource("Animation_xrr8d")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xqbg2"]
+atlas = ExtResource("7_pycc1")
+region = Rect2(0, 36, 54, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_shkgk"]
+atlas = ExtResource("7_pycc1")
+region = Rect2(0, 18, 54, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_benjo"]
+atlas = ExtResource("7_pycc1")
+region = Rect2(0, 0, 54, 18)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a8lqw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xqbg2")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_shkgk")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_benjo")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}]
 
 [sub_resource type="LabelSettings" id="LabelSettings_sx7v3"]
 font = ExtResource("2_avpf7")
@@ -170,10 +434,10 @@ texture = SubResource("GradientTexture2D_j5hrl")
 
 [node name="Icon" type="TextureRect" parent="Panel/Icon"]
 layout_mode = 0
-offset_left = 1.0
-offset_top = -59.5
-offset_right = 65.0
-offset_bottom = 4.5
+offset_left = 33.0
+offset_top = -30.0
+offset_right = 83.0
+offset_bottom = 20.0
 scale = Vector2(4, 4)
 texture = ExtResource("1_o4jn7")
 
@@ -184,9 +448,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -127.0
+offset_left = -126.5
 offset_top = 206.0
-offset_right = 127.0
+offset_right = -1.5
 offset_bottom = 245.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -197,11 +461,56 @@ theme_override_colors/font_focus_color = Color(0.203922, 0.109804, 0.152941, 1)
 theme_override_colors/font_color = Color(0.203922, 0.109804, 0.152941, 1)
 theme_override_fonts/font = ExtResource("3_ui556")
 theme_override_font_sizes/font_size = 24
-theme_override_styles/focus = SubResource("StyleBoxEmpty_n308x")
-theme_override_styles/hover = SubResource("StyleBoxFlat_1bnlt")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_lirvx")
-theme_override_styles/normal = SubResource("StyleBoxFlat_5b83a")
-text = "Close"
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ci4xd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_32f1n")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_o256t")
+theme_override_styles/normal = SubResource("StyleBoxFlat_32f1n")
+keep_pressed_outside = true
+icon = ExtResource("4_om3k2")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Trash" type="Button" parent="Panel" groups=["Button"]]
+texture_filter = 3
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 8.5
+offset_top = 206.0
+offset_right = 126.5
+offset_bottom = 245.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_pressed_color = Color(0.203922, 0.109804, 0.152941, 1)
+theme_override_colors/font_hover_color = Color(0.203922, 0.109804, 0.152941, 1)
+theme_override_colors/font_pressed_color = Color(0.203922, 0.109804, 0.152941, 1)
+theme_override_colors/font_focus_color = Color(0.203922, 0.109804, 0.152941, 1)
+theme_override_colors/font_color = Color(0.203922, 0.109804, 0.152941, 1)
+theme_override_fonts/font = ExtResource("3_ui556")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/focus = SubResource("StyleBoxEmpty_n2qsr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8n0dv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qylde")
+theme_override_styles/normal = SubResource("StyleBoxFlat_8n0dv")
+keep_pressed_outside = true
+icon = ExtResource("5_0gxca")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Focus" type="AnimationPlayer" parent="Panel/Trash"]
+libraries = {
+"": SubResource("AnimationLibrary_mb570")
+}
+autoplay = "unfocus"
+
+[node name="Stars" type="AnimatedSprite2D" parent="Panel"]
+position = Vector2(238, 134)
+scale = Vector2(-1.14331, 1.14331)
+sprite_frames = SubResource("SpriteFrames_a8lqw")
+animation = &"1"
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 0
@@ -301,3 +610,4 @@ label_settings = SubResource("LabelSettings_kr2le")
 horizontal_alignment = 2
 
 [connection signal="pressed" from="Panel/Close" to="." method="_on_close"]
+[connection signal="pressed" from="Panel/Trash" to="." method="_on_trash"]

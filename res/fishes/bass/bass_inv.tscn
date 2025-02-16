@@ -191,7 +191,7 @@ theme_override_colors/font_pressed_color = Color(0.203922, 0.109804, 0.152941, 1
 theme_override_colors/font_focus_color = Color(0.203922, 0.109804, 0.152941, 1)
 theme_override_colors/font_color = Color(0.203922, 0.109804, 0.152941, 1)
 theme_override_fonts/font = ExtResource("1_yxpbu")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 24
 theme_override_styles/focus = SubResource("StyleBoxEmpty_t200f")
 theme_override_styles/hover = SubResource("StyleBoxFlat_3jsan")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_xhv2x")
@@ -224,9 +224,9 @@ frame_progress = 0.0238692
 
 [node name="Icon" type="TextureRect" parent="Price"]
 layout_mode = 0
-offset_left = -260.0
-offset_top = -37.0
-offset_right = -206.0
+offset_left = -276.0
+offset_top = -29.0
+offset_right = -230.0
 offset_bottom = 17.0
 scale = Vector2(-2, 2)
 mouse_filter = 2

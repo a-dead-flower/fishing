@@ -230,10 +230,10 @@ horizontal_alignment = 2
 
 [node name="Icon" type="TextureRect" parent="Price"]
 layout_mode = 0
-offset_left = -146.0
-offset_top = -65.0
-offset_right = -66.0
-offset_bottom = 15.0
+offset_left = -169.0
+offset_top = -42.0
+offset_right = -110.0
+offset_bottom = 17.0
 scale = Vector2(-2, 2)
 mouse_filter = 2
 texture = ExtResource("3_ddaug")

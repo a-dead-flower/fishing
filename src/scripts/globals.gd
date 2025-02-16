@@ -4,11 +4,21 @@ const sturgeon = preload("res://res/fishes/sturgeon/sturgeon_inv.tscn")
 const minnow = preload("res://res/fishes/minnow/minnow_inv.tscn")
 const zebra = preload("res://res/fishes/zebra/zebra_inv.tscn")
 const bass = preload("res://res/fishes/bass/bass_inv.tscn")
+const ruby = preload("res://res/fishes/ruby/ruby_inv.tscn")
+const sapp = preload("res://res/fishes/sapp/sapp_inv.tscn")
+const chub = preload("res://res/fishes/chub/chub_inv.tscn")
+const perch = preload("res://res/fishes/perch/perch_inv.tscn")
+const neon = preload("res://res/fishes/neon/neon_inv.tscn")
 
 const bass_sell = preload("res://res/fishes/bass/bass_sell.tscn")
 const minnow_sell = preload("res://res/fishes/minnow/minnow_sell.tscn")
 const sturgeon_sell = preload("res://res/fishes/sturgeon/sturgeon_sell.tscn")
 const zebra_sell = preload("res://res/fishes/zebra/zebra_sell.tscn")
+const ruby_sell = preload("res://res/fishes/ruby/ruby_sell.tscn")
+const sapp_sell = preload("res://res/fishes/sapp/sapp_sell.tscn")
+const chub_sell = preload("res://res/fishes/chub/chub_sell.tscn")
+const perch_sell = preload("res://res/fishes/perch/perch_sell.tscn")
+const neon_sell = preload("res://res/fishes/neon/neon_sell.tscn")
 
 const grub_inv = preload("res://res/equip/bait/grub/grub_inv.tscn")
 const grub_icon = preload("res://res/equip/bait/grub/grub_icon.tscn")
@@ -84,7 +94,14 @@ var pond_caught = []
 
 var lure = []
 var bait = []
-var fish = []
+var fish = [
+	[bass, 100, "100cm", bass_sell],
+	[minnow, 100, "100cm", minnow_sell],
+	[zebra, 100, "100cm", zebra_sell],
+	[sturgeon, 100, "100cm", sturgeon_sell],
+	[ruby, 100, "100cm", ruby_sell],
+	[sapp, 100, "100cm", sapp_sell]
+]
 
 
 #region SETUP

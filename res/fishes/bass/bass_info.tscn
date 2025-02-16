@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://dhg8xd02r0htf"]
+[gd_scene load_steps=38 format=3 uid="uid://dhg8xd02r0htf"]
 
 [ext_resource type="Texture2D" uid="uid://usyxt166m0tr" path="res://res/fishes/bass/bass_icon.png" id="1_f6tiu"]
 [ext_resource type="Script" path="res://src/scripts/info.gd" id="1_wli8m"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dd8eyy1h55330" path="res://res/sprites/close.svg" id="4_5e4i3"]
 [ext_resource type="Texture2D" uid="uid://m5hesaeg3d6v" path="res://res/sprites/trash.svg" id="5_4sm8u"]
 [ext_resource type="Texture2D" uid="uid://babouoemk4741" path="res://res/sprites/confirm.png" id="6_xk5de"]
+[ext_resource type="Texture2D" uid="uid://clhe2hhfb5euu" path="res://res/sprites/stars.png" id="7_pdugb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5naqq"]
 bg_color = Color(0.905882, 0.835294, 0.701961, 1)
@@ -297,6 +298,45 @@ _data = {
 "unfocus": SubResource("Animation_xrr8d")
 }
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_xqbg2"]
+atlas = ExtResource("7_pdugb")
+region = Rect2(0, 36, 54, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_shkgk"]
+atlas = ExtResource("7_pdugb")
+region = Rect2(0, 18, 54, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_benjo"]
+atlas = ExtResource("7_pdugb")
+region = Rect2(0, 0, 54, 18)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_utv4n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xqbg2")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_shkgk")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_benjo")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}]
+
 [sub_resource type="LabelSettings" id="LabelSettings_sx7v3"]
 font = ExtResource("2_pvsol")
 font_size = 32
@@ -394,10 +434,10 @@ texture = SubResource("GradientTexture2D_j5hrl")
 
 [node name="Icon" type="TextureRect" parent="Panel/Icon"]
 layout_mode = 0
-offset_left = -6.0
-offset_top = -59.0
-offset_right = 58.0
-offset_bottom = 5.0
+offset_left = 23.0
+offset_top = -37.0
+offset_right = 76.0
+offset_bottom = 16.0
 scale = Vector2(4, 4)
 texture = ExtResource("1_f6tiu")
 
@@ -464,6 +504,12 @@ expand_icon = true
 libraries = {
 "": SubResource("AnimationLibrary_mb570")
 }
+
+[node name="Stars" type="AnimatedSprite2D" parent="Panel"]
+position = Vector2(238, 134)
+scale = Vector2(-1.14331, 1.14331)
+sprite_frames = SubResource("SpriteFrames_utv4n")
+animation = &"1"
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 0

@@ -6,6 +6,11 @@ const sturgeon_entity = preload("res://res/fishes/sturgeon/sturgeon_entity.tscn"
 const bass_entity = preload("res://res/fishes/bass/bass_entity.tscn")
 const minnow_entity = preload("res://res/fishes/minnow/minnow_entity.tscn")
 const zebra_entity = preload("res://res/fishes/zebra/zebra_entity.tscn")
+const ruby_entity = preload("res://res/fishes/ruby/ruby_entity.tscn")
+const sapp_entity = preload("res://res/fishes/sapp/sapp_entity.tscn")
+const chub_entity = preload("res://res/fishes/chub/chub_entity.tscn")
+const perch_entity = preload("res://res/fishes/perch/perch_entity.tscn")
+const neon_entity = preload("res://res/fishes/neon/neon_entity.tscn")
 
 var rng = RandomNumberGenerator.new()
 var new_best = false
@@ -49,6 +54,7 @@ func create_fish():
 
 ## Weighted rarity finder
 func get_rarity():
+	return "Common"
 	rng.randomize()
 	var weighted = 0
 	for n in rarities: weighted += rarities[n]
@@ -68,8 +74,13 @@ func generate():
 	
 	## Common fish
 	if type == "Common":
-		var fish = rng.randi_range(1, 1)
+		var fish = rng.randi_range(1, 6)
 		if fish == 1: return minnow()
+		elif fish == 2: return ruby()
+		elif fish == 3: return sapp()
+		elif fish == 4: return perch()
+		elif fish == 5: return neon()
+		elif fish == 6: return chub()
 		
 	## Uncommon fish
 	if type == "Uncommon":
@@ -132,6 +143,81 @@ func minnow():
 	]); return minnow_entity
 
 
+## Add ruby crayfish
+func ruby():
+	var base = 35
+	fish_size = rng.randf_range(5.0, 12.0)
+	var value = base + (fish_size/2)
+	fish_array = Globals.pond_caught
+	fish_name = "Ruby"; fish_token = "cm"
+	Globals.fish.append([
+		Globals.ruby,
+		snapped(value,1),
+		str(snapped(fish_size,0.1),"cm"),
+		Globals.ruby_sell
+	]); return ruby_entity
+
+
+## Add sapphire crayfish
+func sapp():
+	var base = 35
+	fish_size = rng.randf_range(5.0, 14.0)
+	var value = base + (fish_size/2)
+	fish_array = Globals.pond_caught
+	fish_name = "Sapp"; fish_token = "cm"
+	Globals.fish.append([
+		Globals.sapp,
+		snapped(value,1),
+		str(snapped(fish_size,0.1),"cm"),
+		Globals.sapp_sell
+	]); return sapp_entity
+
+
+## Add chub
+func chub():
+	var base = 35
+	fish_size = rng.randf_range(30.0, 50.0)
+	var value = base + (fish_size/2)
+	fish_array = Globals.pond_caught
+	fish_name = "Chub"; fish_token = "cm"
+	Globals.fish.append([
+		Globals.chub,
+		snapped(value,1),
+		str(snapped(fish_size,0.1),"cm"),
+		Globals.chub_sell
+	]); return chub_entity
+
+
+## Add perch
+func perch():
+	var base = 40
+	fish_size = rng.randf_range(30.0, 45.0)
+	var value = base + (fish_size/2)
+	fish_array = Globals.pond_caught
+	fish_name = "Perch"; fish_token = "cm"
+	Globals.fish.append([
+		Globals.perch,
+		snapped(value,1),
+		str(snapped(fish_size,0.1),"cm"),
+		Globals.perch_sell
+	]); return perch_entity
+
+
+## Add perch
+func neon():
+	var base = 50
+	fish_size = rng.randf_range(2.0, 6.0)
+	var value = base + (fish_size/2)
+	fish_array = Globals.pond_caught
+	fish_name = "Neon"; fish_token = "cm"
+	Globals.fish.append([
+		Globals.neon,
+		snapped(value,1),
+		str(snapped(fish_size,0.1),"cm"),
+		Globals.neon_sell
+	]); return neon_entity
+
+
 ## Add bass
 func bass():
 	var base = 100
@@ -175,5 +261,8 @@ func zebra():
 		str(snapped(fish_size,0.1),"cm"),
 		Globals.zebra_sell
 	]); return zebra_entity
+
+
+
 
 #endregion

@@ -1,8 +1,9 @@
-[gd_scene load_steps=24 format=3 uid="uid://0mccbcbo865d"]
+[gd_scene load_steps=29 format=3 uid="uid://0mccbcbo865d"]
 
 [ext_resource type="Shader" path="res://src/shader/bestiary.gdshader" id="1_uvoci"]
 [ext_resource type="Texture2D" uid="uid://cyunqf0qxciq6" path="res://res/fishes/zebra/zebra_icon.png" id="2_pe1ai"]
 [ext_resource type="FontFile" uid="uid://j364g1d5bwm4" path="res://res/fonts/Bold.ttf" id="3_40fpt"]
+[ext_resource type="Texture2D" uid="uid://clhe2hhfb5euu" path="res://res/sprites/stars.png" id="3_bkmwa"]
 [ext_resource type="FontFile" uid="uid://c11kcqv0xwtq8" path="res://res/fonts/Normal.ttf" id="4_yf2yq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jcy50"]
@@ -13,6 +14,21 @@ corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 corner_detail = 20
+
+[sub_resource type="Animation" id="Animation_p4p5e"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Panel/Icon/Icon:material")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [null]
+}
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ylp7e"]
 shader = ExtResource("1_uvoci")
@@ -99,21 +115,6 @@ tracks/2/keys = {
 "values": [null]
 }
 
-[sub_resource type="Animation" id="Animation_p4p5e"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../Panel/Icon/Icon:material")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [null]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8du6e"]
 _data = {
 "RESET": SubResource("Animation_p4p5e"),
@@ -159,6 +160,45 @@ gradient = SubResource("Gradient_s8ihe")
 width = 128
 fill = 1
 fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xqbg2"]
+atlas = ExtResource("3_bkmwa")
+region = Rect2(0, 36, 54, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_shkgk"]
+atlas = ExtResource("3_bkmwa")
+region = Rect2(0, 18, 54, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_benjo"]
+atlas = ExtResource("3_bkmwa")
+region = Rect2(0, 0, 54, 18)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dsy7i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xqbg2")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_shkgk")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_benjo")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}]
 
 [sub_resource type="LabelSettings" id="LabelSettings_3chpl"]
 font = ExtResource("3_40fpt")
@@ -284,12 +324,19 @@ texture = SubResource("GradientTexture2D_li1y5")
 
 [node name="Icon" type="TextureRect" parent="Panel/Icon"]
 layout_mode = 0
-offset_left = -1.0
-offset_top = -59.0
-offset_right = 63.0
-offset_bottom = 5.0
+offset_left = 9.0
+offset_top = -29.0
+offset_right = 69.0
+offset_bottom = 21.0
 scale = Vector2(4, 4)
 texture = ExtResource("2_pe1ai")
+expand_mode = 1
+
+[node name="Stars" type="AnimatedSprite2D" parent="Panel"]
+position = Vector2(238, 134)
+scale = Vector2(-1.14331, 1.14331)
+sprite_frames = SubResource("SpriteFrames_dsy7i")
+animation = &"1"
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 0
