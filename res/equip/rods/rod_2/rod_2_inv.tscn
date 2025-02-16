@@ -1,9 +1,9 @@
-[gd_scene load_steps=18 format=3 uid="uid://bgk80jt0xjgcq"]
+[gd_scene load_steps=18 format=3 uid="uid://b4ov1hn3ihdp0"]
 
-[ext_resource type="FontFile" uid="uid://c11kcqv0xwtq8" path="res://res/fonts/Normal.ttf" id="1_df8kr"]
-[ext_resource type="Script" path="res://src/scripts/equip.gd" id="2_dplml"]
-[ext_resource type="Texture2D" uid="uid://bl4u40obl7st0" path="res://res/equip/rods/rod_one/rod_one_icon.png" id="3_ir7s4"]
-[ext_resource type="Texture2D" uid="uid://clhe2hhfb5euu" path="res://res/sprites/stars.png" id="4_4u44s"]
+[ext_resource type="FontFile" uid="uid://c11kcqv0xwtq8" path="res://res/fonts/Normal.ttf" id="1_j8qhv"]
+[ext_resource type="Script" path="res://src/scripts/equip.gd" id="2_xwxbl"]
+[ext_resource type="Texture2D" uid="uid://dxrvwbob1a0ec" path="res://res/equip/rods/rod_2/rod_2_icon.png" id="3_y3wia"]
+[ext_resource type="Texture2D" uid="uid://clhe2hhfb5euu" path="res://res/sprites/stars.png" id="4_efpex"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t200f"]
 
@@ -35,16 +35,16 @@ width = 60
 height = 48
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eewwo"]
-atlas = ExtResource("4_4u44s")
+atlas = ExtResource("4_efpex")
 region = Rect2(0, 36, 54, 18)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_v3ogr"]
-atlas = ExtResource("4_4u44s")
-region = Rect2(0, 0, 54, 18)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_msbi8"]
-atlas = ExtResource("4_4u44s")
+atlas = ExtResource("4_efpex")
 region = Rect2(0, 18, 54, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v3ogr"]
+atlas = ExtResource("4_efpex")
+region = Rect2(0, 0, 54, 18)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_n64yg"]
 animations = [{
@@ -53,15 +53,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_eewwo")
 }],
 "loop": true,
-"name": &"one",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_v3ogr")
-}],
-"loop": true,
-"name": &"three",
+"name": &"1",
 "speed": 5.0
 }, {
 "frames": [{
@@ -69,7 +61,15 @@ animations = [{
 "texture": SubResource("AtlasTexture_msbi8")
 }],
 "loop": true,
-"name": &"two",
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v3ogr")
+}],
+"loop": true,
+"name": &"3",
 "speed": 5.0
 }]
 
@@ -134,19 +134,19 @@ theme_override_colors/font_hover_color = Color(0.203922, 0.109804, 0.152941, 1)
 theme_override_colors/font_pressed_color = Color(0.203922, 0.109804, 0.152941, 1)
 theme_override_colors/font_focus_color = Color(0.203922, 0.109804, 0.152941, 1)
 theme_override_colors/font_color = Color(0.203922, 0.109804, 0.152941, 1)
-theme_override_fonts/font = ExtResource("1_df8kr")
-theme_override_font_sizes/font_size = 24
+theme_override_fonts/font = ExtResource("1_j8qhv")
+theme_override_font_sizes/font_size = 20
 theme_override_styles/focus = SubResource("StyleBoxEmpty_t200f")
 theme_override_styles/hover = SubResource("StyleBoxFlat_q1og2")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_33xli")
 theme_override_styles/normal = SubResource("StyleBoxFlat_q1og2")
 toggle_mode = true
 keep_pressed_outside = true
-text = "Rod One"
+text = "Feathered"
 icon = SubResource("GradientTexture2D_ibvuj")
 alignment = 0
-script = ExtResource("2_dplml")
-item_name = "One"
+script = ExtResource("2_xwxbl")
+item_name = "Two"
 type = "Rod"
 
 [node name="Down" type="Control" parent="."]
@@ -160,19 +160,19 @@ mouse_filter = 2
 
 [node name="Icon" type="TextureRect" parent="Down"]
 layout_mode = 0
-offset_left = -187.0
-offset_top = -21.8507
+offset_left = -184.0
+offset_top = -18.8507
 offset_right = -168.0
-offset_bottom = -2.85074
+offset_bottom = -2.8507
 scale = Vector2(2, 2)
-texture = ExtResource("3_ir7s4")
+texture = ExtResource("3_y3wia")
 expand_mode = 1
 
 [node name="Stars" type="AnimatedSprite2D" parent="Down"]
 position = Vector2(4, -3.8507)
 scale = Vector2(-0.929216, 0.929216)
 sprite_frames = SubResource("SpriteFrames_n64yg")
-animation = &"one"
+animation = &"2"
 
 [node name="Press" type="AnimationPlayer" parent="."]
 libraries = {

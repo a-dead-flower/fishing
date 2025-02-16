@@ -16,7 +16,7 @@ func _ready() -> void:
 		disabled = true
 		$Max.visible = true
 		$Able.play("disabled")
-	if type == "Three" and Globals.has_rod_thr:
+	if type == "Three" and Globals.has_rod_the:
 		disabled = true
 		$Max.visible = true
 		$Able.play("disabled")
@@ -68,7 +68,7 @@ func _on_pressed():
 		disabled = true
 		$Max.visible = true
 		$Able.play("disabled")
-		Globals.has_rod_thr= true
+		Globals.has_rod_the= true
 		
 	else: place_name()
 

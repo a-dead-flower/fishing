@@ -24,8 +24,14 @@ const blue_sell = preload("res://res/equip/lure/blue/blue_sell.tscn")
 
 const empty_inv = preload("res://src/scenes/empty.tscn")
 
-const rod_one_inv = preload("res://res/equip/rods/rod_one/rod_one_inv.tscn")
-const rod_one_icon = preload("res://res/equip/rods/rod_one/rod_one_icon.tscn")
+const rod_one_inv = preload("res://res/equip/rods/rod_1/rod_1_inv.tscn")
+const rod_one_icon = preload("res://res/equip/rods/rod_1/rod_1_icon.tscn")
+
+const rod_two_inv = preload("res://res/equip/rods/rod_2/rod_2_inv.tscn")
+const rod_two_icon = preload("res://res/equip/rods/rod_2/rod_2_icon.tscn")
+
+const rod_three_inv = preload("res://res/equip/rods/rod_3/rod_3_inv.tscn")
+const rod_three_icon = preload("res://res/equip/rods/rod_3/rod_3_icon.tscn")
 
 
 var money = 500000
@@ -59,7 +65,7 @@ var current_lure = ""
 
 var has_rod_one = true
 var has_rod_two = false
-var has_rod_thr = false
+var has_rod_the = false
 
 var equip_info = true
 var shops_info = true

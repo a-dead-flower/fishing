@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bl4u40obl7st0"
-path="res://.godot/imported/rod_one_icon.png-5383f2f1844062fef68f0bb51635aee1.ctex"
+uid="uid://bsheuwfmsa1cu"
+path="res://.godot/imported/rod_3_icon.png-eeb9547db2ad5540d059f67f4a59fe8f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://res/equip/rods/rod_one/rod_one_icon.png"
-dest_files=["res://.godot/imported/rod_one_icon.png-5383f2f1844062fef68f0bb51635aee1.ctex"]
+source_file="res://res/equip/rods/rod_3/rod_3_icon.png"
+dest_files=["res://.godot/imported/rod_3_icon.png-eeb9547db2ad5540d059f67f4a59fe8f.ctex"]
 
 [params]
 

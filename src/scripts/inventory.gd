@@ -263,6 +263,21 @@ func _redraw_rods():
 	elif Globals.current_rod != "One" and Globals.has_rod_one:
 		var item = Globals.rod_one_inv.instantiate()
 		parent.add_child(item)
+		
+	## Add rod two
+	if Globals.current_rod == "Two":
+		frame.add_child(Globals.rod_two_icon.instantiate())
+	elif Globals.current_rod != "Two" and Globals.has_rod_two:
+		var item = Globals.rod_two_inv.instantiate()
+		parent.add_child(item)
+		
+	## Add rod two
+	if Globals.current_rod == "Three":
+		frame.add_child(Globals.rod_three_icon.instantiate())
+	elif Globals.current_rod != "Three" and Globals.has_rod_the:
+		var item = Globals.rod_three_inv.instantiate()
+		parent.add_child(item)
+	
 	
 	## Set information position
 	if Globals.equip_info: ## Make sure info selected
