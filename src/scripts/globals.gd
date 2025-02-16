@@ -74,24 +74,11 @@ var upgrade_cast = 0
 var upgrade_loss = 0
 var upgrade_pack = 0
 
-var pond_caught = [
-	["Bass","57cm",1],
-	["Sturgeon","1.8m",1],
-	["Zebra","4cm",1]]
+var pond_caught = []
 
 var lure = []
 var bait = []
-var fish = [
-	[minnow, 31, "7cm", minnow_sell],
-	[bass, 102, "57cm", bass_sell],
-	[sturgeon, 243, "1.8m", sturgeon_sell],
-	[zebra, 433, "4cm", zebra_sell],
-	[minnow, 31, "7cm", minnow_sell],
-	[bass, 102, "57cm", bass_sell],
-	[sturgeon, 243, "1.8m", sturgeon_sell],
-	[zebra, 433, "4cm", zebra_sell],
-	[sturgeon, 243, "1.8m", sturgeon_sell],
-	[zebra, 433, "4cm", zebra_sell]]
+var fish = []
 
 
 #region SETUP

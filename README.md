@@ -6,6 +6,7 @@
 ## 0.0.13 WIP
 - Fixed fish sorting by price and name in shops bug
 - Added stats info to shop items instead of only for upgrades
+- Reworked interface for the bestiary for more consistant styling
 
 ## 0.0.12
 - Added repository to GitHub!
