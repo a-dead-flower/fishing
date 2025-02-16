@@ -1,4 +1,4 @@
-[gd_scene load_steps=75 format=3 uid="uid://ccx1xds30bhw"]
+[gd_scene load_steps=77 format=3 uid="uid://ccx1xds30bhw"]
 
 [ext_resource type="Script" path="res://src/scripts/inventory.gd" id="1_jh5kv"]
 [ext_resource type="Shader" path="res://src/shader/blur.gdshader" id="2_l6a0l"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dttu7rj47iq2x" path="res://res/sprites/coin.png" id="4_0hre4"]
 [ext_resource type="AudioStream" uid="uid://cv2h3qkki78cs" path="res://res/sounds/effects/swoop_dn.wav" id="4_4a3pu"]
 [ext_resource type="FontFile" uid="uid://c11kcqv0xwtq8" path="res://res/fonts/Normal.ttf" id="4_67x7h"]
+[ext_resource type="Shader" path="res://src/shader/vignette.gdshader" id="5_ojepa"]
 [ext_resource type="Texture2D" uid="uid://dnltkqaybvd2i" path="res://res/sprites/arrow.png" id="5_x8hf6"]
 [ext_resource type="Texture2D" uid="uid://cw317ku17e7ps" path="res://res/sprites/info.svg" id="6_464k6"]
 [ext_resource type="Script" path="res://src/scripts/eqpanel.gd" id="7_iriqc"]
@@ -168,6 +169,14 @@ _data = {
 "close": SubResource("Animation_se1a1"),
 "open": SubResource("Animation_1pgr2")
 }
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fklu5"]
+shader = ExtResource("5_ojepa")
+shader_parameter/inner_radius = 0.0
+shader_parameter/outer_radius = 0.0
+shader_parameter/vignette_strength = 0.0
+shader_parameter/dither_strength = 0.0
+shader_parameter/vignette_color = null
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0dktm"]
 bg_color = Color(0.905882, 0.835294, 0.701961, 1)
@@ -963,6 +972,16 @@ stream = ExtResource("4_4a3pu")
 volume_db = -8.0
 pitch_scale = 1.2
 bus = &"Effects"
+
+[node name="Vignette" type="ColorRect" parent="Blur"]
+z_index = 100
+material = SubResource("ShaderMaterial_fklu5")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Menu" type="Control" parent="."]
 layout_mode = 3

@@ -1,4 +1,4 @@
-[gd_scene load_steps=80 format=4 uid="uid://bj61ynu4oiib3"]
+[gd_scene load_steps=82 format=4 uid="uid://bj61ynu4oiib3"]
 
 [ext_resource type="Script" path="res://src/scripts/shops.gd" id="1_4ksjv"]
 [ext_resource type="Shader" path="res://src/shader/blur.gdshader" id="2_cfvo1"]
@@ -7,6 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://cv2h3qkki78cs" path="res://res/sounds/effects/swoop_dn.wav" id="4_3fflb"]
 [ext_resource type="Texture2D" uid="uid://dttu7rj47iq2x" path="res://res/sprites/coin.png" id="4_m8j2j"]
 [ext_resource type="FontFile" uid="uid://c11kcqv0xwtq8" path="res://res/fonts/Normal.ttf" id="5_1qldk"]
+[ext_resource type="Shader" path="res://src/shader/vignette.gdshader" id="5_er0x6"]
 [ext_resource type="Texture2D" uid="uid://dnltkqaybvd2i" path="res://res/sprites/arrow.png" id="6_3tfej"]
 [ext_resource type="PackedScene" uid="uid://dgpmjxl1i3qj4" path="res://res/equip/bait/grub/grub_sell.tscn" id="7_sv1fy"]
 [ext_resource type="PackedScene" uid="uid://o4cy6sftman4" path="res://res/equip/bait/worm/worm_sell.tscn" id="8_56b1m"]
@@ -18,6 +19,14 @@ shader = ExtResource("2_cfvo1")
 shader_parameter/lod = 2.0
 shader_parameter/red = 0.0
 shader_parameter/mix_percentage = 0.35
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4rfs6"]
+shader = ExtResource("5_er0x6")
+shader_parameter/inner_radius = 0.0
+shader_parameter/outer_radius = 0.0
+shader_parameter/vignette_strength = 0.0
+shader_parameter/dither_strength = 0.0
+shader_parameter/vignette_color = null
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0dktm"]
 bg_color = Color(0.905882, 0.835294, 0.701961, 1)
@@ -1286,7 +1295,7 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sdbm0"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0cxm5"]
 resource_local_to_scene = true
 content_margin_top = 2.0
 bg_color = Color(0.847059, 0.709804, 0.580392, 1)
@@ -1876,6 +1885,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Vignette" type="ColorRect" parent="Blur"]
+z_index = 100
+material = SubResource("ShaderMaterial_4rfs6")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="Sounds" type="Node" parent="Blur"]
 
 [node name="Up" type="AudioStreamPlayer" parent="Blur/Sounds"]
@@ -2226,7 +2245,7 @@ ammount = 10
 
 [node name="Worm" parent="Menu/Shop/List/VBox" instance=ExtResource("8_56b1m")]
 layout_mode = 2
-theme_override_styles/disabled = SubResource("StyleBoxFlat_sdbm0")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_0cxm5")
 theme_override_styles/hover = SubResource("StyleBoxFlat_exfve")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_s413e")
 theme_override_styles/normal = SubResource("StyleBoxFlat_3h3ji")

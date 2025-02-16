@@ -1,10 +1,11 @@
-[gd_scene load_steps=106 format=4 uid="uid://dxm0eckleoe0y"]
+[gd_scene load_steps=108 format=4 uid="uid://dxm0eckleoe0y"]
 
 [ext_resource type="Script" path="res://src/scripts/bestiary.gd" id="1_6v264"]
 [ext_resource type="Shader" path="res://src/shader/blur.gdshader" id="2_k66q4"]
 [ext_resource type="AudioStream" uid="uid://cyeppffd0xinn" path="res://res/sounds/effects/swoop_up.wav" id="3_2hrpr"]
 [ext_resource type="FontFile" uid="uid://j364g1d5bwm4" path="res://res/fonts/Bold.ttf" id="3_60aye"]
 [ext_resource type="AudioStream" uid="uid://cv2h3qkki78cs" path="res://res/sounds/effects/swoop_dn.wav" id="4_k1q2p"]
+[ext_resource type="Shader" path="res://src/shader/vignette.gdshader" id="5_2rnf8"]
 [ext_resource type="PackedScene" uid="uid://fbao1dk6g3dt" path="res://res/fishes/bass/bass_best.tscn" id="6_1s63a"]
 [ext_resource type="FontFile" uid="uid://c11kcqv0xwtq8" path="res://res/fonts/Normal.ttf" id="6_6boxs"]
 [ext_resource type="Shader" path="res://src/shader/bestiary.gdshader" id="6_bfhu2"]
@@ -175,6 +176,14 @@ _data = {
 "close": SubResource("Animation_se1a1"),
 "open": SubResource("Animation_1pgr2")
 }
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cmjh3"]
+shader = ExtResource("5_2rnf8")
+shader_parameter/inner_radius = 0.0
+shader_parameter/outer_radius = 0.0
+shader_parameter/vignette_strength = 0.0
+shader_parameter/dither_strength = 0.0
+shader_parameter/vignette_color = null
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0dktm"]
 bg_color = Color(0.905882, 0.835294, 0.701961, 1)
@@ -4521,6 +4530,16 @@ stream = ExtResource("4_k1q2p")
 volume_db = -8.0
 pitch_scale = 1.2
 bus = &"Effects"
+
+[node name="Vignette" type="ColorRect" parent="Blur"]
+z_index = 2
+material = SubResource("ShaderMaterial_cmjh3")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Menu" type="Control" parent="."]
 layout_mode = 3

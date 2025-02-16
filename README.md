@@ -4,6 +4,7 @@
 - Using all bait of a specific kind without resetting the global "current_bait" and then visiting the shop will result in the bait being displayed at a value of 0
 
 ## 0.0.13 WIP
+- Fixed Vulkan bug by adding an OpenGL shader ontop of everything (???)
 - Fixed fish sorting by price and name in shops bug
 - Added stats info to shop items instead of only for upgrades
 - Reworked interface for the bestiary for more consistant styling

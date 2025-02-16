@@ -1,7 +1,8 @@
-[gd_scene load_steps=80 format=4 uid="uid://dxuldvh7hegbv"]
+[gd_scene load_steps=82 format=4 uid="uid://dxuldvh7hegbv"]
 
 [ext_resource type="Script" path="res://src/scripts/pause.gd" id="1_g4br5"]
 [ext_resource type="Shader" path="res://src/shader/blur.gdshader" id="2_wd2tm"]
+[ext_resource type="Shader" path="res://src/shader/vignette.gdshader" id="3_cqmja"]
 [ext_resource type="FontFile" uid="uid://j364g1d5bwm4" path="res://res/fonts/Bold.ttf" id="3_oe0hf"]
 [ext_resource type="FontFile" uid="uid://c11kcqv0xwtq8" path="res://res/fonts/Normal.ttf" id="4_clad8"]
 [ext_resource type="Texture2D" uid="uid://bxxnno3kn4x3u" path="res://res/sprites/slider.png" id="5_byo2r"]
@@ -16,6 +17,14 @@ shader = ExtResource("2_wd2tm")
 shader_parameter/lod = 2.0
 shader_parameter/red = 0.0
 shader_parameter/mix_percentage = 0.35
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_n4r87"]
+shader = ExtResource("3_cqmja")
+shader_parameter/inner_radius = 0.0
+shader_parameter/outer_radius = 0.0
+shader_parameter/vignette_strength = 0.0
+shader_parameter/dither_strength = 0.0
+shader_parameter/vignette_color = null
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0dktm"]
 bg_color = Color(0.905882, 0.835294, 0.701961, 1)
@@ -1996,6 +2005,16 @@ script = ExtResource("1_g4br5")
 
 [node name="Blur" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_qrcew")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Vignette" type="ColorRect" parent="Blur"]
+z_index = 2
+material = SubResource("ShaderMaterial_n4r87")
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

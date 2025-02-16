@@ -1,9 +1,10 @@
-[gd_scene load_steps=117 format=4 uid="uid://drij8g318bkom"]
+[gd_scene load_steps=119 format=4 uid="uid://drij8g318bkom"]
 
 [ext_resource type="Script" path="res://src/scripts/upgrade.gd" id="1_pul6s"]
 [ext_resource type="Shader" path="res://src/shader/blur.gdshader" id="2_auwsh"]
 [ext_resource type="AudioStream" uid="uid://cyeppffd0xinn" path="res://res/sounds/effects/swoop_up.wav" id="3_vygub"]
 [ext_resource type="AudioStream" uid="uid://cv2h3qkki78cs" path="res://res/sounds/effects/swoop_dn.wav" id="4_4hsoy"]
+[ext_resource type="Shader" path="res://src/shader/vignette.gdshader" id="5_pssml"]
 [ext_resource type="FontFile" uid="uid://j364g1d5bwm4" path="res://res/fonts/Bold.ttf" id="5_tjgvp"]
 [ext_resource type="Script" path="res://src/scripts/upitem.gd" id="6_4mneo"]
 [ext_resource type="FontFile" uid="uid://c11kcqv0xwtq8" path="res://res/fonts/Normal.ttf" id="7_imeb7"]
@@ -369,6 +370,14 @@ _data = {
 "close": SubResource("Animation_se1a1"),
 "open": SubResource("Animation_1pgr2")
 }
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3mtug"]
+shader = ExtResource("5_pssml")
+shader_parameter/inner_radius = 0.0
+shader_parameter/outer_radius = 0.0
+shader_parameter/vignette_strength = 0.0
+shader_parameter/dither_strength = 0.0
+shader_parameter/vignette_color = null
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0dktm"]
 bg_color = Color(0.905882, 0.835294, 0.701961, 1)
@@ -6119,6 +6128,16 @@ libraries = {
 }
 autoplay = "open"
 speed_scale = 1.5
+
+[node name="Vignette" type="ColorRect" parent="Blur"]
+z_index = 100
+material = SubResource("ShaderMaterial_3mtug")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Menu" type="Control" parent="."]
 layout_mode = 3
