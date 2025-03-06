@@ -18,6 +18,11 @@ const guppy_entity = preload("res://res/fishes/guppy/guppy_entity.tscn")
 const walleye_entity = preload("res://res/fishes/walleye/walleye_entity.tscn")
 const musk_entity = preload("res://res/fishes/musk/musk_entity.tscn")
 const belly_entity = preload("res://res/fishes/belly/belly_entity.tscn")
+const wcrap_entity = preload("res://res/fishes/wcrap/wcrap_entity.tscn")
+const bgill_entity = preload("res://res/fishes/bgill/bgill_entity.tscn")
+const bullh_entity = preload("res://res/fishes/bullh/bullh_entity.tscn")
+const brook_entity = preload("res://res/fishes/brook/brook_entity.tscn")
+const bcrap_entity = preload("res://res/fishes/bcrap/bcrap_entity.tscn")
 
 var rng = RandomNumberGenerator.new()
 var new_best = false
@@ -43,7 +48,7 @@ var rarities = {
 
 ## Function called to start minigame
 func start_game():
-	current_fish = belly()
+	current_fish = bcrap()
 	entity_fish = current_fish.instantiate()
 	var child = game.instantiate()
 	child.fish_name = entity_fish.name
@@ -269,6 +274,36 @@ func guppy():
 	]); return guppy_entity
 
 
+## Add white crappie
+func wcrap():
+	var base = 50
+	fish_size = rng.randf_range(17.0, 53.0)
+	var value = base + (fish_size/2)
+	fish_array = Globals.pond_caught
+	fish_name = "Wcrap"; fish_token = "cm"
+	Globals.fish.append([
+		Globals.wcrap,
+		snapped(value,1),
+		str(snapped(fish_size,0.1),"cm"),
+		Globals.wcrap_sell
+	]); return wcrap_entity
+
+
+## Add black crappie
+func bcrap():
+	var base = 50
+	fish_size = rng.randf_range(17.0, 53.0)
+	var value = base + (fish_size/2)
+	fish_array = Globals.pond_caught
+	fish_name = "Bcrap"; fish_token = "cm"
+	Globals.fish.append([
+		Globals.bcrap,
+		snapped(value,1),
+		str(snapped(fish_size,0.1),"cm"),
+		Globals.bcrap_sell
+	]); return bcrap_entity
+
+
 ## Add perch
 func bream():
 	var base = 30
@@ -282,6 +317,36 @@ func bream():
 		str(snapped(fish_size,0.1),"cm"),
 		Globals.bream_sell
 	]); return bream_entity
+
+
+## Add perch
+func bullh():
+	var base = 30
+	fish_size = rng.randf_range(15.0, 30.0)
+	var value = base + (fish_size)
+	fish_array = Globals.pond_caught
+	fish_name = "Bullh"; fish_token = "cm"
+	Globals.fish.append([
+		Globals.bullh,
+		snapped(value,1),
+		str(snapped(fish_size,0.1),"cm"),
+		Globals.bullh_sell
+	]); return bullh_entity
+
+
+## Add perch
+func brook():
+	var base = 30
+	fish_size = rng.randf_range(25.0, 65.0)
+	var value = base + (fish_size)
+	fish_array = Globals.pond_caught
+	fish_name = "Brook"; fish_token = "cm"
+	Globals.fish.append([
+		Globals.brook,
+		snapped(value,1),
+		str(snapped(fish_size,0.1),"cm"),
+		Globals.brook_sell
+	]); return brook_entity
 
 
 ## Add pike
@@ -327,6 +392,21 @@ func drum():
 		str(snapped(fish_size,0.1),"cm"),
 		Globals.drum_sell
 	]); return drum_entity
+
+
+## Add blue gill
+func bgill():
+	var base = 60
+	fish_size = rng.randf_range(7.0, 22.0)
+	var value = base + (fish_size/2)
+	fish_array = Globals.pond_caught
+	fish_name = "Bgill"; fish_token = "cm"
+	Globals.fish.append([
+		Globals.bgill,
+		snapped(value,1),
+		str(snapped(fish_size,0.1),"cm"),
+		Globals.bgill_sell
+	]); return bgill_entity
 
 
 ## Add bass

@@ -1,13 +1,13 @@
-[gd_scene load_steps=37 format=3 uid="uid://dvujlq147fb3b"]
+[gd_scene load_steps=37 format=3 uid="uid://dsqha6ea6ffyn"]
 
-[ext_resource type="Script" path="res://src/scripts/info.gd" id="1_051df"]
-[ext_resource type="Texture2D" uid="uid://bjrj8gl2lb7sd" path="res://res/fishes/perch/perch_icon.png" id="2_6rroa"]
-[ext_resource type="FontFile" uid="uid://c11kcqv0xwtq8" path="res://res/fonts/Normal.ttf" id="3_s7kcp"]
-[ext_resource type="Texture2D" uid="uid://dd8eyy1h55330" path="res://res/sprites/close.svg" id="4_lvs6x"]
-[ext_resource type="Texture2D" uid="uid://m5hesaeg3d6v" path="res://res/sprites/trash.svg" id="5_8tbw7"]
-[ext_resource type="Texture2D" uid="uid://babouoemk4741" path="res://res/sprites/confirm.png" id="6_swmsb"]
-[ext_resource type="Texture2D" uid="uid://clhe2hhfb5euu" path="res://res/sprites/stars.png" id="7_x7smu"]
-[ext_resource type="FontFile" uid="uid://j364g1d5bwm4" path="res://res/fonts/Bold.ttf" id="8_mmvmo"]
+[ext_resource type="Script" path="res://src/scripts/info.gd" id="1_f87dt"]
+[ext_resource type="Texture2D" uid="uid://f1qyx5syqskc" path="res://res/fishes/brook/brook_icon.png" id="2_dxa3f"]
+[ext_resource type="FontFile" uid="uid://c11kcqv0xwtq8" path="res://res/fonts/Normal.ttf" id="3_72wec"]
+[ext_resource type="Texture2D" uid="uid://dd8eyy1h55330" path="res://res/sprites/close.svg" id="4_s5al4"]
+[ext_resource type="Texture2D" uid="uid://m5hesaeg3d6v" path="res://res/sprites/trash.svg" id="5_wr7d6"]
+[ext_resource type="Texture2D" uid="uid://babouoemk4741" path="res://res/sprites/confirm.png" id="6_mmen1"]
+[ext_resource type="Texture2D" uid="uid://clhe2hhfb5euu" path="res://res/sprites/stars.png" id="7_i0xko"]
+[ext_resource type="FontFile" uid="uid://j364g1d5bwm4" path="res://res/fonts/Bold.ttf" id="8_q71fu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5naqq"]
 bg_color = Color(0.905882, 0.835294, 0.701961, 1)
@@ -136,7 +136,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("5_8tbw7")]
+"values": [ExtResource("5_wr7d6")]
 }
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0sjh1"]
@@ -224,7 +224,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("6_swmsb")]
+"values": [ExtResource("6_mmen1")]
 }
 
 [sub_resource type="Animation" id="Animation_xrr8d"]
@@ -276,7 +276,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("5_8tbw7")]
+"values": [ExtResource("5_wr7d6")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mb570"]
@@ -287,15 +287,15 @@ _data = {
 }
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xqbg2"]
-atlas = ExtResource("7_x7smu")
+atlas = ExtResource("7_i0xko")
 region = Rect2(0, 36, 54, 18)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_shkgk"]
-atlas = ExtResource("7_x7smu")
+atlas = ExtResource("7_i0xko")
 region = Rect2(0, 18, 54, 18)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_benjo"]
-atlas = ExtResource("7_x7smu")
+atlas = ExtResource("7_i0xko")
 region = Rect2(0, 0, 54, 18)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_niycx"]
@@ -326,7 +326,7 @@ animations = [{
 }]
 
 [sub_resource type="LabelSettings" id="LabelSettings_sx7v3"]
-font = ExtResource("8_mmvmo")
+font = ExtResource("8_q71fu")
 font_size = 32
 font_color = Color(0.203922, 0.109804, 0.152941, 1)
 
@@ -338,27 +338,27 @@ corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
 [sub_resource type="LabelSettings" id="LabelSettings_owv5e"]
-font = ExtResource("3_s7kcp")
+font = ExtResource("3_72wec")
 font_size = 24
 font_color = Color(0.203922, 0.109804, 0.152941, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_wtba8"]
-font = ExtResource("3_s7kcp")
+font = ExtResource("3_72wec")
 font_size = 24
 font_color = Color(0.745098, 0.466667, 0.168627, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_opegq"]
-font = ExtResource("3_s7kcp")
+font = ExtResource("3_72wec")
 font_size = 24
 font_color = Color(0.27451, 0.509804, 0.196078, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_6jptj"]
-font = ExtResource("3_s7kcp")
+font = ExtResource("3_72wec")
 font_size = 24
 font_color = Color(0.309804, 0.560784, 0.729412, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_kr2le"]
-font = ExtResource("3_s7kcp")
+font = ExtResource("3_72wec")
 font_size = 24
 font_color = Color(0, 0, 0, 1)
 
@@ -372,7 +372,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_051df")
+script = ExtResource("1_f87dt")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -421,13 +421,12 @@ offset_bottom = 115.0
 texture = SubResource("GradientTexture2D_v3pfq")
 
 [node name="Icon" type="TextureRect" parent="Panel/Icon"]
-layout_mode = 0
-offset_left = 45.0
+offset_left = 47.0
 offset_top = -13.0
-offset_right = 88.0
-offset_bottom = 30.0
+offset_right = 89.0
+offset_bottom = 29.0
 scale = Vector2(4, 4)
-texture = ExtResource("2_6rroa")
+texture = ExtResource("2_dxa3f")
 expand_mode = 1
 
 [node name="Close" type="Button" parent="Panel" groups=["Button"]]
@@ -448,14 +447,14 @@ theme_override_colors/font_hover_color = Color(0.203922, 0.109804, 0.152941, 1)
 theme_override_colors/font_pressed_color = Color(0.203922, 0.109804, 0.152941, 1)
 theme_override_colors/font_focus_color = Color(0.203922, 0.109804, 0.152941, 1)
 theme_override_colors/font_color = Color(0.203922, 0.109804, 0.152941, 1)
-theme_override_fonts/font = ExtResource("3_s7kcp")
+theme_override_fonts/font = ExtResource("3_72wec")
 theme_override_font_sizes/font_size = 24
 theme_override_styles/focus = SubResource("StyleBoxEmpty_lvqn0")
 theme_override_styles/hover = SubResource("StyleBoxFlat_8n0dv")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_bwbc8")
 theme_override_styles/normal = SubResource("StyleBoxFlat_8n0dv")
 keep_pressed_outside = true
-icon = ExtResource("4_lvs6x")
+icon = ExtResource("4_s5al4")
 icon_alignment = 1
 expand_icon = true
 
@@ -478,14 +477,14 @@ theme_override_colors/font_hover_color = Color(0.203922, 0.109804, 0.152941, 1)
 theme_override_colors/font_pressed_color = Color(0.203922, 0.109804, 0.152941, 1)
 theme_override_colors/font_focus_color = Color(0.203922, 0.109804, 0.152941, 1)
 theme_override_colors/font_color = Color(0.203922, 0.109804, 0.152941, 1)
-theme_override_fonts/font = ExtResource("3_s7kcp")
+theme_override_fonts/font = ExtResource("3_72wec")
 theme_override_font_sizes/font_size = 24
 theme_override_styles/focus = SubResource("StyleBoxEmpty_egomf")
 theme_override_styles/hover = SubResource("StyleBoxFlat_8n0dv")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_qylde")
 theme_override_styles/normal = SubResource("StyleBoxFlat_8n0dv")
 keep_pressed_outside = true
-icon = ExtResource("5_8tbw7")
+icon = ExtResource("5_wr7d6")
 icon_alignment = 1
 expand_icon = true
 
@@ -507,7 +506,7 @@ offset_left = 154.0
 offset_top = -106.0
 offset_right = 394.0
 offset_bottom = -66.0
-text = "Yellow Perch"
+text = "Brook Trout"
 label_settings = SubResource("LabelSettings_sx7v3")
 
 [node name="Line1" type="Panel" parent="Title"]

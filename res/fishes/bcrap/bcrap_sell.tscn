@@ -1,10 +1,10 @@
-[gd_scene load_steps=24 format=3 uid="uid://drq2lv77chm0y"]
+[gd_scene load_steps=24 format=3 uid="uid://c3vh8tn4fvrdt"]
 
-[ext_resource type="FontFile" uid="uid://c11kcqv0xwtq8" path="res://res/fonts/Normal.ttf" id="1_li5t4"]
-[ext_resource type="Script" path="res://src/scripts/sellitem.gd" id="2_lt7lo"]
-[ext_resource type="FontFile" uid="uid://j364g1d5bwm4" path="res://res/fonts/Bold.ttf" id="3_gvh0l"]
-[ext_resource type="Texture2D" uid="uid://chjgek330un40" path="res://res/fishes/neon/neon_icon.png" id="4_p2gse"]
-[ext_resource type="Texture2D" uid="uid://dttu7rj47iq2x" path="res://res/sprites/coin.png" id="5_frjam"]
+[ext_resource type="FontFile" uid="uid://c11kcqv0xwtq8" path="res://res/fonts/Normal.ttf" id="1_qlchl"]
+[ext_resource type="Script" path="res://src/scripts/sellitem.gd" id="2_abmiv"]
+[ext_resource type="FontFile" uid="uid://j364g1d5bwm4" path="res://res/fonts/Bold.ttf" id="3_vps1c"]
+[ext_resource type="Texture2D" uid="uid://ps668brculf" path="res://res/fishes/bcrap/bcrap_icon.png" id="4_e2jlp"]
+[ext_resource type="Texture2D" uid="uid://dttu7rj47iq2x" path="res://res/sprites/coin.png" id="5_vo6gn"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t200f"]
 
@@ -58,11 +58,11 @@ width = 94
 height = 58
 
 [sub_resource type="LabelSettings" id="LabelSettings_myoxx"]
-font = ExtResource("3_gvh0l")
+font = ExtResource("3_vps1c")
 font_size = 24
 font_color = Color(0.203922, 0.109804, 0.152941, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bl8r6"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rxugd"]
 bg_color = Color(0.843137, 0.709804, 0.580392, 1)
 border_width_top = 2
 border_color = Color(0.752941, 0.580392, 0.45098, 1)
@@ -72,19 +72,19 @@ corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jbhqs"]
-atlas = ExtResource("5_frjam")
+atlas = ExtResource("5_vo6gn")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jfl8l"]
-atlas = ExtResource("5_frjam")
+atlas = ExtResource("5_vo6gn")
 region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x4m12"]
-atlas = ExtResource("5_frjam")
+atlas = ExtResource("5_vo6gn")
 region = Rect2(32, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g7lo6"]
-atlas = ExtResource("5_frjam")
+atlas = ExtResource("5_vo6gn")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kc6ax"]
@@ -212,7 +212,7 @@ theme_override_colors/font_hover_color = Color(0.203922, 0.109804, 0.152941, 1)
 theme_override_colors/font_pressed_color = Color(0.203922, 0.109804, 0.152941, 1)
 theme_override_colors/font_focus_color = Color(0.203922, 0.109804, 0.152941, 1)
 theme_override_colors/font_color = Color(0.203922, 0.109804, 0.152941, 1)
-theme_override_fonts/font = ExtResource("1_li5t4")
+theme_override_fonts/font = ExtResource("1_qlchl")
 theme_override_font_sizes/font_size = 22
 theme_override_styles/focus = SubResource("StyleBoxEmpty_t200f")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_j8ncm")
@@ -220,11 +220,11 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_ihvyl")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_kprhh")
 theme_override_styles/normal = SubResource("StyleBoxFlat_vwbgq")
 keep_pressed_outside = true
-text = "Neon Tetra"
+text = "Black Crappie"
 icon = SubResource("GradientTexture2D_vildk")
 alignment = 0
-script = ExtResource("2_lt7lo")
-item_name = "Neon"
+script = ExtResource("2_abmiv")
+item_name = "Bcrap"
 item_type = "Fish"
 
 [node name="Price" type="Label" parent="."]
@@ -243,17 +243,17 @@ offset_left = -268.0
 offset_top = -10.0
 offset_right = -185.0
 offset_bottom = 37.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_bl8r6")
+theme_override_styles/panel = SubResource("StyleBoxFlat_rxugd")
 
 [node name="Icon" type="TextureRect" parent="Price"]
 layout_mode = 0
-offset_left = -174.0
-offset_top = -38.0
-offset_right = -119.0
-offset_bottom = 17.0
+offset_left = -180.0
+offset_top = -33.0
+offset_right = -131.0
+offset_bottom = 16.0
 scale = Vector2(-2, 2)
 mouse_filter = 2
-texture = ExtResource("4_p2gse")
+texture = ExtResource("4_e2jlp")
 expand_mode = 1
 
 [node name="Coin" type="AnimatedSprite2D" parent="Price"]

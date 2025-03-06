@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://db6333qjh00cd"]
+[gd_scene load_steps=59 format=3 uid="uid://db6333qjh00cd"]
 
 [ext_resource type="Script" path="res://src/scripts/game.gd" id="1_g0r3g"]
 [ext_resource type="Texture2D" uid="uid://cssstuea15l5m" path="res://res/sprites/rod.png" id="2_7jjqa"]
@@ -488,11 +488,100 @@ tracks/0/keys = {
 "values": [0.29, 0.76, 0.7, 0.41, 0.96, 0.67, 0.84, 0.28, 0.51, 0.7, 1.01, 0.77, 0.24]
 }
 
+[sub_resource type="Animation" id="Animation_ymo3n"]
+resource_name = "Wcrap"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:fish_strength")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0666667, 0.366667, 0.7, 1.26667, 2.5, 2.8, 5.26667, 5.46667, 6.8, 8.56667, 9.23333, 9.5, 9.76667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.16, 0.82, 0.76, 0.51, 0.41, 0.96, 0.67, 0.84, 0.7, 0.7, 1.01, 0.77, 0.24]
+}
+
+[sub_resource type="Animation" id="Animation_evtd7"]
+resource_name = "Bgill"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:fish_strength")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 0.233334, 2.03333, 2.26667, 3.03333, 3.3, 5.46667, 5.73333, 6.8, 8.56667, 9.06667, 9.56667, 9.76667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.16, 0.77, 0.67, 0.96, 1.01, 0.76, 0.84, 0.51, 0.7, 0.7, 0.41, 0.82, 0.24]
+}
+
+[sub_resource type="Animation" id="Animation_h15bw"]
+resource_name = "Bullh"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:fish_strength")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 0.233334, 1.03333, 1.36667, 2.16667, 2.53333, 4.4, 4.7, 6.8, 8.56667, 9.06667, 9.56667, 9.76667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.33, 0.86, 0.96, 0.67, 0.84, 0.51, 1.01, 0.76, 0.7, 0.7, 0.41, 0.82, 0.24]
+}
+
+[sub_resource type="Animation" id="Animation_i34ny"]
+resource_name = "Brook"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:fish_strength")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 1.13333, 3.56667, 6.36667, 9.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.73, 0.5, 0.81, 0.36, 0.33]
+}
+
+[sub_resource type="Animation" id="Animation_kdvfo"]
+resource_name = "Bcrap"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:fish_strength")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0666667, 0.4, 1.03333, 1.3, 3.43333, 3.7, 5.26667, 5.46667, 5.86667, 6.8, 7.03333, 8.56667, 9.76667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.16, 0.76, 0.82, 1.01, 0.51, 0.77, 0.67, 0.84, 0.41, 0.7, 0.96, 0.7, 0.24]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4i2u4"]
 _data = {
 "Bass": SubResource("Animation_odr27"),
+"Bcrap": SubResource("Animation_kdvfo"),
 "Belly": SubResource("Animation_3owyb"),
+"Bgill": SubResource("Animation_evtd7"),
 "Bream": SubResource("Animation_lueh7"),
+"Brook": SubResource("Animation_i34ny"),
+"Bullh": SubResource("Animation_h15bw"),
 "Chub": SubResource("Animation_8mhsw"),
 "Drum": SubResource("Animation_nd5xq"),
 "Guppy": SubResource("Animation_06geq"),
@@ -506,6 +595,7 @@ _data = {
 "Sapp": SubResource("Animation_pqa33"),
 "Sturgeon": SubResource("Animation_k4w2e"),
 "Walleye": SubResource("Animation_pihsx"),
+"Wcrap": SubResource("Animation_ymo3n"),
 "Zebra": SubResource("Animation_e2mbh")
 }
 

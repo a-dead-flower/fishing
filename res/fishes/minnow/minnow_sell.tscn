@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://j0ds1qc38nb8"]
+[gd_scene load_steps=24 format=3 uid="uid://j0ds1qc38nb8"]
 
 [ext_resource type="FontFile" uid="uid://c11kcqv0xwtq8" path="res://res/fonts/Normal.ttf" id="1_jhhp5"]
 [ext_resource type="Script" path="res://src/scripts/sellitem.gd" id="2_dnqtw"]
@@ -61,6 +61,15 @@ height = 58
 font = ExtResource("3_jl6dv")
 font_size = 24
 font_color = Color(0.203922, 0.109804, 0.152941, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spjsp"]
+bg_color = Color(0.843137, 0.709804, 0.580392, 1)
+border_width_top = 2
+border_color = Color(0.752941, 0.580392, 0.45098, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jbhqs"]
 atlas = ExtResource("5_41f2d")
@@ -204,7 +213,7 @@ theme_override_colors/font_pressed_color = Color(0.203922, 0.109804, 0.152941, 1
 theme_override_colors/font_focus_color = Color(0.203922, 0.109804, 0.152941, 1)
 theme_override_colors/font_color = Color(0.203922, 0.109804, 0.152941, 1)
 theme_override_fonts/font = ExtResource("1_jhhp5")
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 22
 theme_override_styles/focus = SubResource("StyleBoxEmpty_t200f")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_j8ncm")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ihvyl")
@@ -228,12 +237,20 @@ text = "100"
 label_settings = SubResource("LabelSettings_myoxx")
 horizontal_alignment = 2
 
+[node name="Panel" type="Panel" parent="Price"]
+layout_mode = 0
+offset_left = -268.0
+offset_top = -10.0
+offset_right = -185.0
+offset_bottom = 37.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_spjsp")
+
 [node name="Icon" type="TextureRect" parent="Price"]
 layout_mode = 0
-offset_left = -166.0
-offset_top = -43.0
-offset_right = -105.0
-offset_bottom = 18.0
+offset_left = -172.0
+offset_top = -41.0
+offset_right = -115.0
+offset_bottom = 16.0
 scale = Vector2(-2, 2)
 mouse_filter = 2
 texture = ExtResource("3_ddaug")

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dws561ei6mndn"
-path="res://.godot/imported/perch_icon.png-f096dcc125268c093145fd7c0fca4764.ctex"
+path="res://.godot/imported/wcrap_icon.png-f0fe469efbf792d6444fa3955eb23468.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://res/fishes/wcrap/perch_icon.png"
-dest_files=["res://.godot/imported/perch_icon.png-f096dcc125268c093145fd7c0fca4764.ctex"]
+source_file="res://res/fishes/wcrap/wcrap_icon.png"
+dest_files=["res://.godot/imported/wcrap_icon.png-f0fe469efbf792d6444fa3955eb23468.ctex"]
 
 [params]
 
