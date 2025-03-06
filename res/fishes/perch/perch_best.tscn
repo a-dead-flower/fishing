@@ -1,6 +1,6 @@
 [gd_scene load_steps=26 format=3 uid="uid://sitkyn3pr1d1"]
 
-[ext_resource type="Texture2D" uid="uid://bjrj8gl2lb7sd" path="res://res/fishes/perch/perch_icon.png" id="1_736et"]
+[ext_resource type="Texture2D" uid="uid://bjrj8gl2lb7sd" path="res://res/fishes/perch/perch_icon.png" id="1_b6r22"]
 [ext_resource type="Texture2D" uid="uid://clhe2hhfb5euu" path="res://res/sprites/stars.png" id="2_fudju"]
 [ext_resource type="FontFile" uid="uid://j364g1d5bwm4" path="res://res/fonts/Bold.ttf" id="3_yxk48"]
 [ext_resource type="FontFile" uid="uid://c11kcqv0xwtq8" path="res://res/fonts/Normal.ttf" id="4_bs6nf"]
@@ -283,7 +283,7 @@ offset_top = -13.0
 offset_right = 88.0
 offset_bottom = 30.0
 scale = Vector2(4, 4)
-texture = ExtResource("1_736et")
+texture = ExtResource("1_b6r22")
 expand_mode = 1
 
 [node name="Stars" type="AnimatedSprite2D" parent="Panel"]

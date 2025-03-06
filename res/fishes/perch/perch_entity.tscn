@@ -185,7 +185,7 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_nnhb7")
 
 [node name="Sprite" type="Sprite2D" parent="Box/Control/Panel/Icon"]
-position = Vector2(57, 30)
+position = Vector2(57, 31)
 rotation = 3.14159
 scale = Vector2(2.27757, -2.27757)
 texture = ExtResource("2_68x6s")

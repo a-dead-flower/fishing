@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://ei4jra75vcfy"]
+[gd_scene load_steps=24 format=3 uid="uid://ei4jra75vcfy"]
 
 [ext_resource type="FontFile" uid="uid://c11kcqv0xwtq8" path="res://res/fonts/Normal.ttf" id="1_txuh4"]
 [ext_resource type="Script" path="res://src/scripts/invitem.gd" id="2_y2nax"]
@@ -48,6 +48,15 @@ height = 62
 font = ExtResource("4_3p4fw")
 font_size = 24
 font_color = Color(0.203922, 0.109804, 0.152941, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s2w8v"]
+bg_color = Color(0.843137, 0.709804, 0.580392, 1)
+border_width_top = 2
+border_color = Color(0.752941, 0.580392, 0.45098, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jbhqs"]
 atlas = ExtResource("5_sq1xq")
@@ -214,6 +223,14 @@ text = "100"
 label_settings = SubResource("LabelSettings_3eh4d")
 horizontal_alignment = 2
 
+[node name="Panel" type="Panel" parent="Price"]
+layout_mode = 0
+offset_left = -365.0
+offset_top = -10.0
+offset_right = -277.0
+offset_bottom = 39.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_s2w8v")
+
 [node name="Coin" type="AnimatedSprite2D" parent="Price"]
 position = Vector2(63, 15)
 scale = Vector2(2, 2)
@@ -223,9 +240,9 @@ frame_progress = 0.0238692
 
 [node name="Icon" type="TextureRect" parent="Price"]
 layout_mode = 0
-offset_left = -272.0
-offset_top = -32.0
-offset_right = -223.0
+offset_left = -265.0
+offset_top = -42.0
+offset_right = -206.0
 offset_bottom = 17.0
 scale = Vector2(-2, 2)
 mouse_filter = 2

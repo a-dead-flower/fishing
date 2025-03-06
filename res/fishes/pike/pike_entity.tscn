@@ -1,0 +1,234 @@
+[gd_scene load_steps=15 format=3 uid="uid://ccs1tl4irgnh4"]
+
+[ext_resource type="Script" path="res://src/scripts/entity.gd" id="1_vctyq"]
+[ext_resource type="Texture2D" uid="uid://gn5ljne3b3ly" path="res://res/fishes/pike/pike_icon.png" id="2_dybqy"]
+[ext_resource type="FontFile" uid="uid://j364g1d5bwm4" path="res://res/fonts/Bold.ttf" id="3_k6ivq"]
+[ext_resource type="FontFile" uid="uid://c11kcqv0xwtq8" path="res://res/fonts/Normal.ttf" id="4_xw40p"]
+[ext_resource type="AudioStream" uid="uid://bignepuhc4s7t" path="res://res/sounds/effects/fish_caught.wav" id="5_perp5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aetkj"]
+size = Vector2(100, 100)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i16te"]
+bg_color = Color(0.905882, 0.835294, 0.701961, 1)
+draw_center = false
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.203922, 0.109804, 0.152941, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qosc2"]
+bg_color = Color(0.905882, 0.835294, 0.701961, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="LabelSettings" id="LabelSettings_46oti"]
+font = ExtResource("3_k6ivq")
+font_size = 32
+font_color = Color(0.203922, 0.109804, 0.152941, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nnhb7"]
+bg_color = Color(0.843137, 0.709804, 0.580392, 1)
+border_width_bottom = 4
+border_color = Color(0.752941, 0.580392, 0.45098, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_557mp"]
+font = ExtResource("4_xw40p")
+font_size = 24
+font_color = Color(0.203922, 0.109804, 0.152941, 1)
+
+[sub_resource type="Animation" id="Animation_mj4au"]
+resource_name = "Open"
+length = 2.0
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 1.75, 2),
+"transitions": PackedFloat32Array(0.6, 1, 0.6, 1),
+"update": 0,
+"values": [Vector2(0, 154), Vector2(0, 0), Vector2(0, 0), Vector2(0, 154)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.25),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"allow_cast"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_liyxh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j1ham"]
+_data = {
+"Open": SubResource("Animation_mj4au"),
+"RESET": SubResource("Animation_liyxh")
+}
+
+[node name="Pike" type="Node2D"]
+process_mode = 3
+script = ExtResource("1_vctyq")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+scale = Vector2(4, 4)
+texture = ExtResource("2_dybqy")
+
+[node name="Area" type="Area2D" parent="."]
+
+[node name="Collision" type="CollisionShape2D" parent="Area"]
+shape = SubResource("RectangleShape2D_aetkj")
+
+[node name="Box" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="Box"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Box/Control"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -259.0
+offset_top = -118.0
+offset_right = 260.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(314, 272)
+theme_override_styles/panel = SubResource("StyleBoxFlat_i16te")
+
+[node name="Border" type="Panel" parent="Box/Control/Panel"]
+show_behind_parent = true
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -6.0
+offset_top = -6.0
+offset_right = 6.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qosc2")
+
+[node name="Label" type="Label" parent="Box/Control/Panel"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 152.0
+offset_top = -19.5
+offset_right = 326.0
+offset_bottom = 20.5
+grow_vertical = 2
+text = "North Pike"
+label_settings = SubResource("LabelSettings_46oti")
+
+[node name="Icon" type="Panel" parent="Box/Control/Panel"]
+show_behind_parent = true
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 15.0
+offset_right = -381.0
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nnhb7")
+
+[node name="Sprite" type="Sprite2D" parent="Box/Control/Panel/Icon"]
+position = Vector2(59, 29)
+rotation = 3.14159
+scale = Vector2(2.2953, -2.2953)
+texture = ExtResource("2_dybqy")
+
+[node name="Best" type="Panel" parent="Box/Control/Panel"]
+show_behind_parent = true
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 361.0
+offset_top = 24.0
+offset_right = -20.0
+offset_bottom = -21.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nnhb7")
+
+[node name="Label" type="Label" parent="Box/Control/Panel/Best"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 10.0
+offset_top = -16.5
+offset_right = 127.0
+offset_bottom = 13.5
+grow_vertical = 2
+text = "New Best!"
+label_settings = SubResource("LabelSettings_557mp")
+horizontal_alignment = 1
+
+[node name="Slide" type="AnimationPlayer" parent="Box"]
+libraries = {
+"": SubResource("AnimationLibrary_j1ham")
+}
+
+[node name="Pop" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_perp5")
+volume_db = -4.0
+autoplay = true
+bus = &"Effects"
+
+[connection signal="body_entered" from="Area" to="." method="_on_body_entered"]
+[connection signal="animation_finished" from="Box/Slide" to="." method="_on_finished"]

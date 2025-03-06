@@ -3,7 +3,7 @@
 [ext_resource type="FontFile" uid="uid://c11kcqv0xwtq8" path="res://res/fonts/Normal.ttf" id="1_li5t4"]
 [ext_resource type="Script" path="res://src/scripts/sellitem.gd" id="2_lt7lo"]
 [ext_resource type="FontFile" uid="uid://j364g1d5bwm4" path="res://res/fonts/Bold.ttf" id="3_gvh0l"]
-[ext_resource type="Texture2D" uid="uid://bjrj8gl2lb7sd" path="res://res/fishes/perch/perch_icon.png" id="4_jlj1p"]
+[ext_resource type="Texture2D" uid="uid://chjgek330un40" path="res://res/fishes/neon/neon_icon.png" id="4_p2gse"]
 [ext_resource type="Texture2D" uid="uid://dttu7rj47iq2x" path="res://res/sprites/coin.png" id="5_frjam"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t200f"]
@@ -211,11 +211,11 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_ihvyl")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_kprhh")
 theme_override_styles/normal = SubResource("StyleBoxFlat_vwbgq")
 keep_pressed_outside = true
-text = "Yellow Perch"
+text = "Neon Tetra"
 icon = SubResource("GradientTexture2D_vildk")
 alignment = 0
 script = ExtResource("2_lt7lo")
-item_name = "Perch"
+item_name = "Neon"
 item_type = "Fish"
 
 [node name="Price" type="Label" parent="."]
@@ -236,7 +236,7 @@ offset_right = -131.0
 offset_bottom = 17.0
 scale = Vector2(-2, 2)
 mouse_filter = 2
-texture = ExtResource("4_jlj1p")
+texture = ExtResource("4_p2gse")
 expand_mode = 1
 
 [node name="Coin" type="AnimatedSprite2D" parent="Price"]
