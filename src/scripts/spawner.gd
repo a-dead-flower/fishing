@@ -48,7 +48,7 @@ var rarities = {
 
 ## Function called to start minigame
 func start_game():
-	current_fish = bcrap()
+	current_fish = generate()
 	entity_fish = current_fish.instantiate()
 	var child = game.instantiate()
 	child.fish_name = entity_fish.name
@@ -66,6 +66,7 @@ func create_fish():
 
 ## Weighted rarity finder
 func get_rarity():
+	return "Common"
 	rng.randomize()
 	var weighted = 0
 	for n in rarities: weighted += rarities[n]
