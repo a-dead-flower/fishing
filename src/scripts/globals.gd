@@ -1,5 +1,6 @@
 extends Node
 
+const eel = preload("res://res/fishes/eel/eel_inv.tscn")
 const bass = preload("res://res/fishes/bass/bass_inv.tscn")
 const ruby = preload("res://res/fishes/ruby/ruby_inv.tscn")
 const sapp = preload("res://res/fishes/sapp/sapp_inv.tscn")
@@ -8,6 +9,11 @@ const neon = preload("res://res/fishes/neon/neon_inv.tscn")
 const pike = preload("res://res/fishes/pike/pike_inv.tscn")
 const drum = preload("res://res/fishes/drum/drum_inv.tscn")
 const musk = preload("res://res/fishes/musk/musk_inv.tscn")
+const carp = preload("res://res/fishes/carp/carp_inv.tscn")
+const lgar = preload("res://res/fishes/lgar/lgar_inv.tscn")
+const ssun = preload("res://res/fishes/ssun/ssun_inv.tscn")
+const catf = preload("res://res/fishes/catf/catf_inv.tscn")
+const bfin = preload("res://res/fishes/bfin/bfin_inv.tscn")
 const perch = preload("res://res/fishes/perch/perch_inv.tscn")
 const bgill = preload("res://res/fishes/bgill/bgill_inv.tscn")
 const zebra = preload("res://res/fishes/zebra/zebra_inv.tscn")
@@ -18,10 +24,15 @@ const bream = preload("res://res/fishes/bream/bream_inv.tscn")
 const brook = preload("res://res/fishes/brook/brook_inv.tscn")
 const bcrap = preload("res://res/fishes/bcrap/bcrap_inv.tscn")
 const belly = preload("res://res/fishes/belly/belly_inv.tscn")
+const asnap = preload("res://res/fishes/asnap/asnap_inv.tscn")
 const minnow = preload("res://res/fishes/minnow/minnow_inv.tscn")
+const aperch = preload("res://res/fishes/aperch/aperch_inv.tscn")
+const btrout = preload("res://res/fishes/btrout/btrout_inv.tscn")
 const walleye = preload("res://res/fishes/walleye/walleye_inv.tscn")
 const sturgeon = preload("res://res/fishes/sturgeon/sturgeon_inv.tscn")
 
+const eel_sell = preload("res://res/fishes/eel/eel_sell.tscn")
+const ssun_sell = preload("res://res/fishes/ssun/ssun_sell.tscn")
 const bass_sell = preload("res://res/fishes/bass/bass_sell.tscn")
 const ruby_sell = preload("res://res/fishes/ruby/ruby_sell.tscn")
 const sapp_sell = preload("res://res/fishes/sapp/sapp_sell.tscn")
@@ -30,6 +41,10 @@ const neon_sell = preload("res://res/fishes/neon/neon_sell.tscn")
 const pike_sell = preload("res://res/fishes/pike/pike_sell.tscn")
 const drum_sell = preload("res://res/fishes/drum/drum_sell.tscn")
 const musk_sell = preload("res://res/fishes/musk/musk_sell.tscn")
+const carp_sell = preload("res://res/fishes/carp/carp_sell.tscn")
+const lgar_sell = preload("res://res/fishes/lgar/lgar_sell.tscn")
+const catf_sell = preload("res://res/fishes/catf/catf_sell.tscn")
+const bfin_sell = preload("res://res/fishes/bfin/bfin_sell.tscn")
 const bream_sell = preload("res://res/fishes/bream/bream_sell.tscn")
 const belly_sell = preload("res://res/fishes/belly/belly_sell.tscn")
 const wcrap_sell = preload("res://res/fishes/wcrap/wcrap_sell.tscn")
@@ -38,8 +53,11 @@ const bcrap_sell = preload("res://res/fishes/bcrap/bcrap_sell.tscn")
 const bullh_sell = preload("res://res/fishes/bullh/bullh_sell.tscn")
 const bgill_sell = preload("res://res/fishes/bgill/bgill_sell.tscn")
 const perch_sell = preload("res://res/fishes/perch/perch_sell.tscn")
+const asnap_sell = preload("res://res/fishes/asnap/asnap_sell.tscn")
 const zebra_sell = preload("res://res/fishes/zebra/zebra_sell.tscn")
 const guppy_sell = preload("res://res/fishes/guppy/guppy_sell.tscn")
+const btrout_sell = preload("res://res/fishes/btrout/btrout_sell.tscn")
+const aperch_sell = preload("res://res/fishes/aperch/aperch_sell.tscn")
 const minnow_sell = preload("res://res/fishes/minnow/minnow_sell.tscn")
 const walleye_sell = preload("res://res/fishes/walleye/walleye_sell.tscn")
 const sturgeon_sell = preload("res://res/fishes/sturgeon/sturgeon_sell.tscn")
@@ -83,7 +101,7 @@ var sett_sfx = 0.7
 var sett_ambi = 0.7
 var sett_player= 0.7
 var sett_vsync = true
-var sett_mute = true
+var sett_mute = false
 var sett_window = "Windowed"
 
 var keys_up = "W"
@@ -138,6 +156,8 @@ func add_test_fish():
 	Spawn.sturgeon()
 	Spawn.walleye()
 	Spawn.minnow()
+	Spawn.aperch()
+	Spawn.btrout()
 	Spawn.zebra()
 	Spawn.bream()
 	Spawn.bcrap()
@@ -148,7 +168,11 @@ func add_test_fish():
 	Spawn.bgill()
 	Spawn.bullh()
 	Spawn.brook()
+	Spawn.asnap()
+	Spawn.bfin()
+	Spawn.catf()
 	Spawn.bass()
+	Spawn.ssun()
 	Spawn.neon()
 	Spawn.drum()
 	Spawn.pike()
@@ -156,6 +180,8 @@ func add_test_fish():
 	Spawn.sapp()
 	Spawn.ruby()
 	Spawn.musk()
+	Spawn.carp()
+	Spawn.eel()
 
 
 #endregion

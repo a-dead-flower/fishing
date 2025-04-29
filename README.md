@@ -1,6 +1,7 @@
 # Fishing
 
 ## Known Bugs
+- Bait will show a value of 0 when in the shops if all of bait type is used
 - Using all bait of a specific kind without resetting the global "current_bait" and then visiting the shop will result in the bait being displayed at a value of 0
 - When casting, the cast can be interupted during travel by holding down the left mouse
 

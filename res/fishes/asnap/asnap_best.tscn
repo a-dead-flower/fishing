@@ -1,0 +1,412 @@
+[gd_scene load_steps=28 format=3 uid="uid://dfw523ko5wth"]
+
+[ext_resource type="Shader" path="res://src/shader/bestiary.gdshader" id="1_gllai"]
+[ext_resource type="Texture2D" uid="uid://cktacgjf55nql" path="res://res/fishes/asnap/asnap_icon.png" id="2_4elec"]
+[ext_resource type="Texture2D" uid="uid://clhe2hhfb5euu" path="res://res/sprites/stars.png" id="3_dpvdq"]
+[ext_resource type="FontFile" uid="uid://j364g1d5bwm4" path="res://res/fonts/Bold.ttf" id="4_yh25v"]
+[ext_resource type="FontFile" uid="uid://c11kcqv0xwtq8" path="res://res/fonts/Normal.ttf" id="5_8ytwg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ccy80"]
+bg_color = Color(0.905882, 0.835294, 0.701961, 1)
+border_color = Color(0.203922, 0.109804, 0.152941, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+corner_detail = 20
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2a4qx"]
+shader = ExtResource("1_gllai")
+shader_parameter/silhoutteColor = Color(0.203922, 0.109804, 0.152941, 1)
+shader_parameter/mixT = 1.0
+
+[sub_resource type="Animation" id="Animation_r8svp"]
+resource_name = "disable"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Title:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["???"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Panel/Icon/Icon:material")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("ShaderMaterial_2a4qx")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_577kh"]
+resource_name = "enabled"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Title:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Bass"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Panel/Icon/Icon:material")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [null]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8du6e"]
+_data = {
+"disable": SubResource("Animation_r8svp"),
+"enabled": SubResource("Animation_577kh")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5naqq"]
+bg_color = Color(0.905882, 0.835294, 0.701961, 1)
+border_width_left = 12
+border_width_top = 12
+border_width_right = 12
+border_width_bottom = 12
+border_color = Color(0.203922, 0.109804, 0.152941, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rkbhd"]
+bg_color = Color(0.658824, 0.792157, 0.345098, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iq1ro"]
+bg_color = Color(0.847059, 0.709804, 0.580392, 1)
+border_width_bottom = 4
+border_color = Color(0.752941, 0.580392, 0.45098, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="Gradient" id="Gradient_s8ihe"]
+offsets = PackedFloat32Array(0, 0.260204, 0.459184)
+colors = PackedColorArray(0, 0, 0, 0.560784, 0, 0, 0, 0.517168, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_j5hrl"]
+gradient = SubResource("Gradient_s8ihe")
+width = 128
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xqbg2"]
+atlas = ExtResource("3_dpvdq")
+region = Rect2(0, 36, 54, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_shkgk"]
+atlas = ExtResource("3_dpvdq")
+region = Rect2(0, 18, 54, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_benjo"]
+atlas = ExtResource("3_dpvdq")
+region = Rect2(0, 0, 54, 18)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_alxqj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xqbg2")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_shkgk")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_benjo")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_sx7v3"]
+font = ExtResource("4_yh25v")
+font_size = 32
+font_color = Color(0.203922, 0.109804, 0.152941, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1rt1w"]
+bg_color = Color(0.203922, 0.109804, 0.152941, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_5lot8"]
+font = ExtResource("5_8ytwg")
+font_size = 24
+font_color = Color(0.203922, 0.109804, 0.152941, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ekbxi"]
+font = ExtResource("5_8ytwg")
+font_size = 24
+font_color = Color(0.745098, 0.466667, 0.168627, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_owv5e"]
+font = ExtResource("5_8ytwg")
+font_size = 24
+font_color = Color(0.203922, 0.109804, 0.152941, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_kr2le"]
+font = ExtResource("5_8ytwg")
+font_size = 24
+font_color = Color(0.27451, 0.509804, 0.196078, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_mtfp7"]
+font = ExtResource("5_8ytwg")
+font_size = 24
+font_color = Color(0.635294, 0.243137, 0.54902, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ofr1p"]
+font = ExtResource("5_8ytwg")
+font_size = 18
+font_color = Color(0.203922, 0.109804, 0.152941, 1)
+
+[node name="Best" type="Control"]
+z_index = 1
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Disable" type="Panel" parent="."]
+visible = false
+z_index = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 149.0
+offset_top = -51.0
+offset_right = 414.0
+offset_bottom = 255.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ccy80")
+
+[node name="Disable" type="AnimationPlayer" parent="Disable"]
+libraries = {
+"": SubResource("AnimationLibrary_8du6e")
+}
+autoplay = "enabled"
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 131.0
+offset_top = -267.0
+offset_right = 428.0
+offset_bottom = 267.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5naqq")
+
+[node name="Border" type="Panel" parent="Panel"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -12.0
+offset_top = -12.0
+offset_right = 12.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rkbhd")
+
+[node name="Icon" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 277.0
+offset_bottom = 156.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_iq1ro")
+
+[node name="Shadow" type="TextureRect" parent="Panel/Icon"]
+modulate = Color(1, 1, 1, 0.380392)
+layout_mode = 0
+offset_left = 1.5
+offset_top = 55.0
+offset_right = 252.5
+offset_bottom = 119.0
+texture = SubResource("GradientTexture2D_j5hrl")
+
+[node name="Icon" type="TextureRect" parent="Panel/Icon"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = -39.0
+offset_right = 81.0
+offset_bottom = 14.0
+scale = Vector2(4, 4)
+texture = ExtResource("2_4elec")
+
+[node name="Stars" type="AnimatedSprite2D" parent="Panel"]
+position = Vector2(238, 134)
+scale = Vector2(-1.14331, 1.14331)
+sprite_frames = SubResource("SpriteFrames_alxqj")
+animation = &"1"
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 154.0
+offset_top = -106.0
+offset_right = 394.0
+offset_bottom = -66.0
+text = "Albino Snapper"
+label_settings = SubResource("LabelSettings_sx7v3")
+
+[node name="Line1" type="Panel" parent="Title"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 43.0
+offset_right = 253.0
+offset_bottom = 48.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1rt1w")
+
+[node name="Line2" type="Panel" parent="Title"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 149.0
+offset_right = 253.0
+offset_bottom = 154.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1rt1w")
+
+[node name="Best" type="Label" parent="."]
+layout_mode = 0
+offset_left = 154.0
+offset_top = -23.0
+offset_right = 217.0
+offset_bottom = 7.0
+text = "Best: "
+label_settings = SubResource("LabelSettings_5lot8")
+
+[node name="Best" type="Label" parent="Best"]
+layout_mode = 0
+offset_left = 84.0
+offset_right = 252.0
+offset_bottom = 30.0
+text = "1.0m"
+label_settings = SubResource("LabelSettings_ekbxi")
+horizontal_alignment = 2
+
+[node name="Rarity" type="Label" parent="."]
+layout_mode = 0
+offset_left = 154.0
+offset_top = 2.0
+offset_right = 238.0
+offset_bottom = 32.0
+text = "Rarity: "
+label_settings = SubResource("LabelSettings_owv5e")
+
+[node name="Rarity" type="Label" parent="Rarity"]
+layout_mode = 0
+offset_left = 84.0
+offset_right = 252.0
+offset_bottom = 30.0
+text = "Uncommon"
+label_settings = SubResource("LabelSettings_kr2le")
+horizontal_alignment = 2
+
+[node name="Caught" type="Label" parent="."]
+layout_mode = 0
+offset_left = 154.0
+offset_top = -48.0
+offset_right = 245.0
+offset_bottom = -18.0
+text = "Caught "
+label_settings = SubResource("LabelSettings_5lot8")
+
+[node name="Caught" type="Label" parent="Caught"]
+layout_mode = 0
+offset_left = 84.0
+offset_right = 252.0
+offset_bottom = 30.0
+text = "0"
+label_settings = SubResource("LabelSettings_mtfp7")
+horizontal_alignment = 2
+
+[node name="Lore" type="Label" parent="."]
+layout_mode = 0
+offset_left = 155.0
+offset_top = 57.0
+offset_right = 405.0
+offset_bottom = 245.0
+text = "A large, fast fish part of the Centrarchidae family found in freshwater. They can swim at two and a half times their body length per second so can outswim any lures thrown their way."
+label_settings = SubResource("LabelSettings_ofr1p")
+autowrap_mode = 3
+clip_text = true
