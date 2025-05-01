@@ -320,6 +320,23 @@ tracks/0/keys = {
 "values": [0.16, 0.77, 0.67, 0.96, 1.01, 0.76, 0.84, 0.51, 0.7, 0.7, 0.41, 0.82, 0.24]
 }
 
+[sub_resource type="Animation" id="Animation_so4uq"]
+resource_name = "Bjaw"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:fish_strength")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.166667, 1.13333, 1.36667, 2.03333, 2.8, 3.73333, 3.9, 4.5, 5.23333, 6.46667, 7.23333, 7.4, 9.33333, 9.76667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [1.0, 0.63, 0.6, 0.63, 0.52, 0.2, 1.0, 0.8, 1.0, 0.9, 0.63, 0.18, 0.21, 0.57, 1.0]
+}
+
 [sub_resource type="Animation" id="Animation_lueh7"]
 resource_name = "Bream"
 length = 10.0
@@ -439,6 +456,23 @@ tracks/0/keys = {
 "values": [0.58, 0.76, 0.51, 0.13, 0.84, 0.96, 1.26, 0.28, 0.7, 0.67, 0.41, 0.24, 0.77]
 }
 
+[sub_resource type="Animation" id="Animation_lpaud"]
+resource_name = "Cpick"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:fish_strength")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333338, 0.133333, 0.633333, 0.733333, 1.5, 1.73333, 2.8, 2.93333, 3.7, 3.9, 4.5, 4.66667, 6.73333, 7.4, 7.66667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.18, 1.0, 0.63, 1.0, 0.8, 0.52, 1.0, 0.57, 0.9, 0.6, 0.2, 0.63, 1.0, 0.21, 0.63]
+}
+
 [sub_resource type="Animation" id="Animation_nd5xq"]
 resource_name = "Drum"
 length = 10.0
@@ -490,6 +524,23 @@ tracks/0/keys = {
 "values": [0.69963, 0.22, 0.77, 0.38, 0.82, 1.0, 0.27, 0.57, 0.34]
 }
 
+[sub_resource type="Animation" id="Animation_6f2qx"]
+resource_name = "Lgar"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:fish_strength")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 0.2, 0.533333, 0.8, 1.8, 3.16667, 3.46667, 3.73333, 4.26667, 4.46667, 5.23333, 6.23333, 7.4, 8.4, 9.76667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.63, 0.52, 0.63, 0.8, 1.0, 0.57, 0.63, 1.0, 0.2, 1.0, 0.9, 0.6, 0.21, 0.18, 1.0]
+}
+
 [sub_resource type="Animation" id="Animation_87lah"]
 resource_name = "Minnow"
 length = 10.0
@@ -505,6 +556,40 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
 "values": [0.5, 0.73, 0.33, 0.81, 0.36]
+}
+
+[sub_resource type="Animation" id="Animation_b1ag3"]
+resource_name = "Moon"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:fish_strength")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.233333, 0.8, 1.16667, 1.43333, 1.66667, 3.06667, 3.7, 4.46667, 5.2, 5.83333, 6.66667, 8.2, 9, 9.93333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [1.0, 0.63, 1.2, 1.0, 0.63, 0.26, 0.8, 0.63, 1.0, 0.52, 1.0, 0.57, 0.18, 0.9, 0.2]
+}
+
+[sub_resource type="Animation" id="Animation_51c74"]
+resource_name = "Moss"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:fish_strength")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.766667, 0.9, 1.86667, 2, 3.36667, 3.53333, 4.23333, 5.23333, 5.4, 6.96667, 7.23333, 9.33333, 9.76667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.21, 0.63, 1.0, 0.52, 0.6, 0.63, 1.0, 0.63, 0.2, 0.9, 0.8, 1.0, 0.18, 0.57, 1.0]
 }
 
 [sub_resource type="Animation" id="Animation_wklf6"]
@@ -590,6 +675,23 @@ tracks/0/keys = {
 "values": [2.0]
 }
 
+[sub_resource type="Animation" id="Animation_nmpvo"]
+resource_name = "Rhop"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:fish_strength")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.234, 0.733333, 1.56667, 1.76667, 2.23333, 2.76667, 3.2, 3.5, 4.36667, 4.66667, 5.83333, 6.63333, 6.86667, 9.93333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.1, 0.18, 0.63, 0.21, 0.57, 0.8, 0.6, 1.0, 0.63, 0.9, 0.63, 1.0, 0.52, 1.0, 0.2]
+}
+
 [sub_resource type="Animation" id="Animation_e7y0u"]
 resource_name = "Ruby"
 length = 10.0
@@ -622,6 +724,23 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [0.58, 0.76, 0.51, 0.13, 0.84, 0.96, 1.26, 0.28, 0.7, 0.67, 0.41, 0.24, 0.77]
+}
+
+[sub_resource type="Animation" id="Animation_xkcvc"]
+resource_name = "Saug"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:fish_strength")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 1.03333, 1.76667, 2, 2.93333, 3.13333, 4.2, 4.36667, 5.46667, 5.63333, 6.03333, 7.26667, 7.43333, 9.76667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.63, 0.6, 0.8, 0.2, 0.57, 0.63, 1.0, 0.63, 0.9, 1.0, 0.52, 0.1, 1.0, 0.18, 0.21]
 }
 
 [sub_resource type="Animation" id="Animation_sdxum"]
@@ -707,125 +826,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [0.8, 0.5, 2.0, 1.0, 0.54, 1.0, 0.1, 0.266667, 0.26, -0.4, 1.0, 0.361, 0.066, 1.0, 1.744, 0.157, 0.66, 0.269, 0.952, -0.232, 1.89, 0.258, 1.0, 0.326]
-}
-
-[sub_resource type="Animation" id="Animation_nmpvo"]
-resource_name = "Rhop"
-length = 10.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:fish_strength")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.234, 0.733333, 1.56667, 1.76667, 2.23333, 2.76667, 3.2, 3.5, 4.36667, 4.66667, 5.83333, 6.63333, 6.86667, 9.93333),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [0.1, 0.18, 0.63, 0.21, 0.57, 0.8, 0.6, 1.0, 0.63, 0.9, 0.63, 1.0, 0.52, 1.0, 0.2]
-}
-
-[sub_resource type="Animation" id="Animation_xkcvc"]
-resource_name = "Saug"
-length = 10.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:fish_strength")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 1.03333, 1.76667, 2, 2.93333, 3.13333, 4.2, 4.36667, 5.46667, 5.63333, 6.03333, 7.26667, 7.43333, 9.76667),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [0.63, 0.6, 0.8, 0.2, 0.57, 0.63, 1.0, 0.63, 0.9, 1.0, 0.52, 0.1, 1.0, 0.18, 0.21]
-}
-
-[sub_resource type="Animation" id="Animation_6f2qx"]
-resource_name = "Lgar"
-length = 10.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:fish_strength")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.0333333, 0.2, 0.533333, 0.8, 1.8, 3.16667, 3.46667, 3.73333, 4.26667, 4.46667, 5.23333, 6.23333, 7.4, 8.4, 9.76667),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [0.63, 0.52, 0.63, 0.8, 1.0, 0.57, 0.63, 1.0, 0.2, 1.0, 0.9, 0.6, 0.21, 0.18, 1.0]
-}
-
-[sub_resource type="Animation" id="Animation_lpaud"]
-resource_name = "Cpick"
-length = 10.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:fish_strength")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.0333338, 0.133333, 0.633333, 0.733333, 1.5, 1.73333, 2.8, 2.93333, 3.7, 3.9, 4.5, 4.66667, 6.73333, 7.4, 7.66667),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [0.18, 1.0, 0.63, 1.0, 0.8, 0.52, 1.0, 0.57, 0.9, 0.6, 0.2, 0.63, 1.0, 0.21, 0.63]
-}
-
-[sub_resource type="Animation" id="Animation_b1ag3"]
-resource_name = "Moon"
-length = 10.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:fish_strength")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.233333, 0.8, 1.16667, 1.43333, 1.66667, 3.06667, 3.7, 4.46667, 5.2, 5.83333, 6.66667, 8.2, 9, 9.93333),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [1.0, 0.63, 1.2, 1.0, 0.63, 0.26, 0.8, 0.63, 1.0, 0.52, 1.0, 0.57, 0.18, 0.9, 0.2]
-}
-
-[sub_resource type="Animation" id="Animation_so4uq"]
-resource_name = "Bjaw"
-length = 10.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:fish_strength")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.166667, 1.13333, 1.36667, 2.03333, 2.8, 3.73333, 3.9, 4.5, 5.23333, 6.46667, 7.23333, 7.4, 9.33333, 9.76667),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [1.0, 0.63, 0.6, 0.63, 0.52, 0.2, 1.0, 0.8, 1.0, 0.9, 0.63, 0.18, 0.21, 0.57, 1.0]
-}
-
-[sub_resource type="Animation" id="Animation_51c74"]
-resource_name = "Moss"
-length = 10.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:fish_strength")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.166667, 0.766667, 0.9, 1.86667, 2, 3.36667, 3.53333, 4.23333, 5.23333, 5.4, 6.96667, 7.23333, 9.33333, 9.76667),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [0.21, 0.63, 1.0, 0.52, 0.6, 0.63, 1.0, 0.63, 0.2, 0.9, 0.8, 1.0, 0.18, 0.57, 1.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4i2u4"]

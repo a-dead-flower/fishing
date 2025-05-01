@@ -86,7 +86,7 @@ func generate():
 
 	## Uncommon fish
 	if type == "Uncommon":
-		var fish = rng.randi_range(1, 13)
+		var fish = rng.randi_range(1, 16)
 		match fish:
 			1: return bass()
 			2: return carp()
@@ -101,6 +101,9 @@ func generate():
 			11: return rhop()
 			12: return saug()
 			13: return cpick()
+			14: return moon()
+			15: return bjaw()
+			16: return moss()
 		
 	## Rare fish
 	if type == "Rare":
