@@ -2,7 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://c11kcqv0xwtq8" path="res://res/fonts/Normal.ttf" id="1_mhhta"]
 [ext_resource type="Script" path="res://src/scripts/invitem.gd" id="2_uwgdl"]
-[ext_resource type="PackedScene" uid="uid://d1xcmuq7de486" path="res://res/fishes/drum/drum_info.tscn" id="3_ie7v8"]
+[ext_resource type="PackedScene" uid="uid://ch7qbtpt30kr5" path="res://res/fishes/bullh/bullh_info.tscn" id="3_y3utu"]
 [ext_resource type="FontFile" uid="uid://j364g1d5bwm4" path="res://res/fonts/Bold.ttf" id="4_cajly"]
 [ext_resource type="Texture2D" uid="uid://dttu7rj47iq2x" path="res://res/sprites/coin.png" id="5_3j3gj"]
 [ext_resource type="Texture2D" uid="uid://dripr8djb7cqd" path="res://res/fishes/bullh/bullh_icon.png" id="6_0gsnv"]
@@ -209,9 +209,8 @@ text = "Bull Head"
 icon = SubResource("GradientTexture2D_8l4mi")
 alignment = 0
 script = ExtResource("2_uwgdl")
-item_name = "bullh"
-item_price = 120
-item_info = ExtResource("3_ie7v8")
+item_name = "Bull Head"
+item_info = ExtResource("3_y3utu")
 
 [node name="Price" type="Label" parent="."]
 layout_mode = 0

@@ -209,8 +209,7 @@ text = "Muskellunge"
 icon = SubResource("GradientTexture2D_8l4mi")
 alignment = 0
 script = ExtResource("2_mncd1")
-item_name = "musk"
-item_price = 120
+item_name = "Muskellunge"
 item_info = ExtResource("3_adhqx")
 
 [node name="Price" type="Label" parent="."]

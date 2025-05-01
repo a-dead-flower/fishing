@@ -101,7 +101,7 @@ _data = {
 "RESET": SubResource("Animation_liyxh")
 }
 
-[node name="Musk" type="Node2D"]
+[node name="Belly" type="Node2D"]
 process_mode = 3
 script = ExtResource("1_eui0a")
 
@@ -191,6 +191,7 @@ scale = Vector2(2.2953, -2.2953)
 texture = ExtResource("2_mfr7h")
 
 [node name="Best" type="Panel" parent="Box/Control/Panel"]
+visible = false
 show_behind_parent = true
 z_index = -1
 layout_mode = 1

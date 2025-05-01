@@ -209,8 +209,7 @@ text = "Neon Tetra"
 icon = SubResource("GradientTexture2D_8l4mi")
 alignment = 0
 script = ExtResource("2_y2nax")
-item_name = "neon"
-item_price = 120
+item_name = "Neon Tetra"
 item_info = ExtResource("3_rwxar")
 
 [node name="Price" type="Label" parent="."]

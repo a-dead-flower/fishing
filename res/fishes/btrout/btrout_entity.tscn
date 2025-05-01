@@ -110,7 +110,7 @@ _data = {
 "RESET": SubResource("Animation_liyxh")
 }
 
-[node name="Bass" type="Node2D"]
+[node name="Btrout" type="Node2D"]
 process_mode = 3
 script = ExtResource("1_h8811")
 
@@ -200,6 +200,7 @@ scale = Vector2(2.21983, -2.21983)
 texture = ExtResource("2_l0eqm")
 
 [node name="Best" type="Panel" parent="Box/Control/Panel"]
+visible = false
 show_behind_parent = true
 z_index = -1
 layout_mode = 1

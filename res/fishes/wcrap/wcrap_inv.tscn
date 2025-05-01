@@ -209,8 +209,7 @@ text = "White Crappie"
 icon = SubResource("GradientTexture2D_8l4mi")
 alignment = 0
 script = ExtResource("2_fldka")
-item_name = "wcrap"
-item_price = 120
+item_name = "White Crappie"
 item_info = ExtResource("3_7o7n1")
 
 [node name="Price" type="Label" parent="."]

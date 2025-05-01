@@ -209,8 +209,7 @@ text = "Longnose Gar"
 icon = SubResource("GradientTexture2D_8l4mi")
 alignment = 0
 script = ExtResource("2_fykkd")
-item_name = "lgar"
-item_price = 120
+item_name = "Longnose Gar"
 item_info = ExtResource("3_2xu37")
 
 [node name="Price" type="Label" parent="."]

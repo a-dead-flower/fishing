@@ -14,8 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://clhe2hhfb5euu" path="res://res/sprites/stars.png" id="8_8p26q"]
 [ext_resource type="Texture2D" uid="uid://bs17bkrv5afli" path="res://res/fishes/minnow/minnow_icon.png" id="8_mrf14"]
 [ext_resource type="Texture2D" uid="uid://dnltkqaybvd2i" path="res://res/sprites/arrow.png" id="8_wdbe7"]
-[ext_resource type="PackedScene" uid="uid://bb8fwib3e5d4s" path="res://res/fishes/sturgeon/sturgeon_best.tscn" id="9_7scty"]
-[ext_resource type="Texture2D" uid="uid://d3gb4qhhmsi30" path="res://res/fishes/sturgeon/sturgeon_icon.png" id="9_h7vqn"]
+[ext_resource type="PackedScene" uid="uid://bb8fwib3e5d4s" path="res://res/fishes/sturg/sturg_best.tscn" id="9_7scty"]
+[ext_resource type="Texture2D" uid="uid://d3gb4qhhmsi30" path="res://res/fishes/sturg/sturg_icon.png" id="9_h7vqn"]
 [ext_resource type="PackedScene" uid="uid://0mccbcbo865d" path="res://res/fishes/zebra/zebra_best.tscn" id="13_x78li"]
 [ext_resource type="Texture2D" uid="uid://cyunqf0qxciq6" path="res://res/fishes/zebra/zebra_icon.png" id="14_y6vdo"]
 

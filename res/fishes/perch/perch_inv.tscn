@@ -209,8 +209,7 @@ text = "Yellow Perch"
 icon = SubResource("GradientTexture2D_8l4mi")
 alignment = 0
 script = ExtResource("2_rhnfr")
-item_name = "perch"
-item_price = 120
+item_name = "Yellow Perch"
 item_info = ExtResource("3_km8sc")
 
 [node name="Price" type="Label" parent="."]

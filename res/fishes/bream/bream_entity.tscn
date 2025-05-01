@@ -191,6 +191,7 @@ scale = Vector2(2.38218, -2.38218)
 texture = ExtResource("2_68x6s")
 
 [node name="Best" type="Panel" parent="Box/Control/Panel"]
+visible = false
 show_behind_parent = true
 z_index = -1
 layout_mode = 1

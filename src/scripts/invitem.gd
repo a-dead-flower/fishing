@@ -1,10 +1,13 @@
 extends Button
 
+## Name used for sorting
 @export var item_name = ""
-@export var item_price = 0
-@export var item_size = ""
+## Packed scene connects to info
 @export var item_info: PackedScene
-@export var item_index = 0
+
+var item_index = 0
+var item_price = 0
+var item_size = ""
 
 ## Setup node
 func _enter_tree(): $Price.text = str(item_price)

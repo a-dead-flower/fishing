@@ -101,7 +101,7 @@ _data = {
 "RESET": SubResource("Animation_liyxh")
 }
 
-[node name="Wcrap" type="Node2D"]
+[node name="Bcrap" type="Node2D"]
 process_mode = 3
 script = ExtResource("1_xrcbe")
 
@@ -191,6 +191,7 @@ scale = Vector2(2.17957, -2.17957)
 texture = ExtResource("2_o5tah")
 
 [node name="Best" type="Panel" parent="Box/Control/Panel"]
+visible = false
 show_behind_parent = true
 z_index = -1
 layout_mode = 1

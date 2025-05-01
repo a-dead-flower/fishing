@@ -2,36 +2,7 @@ extends Node
 
 const game = preload("res://src/scenes/game.tscn")
 
-const eel_entity = preload("res://res/fishes/eel/eel_entity.tscn")
-const bass_entity = preload("res://res/fishes/bass/bass_entity.tscn")
-const ruby_entity = preload("res://res/fishes/ruby/ruby_entity.tscn")
-const sapp_entity = preload("res://res/fishes/sapp/sapp_entity.tscn")
-const bfin_entity = preload("res://res/fishes/bfin/bfin_entity.tscn")
-const chub_entity = preload("res://res/fishes/chub/chub_entity.tscn")
-const neon_entity = preload("res://res/fishes/neon/neon_entity.tscn")
-const pike_entity = preload("res://res/fishes/pike/pike_entity.tscn")
-const drum_entity = preload("res://res/fishes/drum/drum_entity.tscn")
-const musk_entity = preload("res://res/fishes/musk/musk_entity.tscn")
-const carp_entity = preload("res://res/fishes/carp/carp_entity.tscn")
-const lgar_entity = preload("res://res/fishes/lgar/lgar_entity.tscn")
-const ssun_entity = preload("res://res/fishes/ssun/ssun_entity.tscn")
-const catf_entity = preload("res://res/fishes/catf/catf_entity.tscn")
-const belly_entity = preload("res://res/fishes/belly/belly_entity.tscn")
-const wcrap_entity = preload("res://res/fishes/wcrap/wcrap_entity.tscn")
-const bgill_entity = preload("res://res/fishes/bgill/bgill_entity.tscn")
-const bullh_entity = preload("res://res/fishes/bullh/bullh_entity.tscn")
-const brook_entity = preload("res://res/fishes/brook/brook_entity.tscn")
-const asnap_entity = preload("res://res/fishes/asnap/asnap_entity.tscn")
-const bcrap_entity = preload("res://res/fishes/bcrap/bcrap_entity.tscn")
-const guppy_entity = preload("res://res/fishes/guppy/guppy_entity.tscn")
-const bream_entity = preload("res://res/fishes/bream/bream_entity.tscn")
-const zebra_entity = preload("res://res/fishes/zebra/zebra_entity.tscn")
-const perch_entity = preload("res://res/fishes/perch/perch_entity.tscn")
-const minnow_entity = preload("res://res/fishes/minnow/minnow_entity.tscn")
-const aperch_entity = preload("res://res/fishes/aperch/aperch_entity.tscn")
-const btrout_entity = preload("res://res/fishes/btrout/btrout_entity.tscn")
-const walleye_entity = preload("res://res/fishes/walleye/walleye_entity.tscn")
-const sturgeon_entity = preload("res://res/fishes/sturgeon/sturgeon_entity.tscn")
+
 
 var rng = RandomNumberGenerator.new()
 var new_best = false
@@ -57,7 +28,7 @@ var rarities = {
 
 ## Function called to start minigame
 func start_game():
-	current_fish = bfin()
+	current_fish = moss()
 	entity_fish = current_fish.instantiate()
 	var child = game.instantiate()
 	child.fish_name = entity_fish.name
@@ -117,19 +88,26 @@ func generate():
 
 	## Uncommon fish
 	if type == "Uncommon":
-		var fish = rng.randi_range(1, 6)
+		var fish = rng.randi_range(1, 13)
 		match fish:
 			1: return bass()
 			2: return carp()
 			3: return eel()
 			4: return lgar()
-			5: return catf()
-			6: return btrout()
+			5: return asnap()
+			6: return ssun()
+			7: return aperch()
+			8: return catf()
+			9: return btrout()
+			10: return bfin()
+			11: return rhop()
+			12: return saug()
+			13: return cpick()
 		
 	## Rare fish
 	if type == "Rare":
 		var fish = rng.randi_range(1, 1)
-		if fish == 1: return sturgeon()
+		if fish == 1: return sturg()
 		
 	## Epic fish
 	if type == "Epic":
@@ -181,11 +159,11 @@ func minnow():
 	fish_array = Globals.pond_caught
 	fish_name = "Minnow"; fish_token = "cm"
 	Globals.fish.append([
-		Globals.minnow,
+		Globals.minnow_inv,
 		snapped(value,1),
 		str(snapped(fish_size,0.1),"cm"),
 		Globals.minnow_sell
-	]); return minnow_entity
+	]); return Globals.minnow_entity
 
 ## Add ruby crayfish
 func ruby():
@@ -195,11 +173,11 @@ func ruby():
 	fish_array = Globals.pond_caught
 	fish_name = "Ruby"; fish_token = "cm"
 	Globals.fish.append([
-		Globals.ruby,
+		Globals.ruby_inv,
 		snapped(value,1),
 		str(snapped(fish_size,0.1),"cm"),
 		Globals.ruby_sell
-	]); return ruby_entity
+	]); return Globals.ruby_entity
 
 ## Add sapphire crayfish
 func sapp():
@@ -209,11 +187,11 @@ func sapp():
 	fish_array = Globals.pond_caught
 	fish_name = "Sapp"; fish_token = "cm"
 	Globals.fish.append([
-		Globals.sapp,
+		Globals.sapp_inv,
 		snapped(value,1),
 		str(snapped(fish_size,0.1),"cm"),
 		Globals.sapp_sell
-	]); return sapp_entity
+	]); return Globals.sapp_entity
 
 ## Add chub
 func chub():
@@ -223,11 +201,11 @@ func chub():
 	fish_array = Globals.pond_caught
 	fish_name = "Chub"; fish_token = "cm"
 	Globals.fish.append([
-		Globals.chub,
+		Globals.chub_inv,
 		snapped(value,1),
 		str(snapped(fish_size,0.1),"cm"),
 		Globals.chub_sell
-	]); return chub_entity
+	]); return Globals.chub_entity
 
 ## Add perch
 func perch():
@@ -237,11 +215,11 @@ func perch():
 	fish_array = Globals.pond_caught
 	fish_name = "Perch"; fish_token = "cm"
 	Globals.fish.append([
-		Globals.perch,
+		Globals.perch_inv,
 		snapped(value,1),
 		str(snapped(fish_size,0.1),"cm"),
 		Globals.perch_sell
-	]); return perch_entity
+	]); return Globals.perch_entity
 
 ## Add belly
 func belly():
@@ -251,11 +229,11 @@ func belly():
 	fish_array = Globals.pond_caught
 	fish_name = "Belly"; fish_token = "cm"
 	Globals.fish.append([
-		Globals.belly,
+		Globals.belly_inv,
 		snapped(value,1),
 		str(snapped(fish_size,0.1),"cm"),
 		Globals.belly_sell
-	]); return belly_entity
+	]); return Globals.belly_entity
 
 ## Add walleye
 func walleye():
@@ -265,11 +243,11 @@ func walleye():
 	fish_array = Globals.pond_caught
 	fish_name = "Walleye"; fish_token = "cm"
 	Globals.fish.append([
-		Globals.walleye,
+		Globals.walleye_inv,
 		snapped(value,1),
 		str(snapped(fish_size,0.1),"cm"),
 		Globals.walleye_sell
-	]); return walleye_entity
+	]); return Globals.walleye_entity
 
 ## Add neon
 func neon():
@@ -279,11 +257,11 @@ func neon():
 	fish_array = Globals.pond_caught
 	fish_name = "Neon"; fish_token = "cm"
 	Globals.fish.append([
-		Globals.neon,
+		Globals.neon_inv,
 		snapped(value,1),
 		str(snapped(fish_size,0.1),"cm"),
 		Globals.neon_sell
-	]); return neon_entity
+	]); return Globals.neon_entity
 
 ## Add guppy
 func guppy():
@@ -293,11 +271,11 @@ func guppy():
 	fish_array = Globals.pond_caught
 	fish_name = "Guppy"; fish_token = "cm"
 	Globals.fish.append([
-		Globals.guppy,
+		Globals.guppy_inv,
 		snapped(value,1),
 		str(snapped(fish_size,0.1),"cm"),
 		Globals.guppy_sell
-	]); return guppy_entity
+	]); return Globals.guppy_entity
 
 ## Add white crappie
 func wcrap():
@@ -307,11 +285,11 @@ func wcrap():
 	fish_array = Globals.pond_caught
 	fish_name = "Wcrap"; fish_token = "cm"
 	Globals.fish.append([
-		Globals.wcrap,
+		Globals.wcrap_inv,
 		snapped(value,1),
 		str(snapped(fish_size,0.1),"cm"),
 		Globals.wcrap_sell
-	]); return wcrap_entity
+	]); return Globals.wcrap_entity
 
 ## Add black crappie
 func bcrap():
@@ -321,11 +299,11 @@ func bcrap():
 	fish_array = Globals.pond_caught
 	fish_name = "Bcrap"; fish_token = "cm"
 	Globals.fish.append([
-		Globals.bcrap,
+		Globals.bcrap_inv,
 		snapped(value,1),
 		str(snapped(fish_size,0.1),"cm"),
 		Globals.bcrap_sell
-	]); return bcrap_entity
+	]); return Globals.bcrap_entity
 
 ## Add perch
 func bream():
@@ -335,11 +313,11 @@ func bream():
 	fish_array = Globals.pond_caught
 	fish_name = "Bream"; fish_token = "cm"
 	Globals.fish.append([
-		Globals.bream,
+		Globals.bream_inv,
 		snapped(value,1),
 		str(snapped(fish_size,0.1),"cm"),
 		Globals.bream_sell
-	]); return bream_entity
+	]); return Globals.bream_entity
 
 ## Add perch
 func bullh():
@@ -349,11 +327,11 @@ func bullh():
 	fish_array = Globals.pond_caught
 	fish_name = "Bullh"; fish_token = "cm"
 	Globals.fish.append([
-		Globals.bullh,
+		Globals.bullh_inv,
 		snapped(value,1),
 		str(snapped(fish_size,0.1),"cm"),
 		Globals.bullh_sell
-	]); return bullh_entity
+	]); return Globals.bullh_entity
 
 ## Add perch
 func brook():
@@ -363,11 +341,11 @@ func brook():
 	fish_array = Globals.pond_caught
 	fish_name = "Brook"; fish_token = "cm"
 	Globals.fish.append([
-		Globals.brook,
+		Globals.brook_inv,
 		snapped(value,1),
 		str(snapped(fish_size,0.1),"cm"),
 		Globals.brook_sell
-	]); return brook_entity
+	]); return Globals.brook_entity
 
 ## Add pike
 func pike():
@@ -377,11 +355,11 @@ func pike():
 	fish_array = Globals.pond_caught
 	fish_name = "Pike"; fish_token = "cm"
 	Globals.fish.append([
-		Globals.pike,
+		Globals.pike_inv,
 		snapped(value,1),
 		str(snapped(fish_size,0.1),"cm"),
 		Globals.pike_sell
-	]); return pike_entity
+	]); return Globals.pike_entity
 
 ## Add musk
 func musk():
@@ -391,11 +369,11 @@ func musk():
 	fish_array = Globals.pond_caught
 	fish_name = "Musk"; fish_token = "cm"
 	Globals.fish.append([
-		Globals.musk,
+		Globals.musk_inv,
 		snapped(value,1),
 		str(snapped(fish_size,0.1),"cm"),
 		Globals.musk_sell
-	]); return musk_entity
+	]); return Globals.musk_entity
 
 ## Add drum
 func drum():
@@ -405,11 +383,11 @@ func drum():
 	fish_array = Globals.pond_caught
 	fish_name = "Drum"; fish_token = "cm"
 	Globals.fish.append([
-		Globals.drum,
+		Globals.drum_inv,
 		snapped(value,1),
 		str(snapped(fish_size,0.1),"cm"),
 		Globals.drum_sell
-	]); return drum_entity
+	]); return Globals.drum_entity
 
 ## Add blue gill
 func bgill():
@@ -419,25 +397,25 @@ func bgill():
 	fish_array = Globals.pond_caught
 	fish_name = "Bgill"; fish_token = "cm"
 	Globals.fish.append([
-		Globals.bgill,
+		Globals.bgill_inv,
 		snapped(value,1),
 		str(snapped(fish_size,0.1),"cm"),
 		Globals.bgill_sell
-	]); return bgill_entity
+	]); return Globals.bgill_entity
 
 ## Add sturgeon
-func sturgeon():
+func sturg():
 	var base = 200
 	fish_size = rng.randf_range(0.5, 4.0)
 	var value = base + (fish_size * 100)/2
 	fish_array = Globals.pond_caught
 	fish_name = "Sturgeon"; fish_token = "m"
 	Globals.fish.append([
-		Globals.sturgeon,
+		Globals.sturg_inv,
 		snapped(value,1),
 		str(snapped(fish_size,0.01),"m"),
-		Globals.sturgeon_sell
-	]); return sturgeon_entity
+		Globals.sturg_sell
+	]); return Globals.sturg_entity
 
 ## Add zebra pleco
 func zebra():
@@ -447,11 +425,11 @@ func zebra():
 	fish_array = Globals.pond_caught
 	fish_name = "Zebra"; fish_token = "cm"
 	Globals.fish.append([
-		Globals.zebra,
+		Globals.zebra_inv,
 		snapped(value,1),
 		str(snapped(fish_size,0.1),"cm"),
 		Globals.zebra_sell
-	]); return zebra_entity
+	]); return Globals.zebra_entity
 #endregion
 
 #region UNCOMMON
@@ -468,11 +446,11 @@ func bass():
 	fish_array = Globals.pond_caught
 	fish_name = "Bass"; fish_token = "cm"
 	Globals.fish.append([
-		Globals.bass,
+		Globals.bass_inv,
 		snapped(value,1),
 		str(snapped(fish_size,1),"cm"),
 		Globals.bass_sell
-	]); return bass_entity
+	]); return Globals.bass_entity
 
 ## Add carp
 func carp():
@@ -482,11 +460,11 @@ func carp():
 	fish_array = Globals.pond_caught
 	fish_name = "Carp"; fish_token = "cm"
 	Globals.fish.append([
-		Globals.carp,
+		Globals.carp_inv,
 		snapped(value,1),
 		str(snapped(fish_size,0.1),"cm"),
 		Globals.carp_sell
-	]); return carp_entity
+	]); return Globals.carp_entity
 
 ## Add eel
 func eel():
@@ -496,11 +474,11 @@ func eel():
 	fish_array = Globals.pond_caught
 	fish_name = "Eel"; fish_token = "m"
 	Globals.fish.append([
-		Globals.eel,
+		Globals.eel_inv,
 		snapped(value,1),
 		str(snapped(fish_size,0.1),"m"),
 		Globals.eel_sell
-	]); return eel_entity
+	]); return Globals.eel_entity
 
 ## Add longnose gar
 func lgar():
@@ -510,11 +488,11 @@ func lgar():
 	fish_array = Globals.pond_caught
 	fish_name = "Lgar"; fish_token = "cm"
 	Globals.fish.append([
-		Globals.lgar,
+		Globals.lgar_inv,
 		snapped(value,1),
 		str(snapped(fish_size,0.1),"cm"),
 		Globals.lgar_sell
-	]); return lgar_entity
+	]); return Globals.lgar_entity
 
 
 #################################################################################
@@ -529,11 +507,11 @@ func asnap():
 	fish_array = Globals.pond_caught
 	fish_name = "Asnap"; fish_token = "cm"
 	Globals.fish.append([
-		Globals.asnap,
+		Globals.asnap_inv,
 		snapped(value,1),
 		str(snapped(fish_size,0.1),"cm"),
 		Globals.asnap_sell
-	]); return asnap_entity
+	]); return Globals.asnap_entity
 
 ## Add spotted sunfish
 func ssun():
@@ -543,11 +521,11 @@ func ssun():
 	fish_array = Globals.pond_caught
 	fish_name = "Ssun"; fish_token = "cm"
 	Globals.fish.append([
-		Globals.ssun,
+		Globals.ssun_inv,
 		snapped(value,1),
 		str(snapped(fish_size,0.1),"cm"),
 		Globals.ssun_sell
-	]); return ssun_entity
+	]); return Globals.ssun_entity
 	
 ## Add albino perch
 func aperch():
@@ -557,11 +535,11 @@ func aperch():
 	fish_array = Globals.pond_caught
 	fish_name = "Aperch"; fish_token = "cm"
 	Globals.fish.append([
-		Globals.aperch,
+		Globals.aperch_inv,
 		snapped(value,1),
 		str(snapped(fish_size,0.1),"cm"),
 		Globals.aperch_sell
-	]); return aperch_entity
+	]); return Globals.aperch_entity
 
 ## Add catfisn
 func catf():
@@ -571,11 +549,11 @@ func catf():
 	fish_array = Globals.pond_caught
 	fish_name = "Catf"; fish_token = "cm"
 	Globals.fish.append([
-		Globals.catf,
+		Globals.catf_inv,
 		snapped(value,1),
 		str(snapped(fish_size,0.1),"cm"),
 		Globals.catf_sell
-	]); return catf_entity
+	]); return Globals.catf_entity
 
 ## Add brown trout
 func btrout():
@@ -585,11 +563,11 @@ func btrout():
 	fish_array = Globals.pond_caught
 	fish_name = "Btrout"; fish_token = "cm"
 	Globals.fish.append([
-		Globals.btrout,
+		Globals.btrout_inv,
 		snapped(value,1),
 		str(snapped(fish_size,0.1),"cm"),
 		Globals.btrout_sell
-	]); return btrout_entity
+	]); return Globals.btrout_entity
 
 ## Add bowfin
 func bfin():
@@ -599,11 +577,95 @@ func bfin():
 	fish_array = Globals.pond_caught
 	fish_name = "Bfin"; fish_token = "cm"
 	Globals.fish.append([
-		Globals.bfin,
+		Globals.bfin_inv,
 		snapped(value,1),
 		str(snapped(fish_size,0.1),"cm"),
 		Globals.bfin_sell
-	]); return bfin_entity
+	]); return Globals.bfin_entity
+
+## Add rock hopper
+func rhop():
+	var base = 90
+	fish_size = rng.randf_range(70, 120)
+	var value = base + (fish_size)
+	fish_array = Globals.pond_caught
+	fish_name = "Rhop"; fish_token = "cm"
+	Globals.fish.append([
+		Globals.rhop_inv,
+		snapped(value,1),
+		str(snapped(fish_size,0.1),"cm"),
+		Globals.rhop_sell
+	]); return Globals.rhop_entity
+
+## Add sauger
+func saug():
+	var base = 90
+	fish_size = rng.randf_range(70, 120)
+	var value = base + (fish_size)
+	fish_array = Globals.pond_caught
+	fish_name = "Saug"; fish_token = "cm"
+	Globals.fish.append([
+		Globals.saug_inv,
+		snapped(value,1),
+		str(snapped(fish_size,0.1),"cm"),
+		Globals.saug_sell
+	]); return Globals.saug_entity
+
+## Add chain pickrel
+func cpick():
+	var base = 90
+	fish_size = rng.randf_range(70, 120)
+	var value = base + (fish_size)
+	fish_array = Globals.pond_caught
+	fish_name = "Cpick"; fish_token = "cm"
+	Globals.fish.append([
+		Globals.cpick_inv,
+		snapped(value,1),
+		str(snapped(fish_size,0.1),"cm"),
+		Globals.cpick_sell
+	]); return Globals.cpick_entity
+
+## Add mooneye
+func moon():
+	var base = 90
+	fish_size = rng.randf_range(70, 120)
+	var value = base + (fish_size)
+	fish_array = Globals.pond_caught
+	fish_name = "Moon"; fish_token = "cm"
+	Globals.fish.append([
+		Globals.moon_inv,
+		snapped(value,1),
+		str(snapped(fish_size,0.1),"cm"),
+		Globals.moon_sell
+	]); return Globals.moon_entity
+
+## Add blackjaw
+func bjaw():
+	var base = 90
+	fish_size = rng.randf_range(70, 120)
+	var value = base + (fish_size)
+	fish_array = Globals.pond_caught
+	fish_name = "Bjaw"; fish_token = "cm"
+	Globals.fish.append([
+		Globals.bjaw_inv,
+		snapped(value,1),
+		str(snapped(fish_size,0.1),"cm"),
+		Globals.bjaw_sell
+	]); return Globals.bjaw_entity
+
+## Add mossy arrowhead
+func moss():
+	var base = 90
+	fish_size = rng.randf_range(70, 120)
+	var value = base + (fish_size)
+	fish_array = Globals.pond_caught
+	fish_name = "Moss"; fish_token = "cm"
+	Globals.fish.append([
+		Globals.moss_inv,
+		snapped(value,1),
+		str(snapped(fish_size,0.1),"cm"),
+		Globals.moss_sell
+	]); return Globals.moss_entity
 
 #endregion
 

@@ -214,7 +214,7 @@ text = "Zebra Pleco"
 icon = SubResource("GradientTexture2D_vildk")
 alignment = 0
 script = ExtResource("2_63gjh")
-item_name = "zebra"
+item_name = "Zebra Pleco"
 item_type = "Fish"
 
 [node name="Price" type="Label" parent="."]

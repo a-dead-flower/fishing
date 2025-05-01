@@ -210,8 +210,7 @@ text = "Bass"
 icon = SubResource("GradientTexture2D_8l4mi")
 alignment = 0
 script = ExtResource("2_0oc5b")
-item_name = "bass"
-item_price = 120
+item_name = "Bass"
 item_info = ExtResource("3_tqjrd")
 
 [node name="Price" type="Label" parent="."]
@@ -225,6 +224,7 @@ label_settings = SubResource("LabelSettings_3eh4d")
 horizontal_alignment = 2
 
 [node name="Panel" type="Panel" parent="Price"]
+layout_mode = 0
 offset_left = -365.0
 offset_top = -10.0
 offset_right = -277.0

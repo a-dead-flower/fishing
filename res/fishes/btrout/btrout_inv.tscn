@@ -209,8 +209,7 @@ text = "Brown Trout"
 icon = SubResource("GradientTexture2D_8l4mi")
 alignment = 0
 script = ExtResource("2_udren")
-item_name = "btrout"
-item_price = 120
+item_name = "Brown Trout"
 item_info = ExtResource("3_8768k")
 
 [node name="Price" type="Label" parent="."]

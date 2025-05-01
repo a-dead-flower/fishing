@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3gb4qhhmsi30"
-path="res://.godot/imported/sturgeon_icon.png-de80f28bb9466ca415d7231b0342e099.ctex"
+uid="uid://diteh8805nu30"
+path="res://.godot/imported/rhop_icon.png-a9e56d995f1e72fc0e4fad11134ca6ca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://res/fishes/sturgeon/sturgeon_icon.png"
-dest_files=["res://.godot/imported/sturgeon_icon.png-de80f28bb9466ca415d7231b0342e099.ctex"]
+source_file="res://res/fishes/rhop/rhop_icon.png"
+dest_files=["res://.godot/imported/rhop_icon.png-a9e56d995f1e72fc0e4fad11134ca6ca.ctex"]
 
 [params]
 

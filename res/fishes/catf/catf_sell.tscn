@@ -224,7 +224,7 @@ text = "Catfish"
 icon = SubResource("GradientTexture2D_vildk")
 alignment = 0
 script = ExtResource("2_gau3m")
-item_name = "Catf"
+item_name = "Catfish"
 item_type = "Fish"
 
 [node name="Price" type="Label" parent="."]

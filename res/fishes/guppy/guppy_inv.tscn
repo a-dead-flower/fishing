@@ -209,8 +209,7 @@ text = "Guppy"
 icon = SubResource("GradientTexture2D_8l4mi")
 alignment = 0
 script = ExtResource("2_r01p1")
-item_name = "guppy"
-item_price = 120
+item_name = "Guppy"
 item_info = ExtResource("3_84ryq")
 
 [node name="Price" type="Label" parent="."]
@@ -224,6 +223,7 @@ label_settings = SubResource("LabelSettings_3eh4d")
 horizontal_alignment = 2
 
 [node name="Panel" type="Panel" parent="Price"]
+layout_mode = 0
 offset_left = -365.0
 offset_top = -10.0
 offset_right = -277.0

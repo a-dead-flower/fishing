@@ -224,7 +224,7 @@ text = "Ruby Crayfish"
 icon = SubResource("GradientTexture2D_vildk")
 alignment = 0
 script = ExtResource("2_r36e3")
-item_name = "Ruby"
+item_name = "Ruby Crayfish"
 item_type = "Fish"
 
 [node name="Price" type="Label" parent="."]

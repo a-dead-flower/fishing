@@ -2,7 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://c11kcqv0xwtq8" path="res://res/fonts/Normal.ttf" id="1_t8clq"]
 [ext_resource type="Script" path="res://src/scripts/invitem.gd" id="2_6xkwj"]
-[ext_resource type="PackedScene" uid="uid://cql7vt4xku4g6" path="res://res/fishes/asnap/asnap_info.tscn" id="3_w6fo1"]
+[ext_resource type="PackedScene" uid="uid://chy6jd2m6abpb" path="res://res/fishes/ssun/ssun_info.tscn" id="3_5ug8q"]
 [ext_resource type="FontFile" uid="uid://j364g1d5bwm4" path="res://res/fonts/Bold.ttf" id="4_usqa7"]
 [ext_resource type="Texture2D" uid="uid://dttu7rj47iq2x" path="res://res/sprites/coin.png" id="5_urn3d"]
 [ext_resource type="Texture2D" uid="uid://baturbne6d3mi" path="res://res/fishes/ssun/ssun_icon.png" id="6_etry8"]
@@ -210,9 +210,8 @@ text = "Spotted Sunfish"
 icon = SubResource("GradientTexture2D_8l4mi")
 alignment = 0
 script = ExtResource("2_6xkwj")
-item_name = "Ssun"
-item_price = 120
-item_info = ExtResource("3_w6fo1")
+item_name = "Spotted Sunfish"
+item_info = ExtResource("3_5ug8q")
 
 [node name="Price" type="Label" parent="."]
 layout_mode = 0

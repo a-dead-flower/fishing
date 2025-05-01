@@ -101,7 +101,7 @@ _data = {
 "RESET": SubResource("Animation_liyxh")
 }
 
-[node name="Minnow" type="Node2D"]
+[node name="Sapp" type="Node2D"]
 process_mode = 3
 script = ExtResource("1_fqlxt")
 
@@ -191,6 +191,7 @@ scale = Vector2(2.52878, -2.52878)
 texture = ExtResource("2_rrahd")
 
 [node name="Best" type="Panel" parent="Box/Control/Panel"]
+visible = false
 show_behind_parent = true
 z_index = -1
 layout_mode = 1

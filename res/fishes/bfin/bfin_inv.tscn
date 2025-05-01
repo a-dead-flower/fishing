@@ -205,12 +205,11 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_3jsan")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_xhv2x")
 theme_override_styles/normal = SubResource("StyleBoxFlat_q1og2")
 keep_pressed_outside = true
-text = " Bowfin"
+text = "Bowfin"
 icon = SubResource("GradientTexture2D_8l4mi")
 alignment = 0
 script = ExtResource("2_1id2p")
-item_name = "bfin"
-item_price = 120
+item_name = "Bowfin"
 item_info = ExtResource("3_fdyd4")
 
 [node name="Price" type="Label" parent="."]

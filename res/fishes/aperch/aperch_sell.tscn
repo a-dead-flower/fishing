@@ -224,7 +224,7 @@ text = "Albino Perch"
 icon = SubResource("GradientTexture2D_vildk")
 alignment = 0
 script = ExtResource("2_dfcjr")
-item_name = "Aperch"
+item_name = "Albino Perch"
 item_type = "Fish"
 
 [node name="Price" type="Label" parent="."]

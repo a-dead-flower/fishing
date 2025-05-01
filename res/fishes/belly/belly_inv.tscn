@@ -209,8 +209,7 @@ text = "Mudbelly"
 icon = SubResource("GradientTexture2D_8l4mi")
 alignment = 0
 script = ExtResource("2_w6ki1")
-item_name = "belly"
-item_price = 120
+item_name = "Mudbelly"
 item_info = ExtResource("3_rem4d")
 
 [node name="Price" type="Label" parent="."]

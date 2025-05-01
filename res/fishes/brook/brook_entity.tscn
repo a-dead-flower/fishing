@@ -101,7 +101,7 @@ _data = {
 "RESET": SubResource("Animation_liyxh")
 }
 
-[node name="Drum" type="Node2D"]
+[node name="Brook" type="Node2D"]
 process_mode = 3
 script = ExtResource("1_oohtb")
 
