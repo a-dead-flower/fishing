@@ -2,8 +2,6 @@ extends Node
 
 const game = preload("res://src/scenes/game.tscn")
 
-
-
 var rng = RandomNumberGenerator.new()
 var new_best = false
 var new_fish = false
@@ -28,7 +26,7 @@ var rarities = {
 
 ## Function called to start minigame
 func start_game():
-	current_fish = moss()
+	current_fish = generate()
 	entity_fish = current_fish.instantiate()
 	var child = game.instantiate()
 	child.fish_name = entity_fish.name
