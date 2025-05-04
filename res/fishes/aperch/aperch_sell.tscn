@@ -3,7 +3,7 @@
 [ext_resource type="FontFile" uid="uid://c11kcqv0xwtq8" path="res://res/fonts/Normal.ttf" id="1_nrtdx"]
 [ext_resource type="Script" path="res://src/scripts/sellitem.gd" id="2_dfcjr"]
 [ext_resource type="FontFile" uid="uid://j364g1d5bwm4" path="res://res/fonts/Bold.ttf" id="3_vsgcq"]
-[ext_resource type="Texture2D" uid="uid://cktacgjf55nql" path="res://res/fishes/asnap/asnap_icon.png" id="4_6ojwf"]
+[ext_resource type="Texture2D" uid="uid://clsnlxngkpuat" path="res://res/fishes/aperch/aperch_icon.png" id="4_ps125"]
 [ext_resource type="Texture2D" uid="uid://dttu7rj47iq2x" path="res://res/sprites/coin.png" id="5_bbr0n"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t200f"]
@@ -253,7 +253,7 @@ offset_right = -141.0
 offset_bottom = 16.0
 scale = Vector2(-2, 2)
 mouse_filter = 2
-texture = ExtResource("4_6ojwf")
+texture = ExtResource("4_ps125")
 expand_mode = 1
 
 [node name="Coin" type="AnimatedSprite2D" parent="Price"]

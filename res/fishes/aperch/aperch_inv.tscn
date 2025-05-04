@@ -245,7 +245,6 @@ offset_top = -26.0
 offset_right = -236.0
 offset_bottom = 17.0
 scale = Vector2(-2, 2)
-mouse_filter = 2
 texture = ExtResource("6_2etn7")
 expand_mode = 1
 

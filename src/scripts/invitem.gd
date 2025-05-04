@@ -13,7 +13,9 @@ var item_size = ""
 func _enter_tree(): $Price.text = str(item_price)
 func _on_up(): $Press.play("up")
 func _on_down(): $Press.play("down")
-func _ready(): Setup.connect_self(self.get_path())
+func _ready():
+	Setup.connect_self(self.get_path())
+	$Price/Panel.mouse_filter = MOUSE_FILTER_PASS
 
 ## Open Info panel
 func _on_pressed() -> void:

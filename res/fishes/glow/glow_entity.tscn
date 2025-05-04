@@ -1,10 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://i04ecle65yh8"]
+[gd_scene load_steps=15 format=3 uid="uid://wv2g4aloyud"]
 
-[ext_resource type="Texture2D" uid="uid://d3gb4qhhmsi30" path="res://res/fishes/sturg/sturg_icon.png" id="1_a3nyx"]
-[ext_resource type="Script" path="res://src/scripts/entity.gd" id="2_i08jw"]
-[ext_resource type="FontFile" uid="uid://j364g1d5bwm4" path="res://res/fonts/Bold.ttf" id="3_srhj2"]
-[ext_resource type="FontFile" uid="uid://c11kcqv0xwtq8" path="res://res/fonts/Normal.ttf" id="4_5c2ks"]
-[ext_resource type="AudioStream" uid="uid://bignepuhc4s7t" path="res://res/sounds/effects/fish_caught.wav" id="5_jdo1k"]
+[ext_resource type="Script" path="res://src/scripts/entity.gd" id="1_kt4hn"]
+[ext_resource type="Texture2D" uid="uid://dohmyqmvxw8g1" path="res://res/fishes/glow/glow_icon.png" id="2_8pbjm"]
+[ext_resource type="FontFile" uid="uid://j364g1d5bwm4" path="res://res/fonts/Bold.ttf" id="3_sm8mv"]
+[ext_resource type="FontFile" uid="uid://c11kcqv0xwtq8" path="res://res/fonts/Normal.ttf" id="4_kc7ed"]
+[ext_resource type="AudioStream" uid="uid://bignepuhc4s7t" path="res://res/sounds/effects/fish_caught.wav" id="5_v3q1q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aetkj"]
 size = Vector2(100, 100)
@@ -31,7 +31,7 @@ corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 
 [sub_resource type="LabelSettings" id="LabelSettings_difbk"]
-font = ExtResource("3_srhj2")
+font = ExtResource("3_sm8mv")
 font_size = 32
 font_color = Color(0.203922, 0.109804, 0.152941, 1)
 
@@ -45,7 +45,7 @@ corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
 [sub_resource type="LabelSettings" id="LabelSettings_epal6"]
-font = ExtResource("4_5c2ks")
+font = ExtResource("4_kc7ed")
 font_size = 24
 font_color = Color(0.203922, 0.109804, 0.152941, 1)
 
@@ -101,13 +101,13 @@ _data = {
 "RESET": SubResource("Animation_liyxh")
 }
 
-[node name="Sturg" type="Node2D"]
+[node name="Glow" type="Node2D"]
 process_mode = 3
-script = ExtResource("2_i08jw")
+script = ExtResource("1_kt4hn")
 
 [node name="Sprite" type="Sprite2D" parent="."]
 scale = Vector2(4, 4)
-texture = ExtResource("1_a3nyx")
+texture = ExtResource("2_8pbjm")
 
 [node name="Area" type="Area2D" parent="."]
 
@@ -132,9 +132,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -259.0
+offset_left = -325.0
 offset_top = -118.0
-offset_right = 260.0
+offset_right = 341.0
 offset_bottom = -30.0
 grow_horizontal = 2
 grow_vertical = 0
@@ -161,12 +161,12 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 152.0
+offset_left = 138.0
 offset_top = -19.5
-offset_right = 326.0
+offset_right = 498.0
 offset_bottom = 20.5
 grow_vertical = 2
-text = "Sturgeon"
+text = "Glowing Night Winder"
 label_settings = SubResource("LabelSettings_difbk")
 
 [node name="Icon" type="Panel" parent="Box/Control/Panel"]
@@ -178,29 +178,28 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 16.0
 offset_top = 15.0
-offset_right = -381.0
+offset_right = -536.0
 offset_bottom = -14.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_qqn83")
 
 [node name="Sprite" type="Sprite2D" parent="Box/Control/Panel/Icon"]
-position = Vector2(57, 31)
+position = Vector2(54, 31)
 rotation = 3.14159
-scale = Vector2(2.16333, -2.16333)
-texture = ExtResource("1_a3nyx")
+scale = Vector2(1.92699, -1.92699)
+texture = ExtResource("2_8pbjm")
 
 [node name="Best" type="Panel" parent="Box/Control/Panel"]
-visible = false
 show_behind_parent = true
 z_index = -1
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 361.0
+offset_left = 510.0
 offset_top = 24.0
-offset_right = -20.0
+offset_right = -18.0
 offset_bottom = -21.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -226,7 +225,7 @@ libraries = {
 }
 
 [node name="Pop" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_jdo1k")
+stream = ExtResource("5_v3q1q")
 volume_db = -4.0
 autoplay = true
 bus = &"Effects"

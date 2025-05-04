@@ -1,11 +1,11 @@
-[gd_scene load_steps=24 format=3 uid="uid://cnm1yybwcypn6"]
+[gd_scene load_steps=24 format=3 uid="uid://b66v564gv1xd1"]
 
-[ext_resource type="FontFile" uid="uid://c11kcqv0xwtq8" path="res://res/fonts/Normal.ttf" id="1_yxpbu"]
-[ext_resource type="Script" path="res://src/scripts/invitem.gd" id="2_0oc5b"]
-[ext_resource type="PackedScene" uid="uid://dhg8xd02r0htf" path="res://res/fishes/bass/bass_info.tscn" id="3_tqjrd"]
-[ext_resource type="Texture2D" uid="uid://usyxt166m0tr" path="res://res/fishes/bass/bass_icon.png" id="4_2eo7u"]
-[ext_resource type="FontFile" uid="uid://j364g1d5bwm4" path="res://res/fonts/Bold.ttf" id="5_dxqqf"]
-[ext_resource type="Texture2D" uid="uid://dttu7rj47iq2x" path="res://res/sprites/coin.png" id="6_teeip"]
+[ext_resource type="FontFile" uid="uid://c11kcqv0xwtq8" path="res://res/fonts/Normal.ttf" id="1_agh1r"]
+[ext_resource type="Script" path="res://src/scripts/invitem.gd" id="2_63ra0"]
+[ext_resource type="PackedScene" uid="uid://bvjhedpf0q6p4" path="res://res/fishes/snap/snap_info.tscn" id="3_qb7kp"]
+[ext_resource type="FontFile" uid="uid://j364g1d5bwm4" path="res://res/fonts/Bold.ttf" id="4_chboi"]
+[ext_resource type="Texture2D" uid="uid://dttu7rj47iq2x" path="res://res/sprites/coin.png" id="5_oxlrk"]
+[ext_resource type="Texture2D" uid="uid://bxda36g1xyu0p" path="res://res/fishes/snap/snap_icon.png" id="6_yejle"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t200f"]
 
@@ -28,7 +28,6 @@ corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q1og2"]
-content_margin_right = 280.0
 bg_color = Color(0.905882, 0.835294, 0.701961, 1)
 border_width_bottom = 4
 border_color = Color(0.843137, 0.709804, 0.580392, 1)
@@ -46,11 +45,11 @@ width = 102
 height = 62
 
 [sub_resource type="LabelSettings" id="LabelSettings_3eh4d"]
-font = ExtResource("5_dxqqf")
+font = ExtResource("4_chboi")
 font_size = 24
 font_color = Color(0.203922, 0.109804, 0.152941, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0mkw3"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0pqai"]
 bg_color = Color(0.843137, 0.709804, 0.580392, 1)
 border_width_top = 2
 border_color = Color(0.752941, 0.580392, 0.45098, 1)
@@ -60,19 +59,19 @@ corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jbhqs"]
-atlas = ExtResource("6_teeip")
+atlas = ExtResource("5_oxlrk")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jfl8l"]
-atlas = ExtResource("6_teeip")
+atlas = ExtResource("5_oxlrk")
 region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x4m12"]
-atlas = ExtResource("6_teeip")
+atlas = ExtResource("5_oxlrk")
 region = Rect2(32, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g7lo6"]
-atlas = ExtResource("6_teeip")
+atlas = ExtResource("5_oxlrk")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kc6ax"]
@@ -192,26 +191,26 @@ _data = {
 }
 
 [node name="Button" type="Button" groups=["Button"]]
-offset_right = 474.0
-offset_bottom = 62.0
+offset_right = 498.0
+offset_bottom = 66.0
 theme_override_colors/font_hover_pressed_color = Color(0.203922, 0.109804, 0.152941, 1)
 theme_override_colors/font_hover_color = Color(0.203922, 0.109804, 0.152941, 1)
 theme_override_colors/font_pressed_color = Color(0.203922, 0.109804, 0.152941, 1)
 theme_override_colors/font_focus_color = Color(0.203922, 0.109804, 0.152941, 1)
 theme_override_colors/font_color = Color(0.203922, 0.109804, 0.152941, 1)
-theme_override_fonts/font = ExtResource("1_yxpbu")
+theme_override_fonts/font = ExtResource("1_agh1r")
 theme_override_font_sizes/font_size = 24
 theme_override_styles/focus = SubResource("StyleBoxEmpty_t200f")
 theme_override_styles/hover = SubResource("StyleBoxFlat_3jsan")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_xhv2x")
 theme_override_styles/normal = SubResource("StyleBoxFlat_q1og2")
 keep_pressed_outside = true
-text = "Bass"
+text = "Alligator Turtle"
 icon = SubResource("GradientTexture2D_8l4mi")
 alignment = 0
-script = ExtResource("2_0oc5b")
-item_name = "Bass"
-item_info = ExtResource("3_tqjrd")
+script = ExtResource("2_63ra0")
+item_name = "Alligator Turtle"
+item_info = ExtResource("3_qb7kp")
 
 [node name="Price" type="Label" parent="."]
 layout_mode = 0
@@ -229,7 +228,7 @@ offset_left = -365.0
 offset_top = -10.0
 offset_right = -277.0
 offset_bottom = 39.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_0mkw3")
+theme_override_styles/panel = SubResource("StyleBoxFlat_0pqai")
 
 [node name="Coin" type="AnimatedSprite2D" parent="Price"]
 position = Vector2(63, 15)
@@ -240,13 +239,13 @@ frame_progress = 0.0238692
 
 [node name="Icon" type="TextureRect" parent="Price"]
 layout_mode = 0
-offset_left = -281.0
-offset_top = -24.0
-offset_right = -240.0
-offset_bottom = 17.0
+offset_left = -276.0
+offset_top = -26.0
+offset_right = -229.0
+offset_bottom = 16.0
 scale = Vector2(-2, 2)
-mouse_filter = 0
-texture = ExtResource("4_2eo7u")
+mouse_filter = 2
+texture = ExtResource("6_yejle")
 expand_mode = 1
 
 [node name="Press" type="AnimationPlayer" parent="."]
