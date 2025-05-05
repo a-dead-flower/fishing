@@ -6,7 +6,8 @@ var current_page = 0
 func _ready():
 	Setup.dim_ambient()
 	Setup.connect_buttons()
-	var children = $Menu/Fish/Pond/Grid.get_children()
+	var children = $Menu/Fish/Pond/Margin/Grid.get_children()
+	$Menu/Fish/Pond.clip_contents = true
 	for i in Globals.pond_caught:
 		for j in children:
 			if i[0] == j.name:
@@ -16,7 +17,13 @@ func _ready():
 				button.fish_found = true
 				button.get_node("Icon/Icon").visible = true
 				button.get_node("Active").play("enabled")
-
+				if i[3] == true:
+					var new = Globals.beast.instantiate()
+					button.get_parent().add_child(new)
+					i[3] = false
+					
+					
+					
 
 ## Process function
 func _process(_delta: float) -> void:

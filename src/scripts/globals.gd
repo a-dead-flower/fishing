@@ -156,7 +156,7 @@ const blue_inv = preload("res://res/equip/lure/blue/blue_inv.tscn")
 const blue_icon = preload("res://res/equip/lure/blue/blue_icon.tscn")
 const blue_sell = preload("res://res/equip/lure/blue/blue_sell.tscn")
 
-
+const beast = preload("res://src/scenes/beast.tscn")
 const empty_inv = preload("res://src/scenes/empty.tscn")
 
 const rod_one_inv = preload("res://res/equip/rods/rod_1/rod_1_inv.tscn")
@@ -172,7 +172,7 @@ var speed = 450
 var stop_cast = false
 var time_of_day = 900
 var cast_speed = 400
-var inv_space = 100
+var inv_space = 10
 var bonus_rng = 0
 
 var sett_scale = 2
@@ -212,7 +212,7 @@ var upgrade_bar = 0
 var upgrade_prog = 0
 var upgrade_cast = 0
 var upgrade_loss = 0
-var upgrade_pack = 5
+var upgrade_pack = 0
 
 var pond_caught = []
 
@@ -224,7 +224,7 @@ var fish = []
 #region SETUP
 
 func _ready() -> void:
-	add_test_fish()
+	#add_test_fish()
 	set_settings()
 
 func set_settings() -> void:

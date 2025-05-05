@@ -1,6 +1,8 @@
 extends Node2D
 
 func _ready() -> void:
+	var size = $Box/Control/Panel/Icon.size.x + 16
+	$Box/Control/Panel/Label.position.x = size + 8
 	$Box/Control.visible = false
 
 func _process(delta: float) -> void:

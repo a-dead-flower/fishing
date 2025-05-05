@@ -1,6 +1,7 @@
-[gd_scene load_steps=26 format=3 uid="uid://nxswi60gawii"]
+[gd_scene load_steps=28 format=3 uid="uid://nxswi60gawii"]
 
 [ext_resource type="Texture2D" uid="uid://c6pw8u7d75dx5" path="res://res/fishes/lgar/lgar_icon.png" id="1_7v3gj"]
+[ext_resource type="Shader" path="res://src/shader/bestiary.gdshader" id="1_e71pc"]
 [ext_resource type="Texture2D" uid="uid://clhe2hhfb5euu" path="res://res/sprites/stars.png" id="2_d3ypg"]
 [ext_resource type="FontFile" uid="uid://j364g1d5bwm4" path="res://res/fonts/Bold.ttf" id="3_2v447"]
 [ext_resource type="FontFile" uid="uid://c11kcqv0xwtq8" path="res://res/fonts/Normal.ttf" id="4_ca20v"]
@@ -14,66 +15,95 @@ corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 corner_detail = 20
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2a4qx"]
+shader = ExtResource("1_e71pc")
+shader_parameter/silhoutteColor = Color(0.203922, 0.109804, 0.152941, 1)
+shader_parameter/mixT = 1.0
+
 [sub_resource type="Animation" id="Animation_r8svp"]
 resource_name = "disable"
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:visible")
+tracks/0/path = NodePath("../Title:text")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../Title:text")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": ["???"]
 }
-
-[sub_resource type="Animation" id="Animation_2imon"]
-resource_name = "enabled"
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("../Title:text")
+tracks/1/path = NodePath("../Panel/Icon/Icon:material")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": ["Minnow"]
+"values": [SubResource("ShaderMaterial_2a4qx")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_577kh"]
+resource_name = "enabled"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Title:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Longnose Gar"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Panel/Icon/Icon:material")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [null]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8du6e"]
 _data = {
 "disable": SubResource("Animation_r8svp"),
-"enabled": SubResource("Animation_2imon")
+"enabled": SubResource("Animation_577kh")
 }
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5naqq"]

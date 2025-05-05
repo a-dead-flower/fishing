@@ -1,0 +1,103 @@
+[gd_scene load_steps=7 format=3 uid="uid://da0wr2inry0q5"]
+
+[ext_resource type="Script" path="res://src/scripts/beast.gd" id="1_nvlni"]
+[ext_resource type="Texture2D" uid="uid://bublh8sd8h5us" path="res://res/sprites/new_fish.png" id="1_y2ox7"]
+
+[sub_resource type="Animation" id="Animation_vypck"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.276, 1.276)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Glow:theme_override_styles/panel:shadow_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 0.419608, 0.6)]
+}
+
+[sub_resource type="Animation" id="Animation_8td53"]
+resource_name = "sine"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1.406, 1.406), Vector2(1.576, 1.576), Vector2(1.406, 1.406)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Glow:theme_override_styles/panel:shadow_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 0.419608, 0.27451), Color(1, 1, 0.419608, 0.6), Color(1, 1, 0.419608, 0.27451)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2eqrs"]
+_data = {
+"RESET": SubResource("Animation_vypck"),
+"sine": SubResource("Animation_8td53")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k3vkk"]
+bg_color = Color(1, 1, 0.403922, 0.0117647)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(1, 1, 0.419608, 0.6)
+shadow_size = 6
+
+[node name="New" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_nvlni")
+
+[node name="Sine" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Star")
+libraries = {
+"": SubResource("AnimationLibrary_2eqrs")
+}
+autoplay = "sine"
+
+[node name="Star" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(73.5, 5)
+scale = Vector2(1.276, 1.276)
+texture = ExtResource("1_y2ox7")
+
+[node name="Glow" type="Panel" parent="."]
+layout_mode = 2
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 78.0
+offset_bottom = 69.0
+scale = Vector2(1.04, 1.04)
+pivot_offset = Vector2(40, 35.5)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_k3vkk")

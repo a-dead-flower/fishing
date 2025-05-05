@@ -149,7 +149,7 @@ func check_bestiary():
 				i[1] = str(snapped(fish_size,0.1),fish_token)
 				new_best = true
 			return
-	fish_array.append([fish_name,str(snapped(fish_size,0.1),fish_token),1])
+	fish_array.append([fish_name,str(snapped(fish_size,0.1),fish_token),1,true])
 	new_fish = true
 	new_best = true
 
@@ -373,7 +373,7 @@ func pike():
 		Globals.pike_sell
 	]); return Globals.pike_entity
 
-## Add musk
+## Add muskellunge
 func musk():
 	var base = 65
 	fish_size = rng.randf_range(50.0, 150.0)
