@@ -15,6 +15,13 @@ corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 corner_detail = 20
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gwypj"]
+bg_color = Color(0.203922, 0.109804, 0.152941, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
 [sub_resource type="Animation" id="Animation_e1udj"]
 length = 0.001
 tracks/0/type = "value"
@@ -100,7 +107,8 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": ["Sturgeon"]
+"values": ["Atlantic
+Salmon"]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -206,13 +214,6 @@ font = ExtResource("4_i4u72")
 font_size = 32
 font_color = Color(0.203922, 0.109804, 0.152941, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gwypj"]
-bg_color = Color(0.203922, 0.109804, 0.152941, 1)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
-
 [sub_resource type="LabelSettings" id="LabelSettings_d2bui"]
 font = ExtResource("5_7uag5")
 font_size = 24
@@ -255,7 +256,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Disable" type="Panel" parent="."]
-visible = false
 z_index = 1
 layout_mode = 1
 anchors_preset = 8
@@ -270,6 +270,14 @@ offset_bottom = 255.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_jcy50")
+
+[node name="Line3" type="Panel" parent="Disable"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = -12.0
+offset_right = 258.0
+offset_bottom = -7.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_gwypj")
 
 [node name="Disable" type="AnimationPlayer" parent="Disable"]
 libraries = {
@@ -345,8 +353,7 @@ offset_left = 154.0
 offset_top = -106.0
 offset_right = 394.0
 offset_bottom = -66.0
-text = "Atlantic
-Salmon"
+text = "???"
 label_settings = SubResource("LabelSettings_uhhwv")
 
 [node name="Line1" type="Panel" parent="Title"]

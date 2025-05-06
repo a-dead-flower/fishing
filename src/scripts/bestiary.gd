@@ -27,6 +27,13 @@ func _ready():
 
 ## Process function
 func _process(_delta: float) -> void:
+	
+	## Scrollbar shadow max-13
+	if $Menu/Fish/Pond.scroll_vertical > 427:
+		$Menu/Fish/Shadow.visible = false
+	else: $Menu/Fish/Shadow.visible = true
+	
+	## Open and close animation
 	if Input.is_action_just_pressed("menu"):
 		$Blur/Animate.play("close")
 		Setup.undim_ambient()
