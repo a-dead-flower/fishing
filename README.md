@@ -1,11 +1,12 @@
 # Fishing
 
 ## Known Bugs
+- Blackjaw selling is mooneye
 - Bait will show a value of 0 when in the shops if all of bait type is used
 - Using all bait of a specific kind without resetting the global "current_bait" and then visiting the shop will result in the bait being displayed at a value of 0
 - When casting, the cast can be interupted during travel by holding down the left mouse
 
-## 0.0.13 WIP
+## 0.0.13
 - Fixed Vulkan bug by adding an OpenGL shader ontop of everything (???)
 - Fixed fish sorting by price and name in shops bug
 - Added stats info to shop items instead of only for upgrades

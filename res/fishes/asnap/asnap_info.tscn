@@ -433,6 +433,7 @@ offset_bottom = 119.0
 texture = SubResource("GradientTexture2D_j5hrl")
 
 [node name="Icon" type="TextureRect" parent="Panel/Icon"]
+layout_mode = 0
 offset_left = 28.0
 offset_top = -39.0
 offset_right = 81.0
@@ -508,7 +509,7 @@ libraries = {
 position = Vector2(238, 134)
 scale = Vector2(-1.14331, 1.14331)
 sprite_frames = SubResource("SpriteFrames_utv4n")
-animation = &"1"
+animation = &"3"
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 0

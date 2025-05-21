@@ -1,4 +1,4 @@
-[gd_scene load_steps=85 format=3 uid="uid://db6333qjh00cd"]
+[gd_scene load_steps=98 format=3 uid="uid://db6333qjh00cd"]
 
 [ext_resource type="Script" path="res://src/scripts/game.gd" id="1_g0r3g"]
 [ext_resource type="Texture2D" uid="uid://cssstuea15l5m" path="res://res/sprites/rod.png" id="2_7jjqa"]
@@ -286,6 +286,23 @@ tracks/0/keys = {
 "values": [0.63, 0.022, 0.0, 0.2, 1.0, 0.5, 0.419, 1.0, 0.2, 0.387, 0.676, 0.236, 1.0, 0.312, 0.353, 1.0, 0.1, 1.0, 0.645, 1.0, 1.08, 1.0]
 }
 
+[sub_resource type="Animation" id="Animation_72cdn"]
+resource_name = "Barb"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:fish_strength")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.233333, 0.433333, 0.566667, 0.833333, 1.06667, 1.23333, 1.56667, 1.9, 2.13333, 2.5, 3.23333, 3.76667, 4.03333, 4.4, 5.03333, 5.36667, 6.03333, 6.46667, 7.06667, 7.43333, 7.93333, 8.46667, 9.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.236, 0.5, 0.552, 0.633, 0.2, 0.419, 0.0, 1.0, 0.2, 3.0, 0.387, 1.0, 1.286, 1.0, 0.63, 1.0, 0.33, 0.0, 1.0, 0.312, 0.1, 1.0, 0.645, 1.0]
+}
+
 [sub_resource type="Animation" id="Animation_odr27"]
 resource_name = "Bass"
 length = 10.0
@@ -524,6 +541,40 @@ tracks/0/keys = {
 "values": [0.58, 0.37, 0.84, 0.13, 0.46, 0.51, 0.7, 0.28, 0.67, 0.56, 0.41, 0.24, 0.77]
 }
 
+[sub_resource type="Animation" id="Animation_6rksd"]
+resource_name = "Cloud"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:fish_strength")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.133333, 0.2, 0.9, 1, 1.7, 2.2, 2.3, 3.23333, 3.46667, 3.9, 4.03333, 4.93333, 5.33333, 5.56667, 6.53333, 6.66667, 6.8, 7.46667, 8.3, 8.5, 8.56667, 9.33333, 9.66667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.1, 0.26, 2.0, 0.69, 0.266667, 1.0, 0.54, 1.0, 0.5, 1.0, -0.4, 0.361, 1.744, 1.0, 0.066, 0.269, 0.66, 0.157, 0.952, 0.258, 1.0, 1.89, -0.232, 0.326]
+}
+
+[sub_resource type="Animation" id="Animation_8i07w"]
+resource_name = "Cosmic"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:fish_strength")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.366667, 0.8, 1.06667, 1.43333, 1.56667, 1.76667, 2.03333, 2.53333, 2.76667, 3.13333, 3.5, 4.06667, 4.76667, 5.16667, 5.6, 6.03333, 6.56667, 6.73333, 7.06667, 7.7, 8.06667, 8.36667, 9.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [1.2, 0.627, -1.36, 0.739, 0.633, 2.67, -3.7, 0.236, 1.162, 0.5, -0.34, 0.45, 1.706, 1.43, -1.0, 1.0, 0.0, 0.312, 1.0, 0.1, 1.0, 0.2, 1.0, 0.645]
+}
+
 [sub_resource type="Animation" id="Animation_lpaud"]
 resource_name = "Cpick"
 length = 10.0
@@ -539,6 +590,57 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [0.18, 1.0, 0.63, 1.0, 0.8, 0.52, 1.0, 0.57, 0.9, 0.6, 0.2, 0.63, 1.0, 0.21, 0.63]
+}
+
+[sub_resource type="Animation" id="Animation_n8rwx"]
+resource_name = "Dart"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:fish_strength")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0999999, 0.366667, 0.533333, 0.9, 1.1, 1.43333, 2, 2.4, 2.7, 3.3, 3.46667, 4.06667, 4.46667, 5.63333, 5.8, 6.4, 6.83333, 7.1, 7.6, 8.23333, 8.56667, 9, 9.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.882, 0.5, 0.361, 0.3, 1.0, -0.29, 0.266667, -1.101, 0.157, 0.54, 1.0, 0.824, 0.258, 0.95, -0.4, 1.0, 0.07, -0.232, 1.0, 0.26, 0.1, 0.066, 0.326, 0.66]
+}
+
+[sub_resource type="Animation" id="Animation_m6qa7"]
+resource_name = "Dragon"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:fish_strength")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.5, 0.733333, 1.06667, 1.3, 1.56667, 1.76667, 1.9, 2.36667, 2.76667, 2.96667, 3.5, 3.63333, 4.86667, 5.16667, 5.6, 6.03333, 6.46667, 7.06667, 7.43333, 7.93333, 8.46667, 9.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.236, 1.162, 0.633, -1.36, 0.739, -4.243, 2.67, -3.7, 1.2, -0.34, 0.5, 0.2, 0.45, 1.0, 1.706, -1.0, 1.43, 0.0, 1.0, 0.312, 0.1, 1.0, 0.645, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_4x2fd"]
+resource_name = "Dream"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:fish_strength")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.266667, 0.4, 0.633333, 0.8, 0.866667, 0.966667, 1.36667, 1.53333, 1.73333, 1.86667, 2.03333, 2.33333, 2.56667, 2.76667, 2.9, 3.16667, 3.33333, 3.53333, 4, 4.26667, 4.73333, 5.16667, 5.76667, 6.43333, 6.66667, 7, 7.43333, 7.7, 8.36667, 8.73333, 9.53333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [1.0, 0.78, 1.31, -0.32, -2.46, 0.75, 0.01, 0.53, 0.92, -0.33, 0.44, 0.26, 0.61, 0.38, 0.66, 1.77, -1.32, -0.38, 0.21, 0.79, 1.31, 1.0, 1.81, -0.82, -0.1, 0.05, 2.17, 0.16, 1.52, -0.18, -0.04, 0.67, 0.42]
 }
 
 [sub_resource type="Animation" id="Animation_nd5xq"]
@@ -609,6 +711,23 @@ tracks/0/keys = {
 "values": [0.5, 1.286, 0.552, 0.0, 0.2, 1.0, 0.419, 1.0, 0.2, 0.645, 1.0, 1.3, 0.63, 1.0, 0.236, 0.33, 0.1, 0.633, 1.0, 0.0, 0.387, 1.0, 0.312, 1.0]
 }
 
+[sub_resource type="Animation" id="Animation_ql61l"]
+resource_name = "Gold"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:fish_strength")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.266667, 0.7, 0.9, 1.13333, 1.36667, 1.9, 2.13333, 2.4, 2.86667, 3.5, 4.06667, 4.3, 4.96667, 5.63333, 5.8, 6.06667, 6.56667, 7.1, 7.66667, 8.36667, 8.56667, 9, 9.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.29, 0.882, 0.5, 1.0, -1.101, 0.361, 1.0, 0.95, 0.157, 0.824, 0.3, 0.258, 0.07, 0.54, -0.4, 1.0, 0.266667, 0.26, 1.0, 0.1, -0.232, 0.066, 0.326, 0.66]
+}
+
 [sub_resource type="Animation" id="Animation_06geq"]
 resource_name = "Guppy"
 length = 10.0
@@ -624,6 +743,40 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [0.69963, 0.22, 0.77, 0.38, 0.82, 1.0, 0.27, 0.57, 0.34]
+}
+
+[sub_resource type="Animation" id="Animation_xdq5e"]
+resource_name = "Home"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:fish_strength")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.566667, 0.966667, 1.36667, 1.46667, 2.3, 2.6, 2.96667, 3.1, 3.46667, 3.9, 4.4, 4.93333, 5.33333, 5.43333, 6.53333, 6.66667, 7.46667, 8.06667, 8.3, 8.43333, 9.6, 9.76667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [2.0, 1.0, 0.5, 0.8, 0.266667, 0.54, 0.1, 1.0, 0.361, 0.26, 1.0, -0.4, 0.066, 1.744, 1.0, 0.157, 0.269, 0.66, 0.952, 1.89, 0.258, -0.232, 0.326, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_nr53d"]
+resource_name = "Jack"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:fish_strength")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.133333, 0.733333, 0.866667, 1.4, 1.5, 1.93333, 2.03333, 2.76667, 2.86667, 3.63333, 3.73333, 4.66667, 4.76667, 5.53333, 5.6, 6.03333, 6.56667, 6.73333, 7.06667, 7.7, 8.06667, 8.36667, 9.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.739, 0.633, -3.7, 0.236, 0.45, 1.2, -1.36, 2.67, 0.5, 1.162, 0.627, -0.34, 1.706, 1.43, -1.0, 1.0, 0.0, 0.312, 1.0, 0.1, 1.0, 0.2, 1.0, 0.645]
 }
 
 [sub_resource type="Animation" id="Animation_virb1"]
@@ -743,6 +896,40 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [1.0, 0.77, 0.57, 0.69963, 0.82, 0.22, 0.38, 0.27, 0.34]
+}
+
+[sub_resource type="Animation" id="Animation_ebjqs"]
+resource_name = "Night"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:fish_strength")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.566667, 1.46667, 2.06667, 2.53333, 3.06667, 3.56667, 3.9, 4.7, 4.8, 5.06667, 5.4, 5.53333, 5.8, 6.33333, 6.5, 6.83333, 7.6, 7.86667, 8.23333, 8.56667, 9.4, 9.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.258, -0.4, 0.54, 1.0, 0.269, 0.5, 2.0, -0.44, 0.361, 1.0, 0.157, 0.8, 1.0, 0.266667, 1.0, 0.882, 1.0, -0.106, 0.26, -0.232, 0.1, 0.066, 0.66, 0.326]
+}
+
+[sub_resource type="Animation" id="Animation_aje2m"]
+resource_name = "Padd"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:fish_strength")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.533333, 0.733333, 1.4, 1.5, 1.76667, 2.1, 2.63333, 3.1, 3.8, 3.96667, 4.46667, 4.83333, 5.56667, 6.26667, 6.43333, 7.1, 8.23333, 9.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [1.0, -0.23, 0.54, 1.21, 1.02, 0.1, 0.8, -0.4, 0.361, 0.066, 0.157, 1.744, 0.269, 0.66, -0.232, 1.89, 0.258, 0.326, 1.12, 0.76]
 }
 
 [sub_resource type="Animation" id="Animation_ufobx"]
@@ -964,6 +1151,40 @@ tracks/0/keys = {
 "values": [3.0, 0.2, 1.0, 0.1, 1.0, 0.2, 0.5, 0.0, 1.0, 0.0, 1.0, 0.419, 0.236, 1.286, 1.0, 0.63, 0.33, 0.312, 0.633, 1.0, 0.552, 0.387, 0.645, 1.0]
 }
 
+[sub_resource type="Animation" id="Animation_muwgo"]
+resource_name = "Swirl"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:fish_strength")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 0.433333, 0.866667, 1.2, 1.46667, 2.06667, 2.3, 2.83333, 3, 3.76667, 4.7, 4.76667, 5.13333, 5.4, 5.53333, 5.8, 6.26667, 6.83333, 7.46667, 7.86667, 8.06667, 8.56667, 9.4, 9.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [1.0, 2.0, 0.8, 0.5, 0.54, 0.269, 0.1, 0.26, -0.4, 0.361, 1.0, 1.0, 0.157, 1.0, 0.266667, 1.0, 0.258, -0.106, 0.882, -0.232, 1.89, 0.066, 0.66, 0.326]
+}
+
+[sub_resource type="Animation" id="Animation_yvlq1"]
+resource_name = "Violet"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:fish_strength")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.366667, 0.9, 1.1, 1.3, 1.4, 1.86667, 2.23333, 2.9, 3.26667, 3.86667, 4.06667, 4.46667, 5.8, 6.16667, 6.5, 7.06667, 7.6, 7.86667, 8.23333, 8.56667, 9.4, 9.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.882, -1.101, 0.824, 0.361, 0.54, -1.54, 0.3, 0.266667, 1.0, 0.157, 0.5, 1.0, 0.258, 0.95, 1.0, -0.4, 1.0, 0.07, 0.26, -0.232, 0.1, 0.066, 0.66, 0.326]
+}
+
 [sub_resource type="Animation" id="Animation_pihsx"]
 resource_name = "Walleye"
 length = 10.0
@@ -1009,10 +1230,10 @@ tracks/0/path = NodePath(".:fish_strength")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.533333, 0.8, 1, 1.46667, 1.9, 2.3, 2.46667, 2.83333, 3, 3.46667, 3.76667, 4.4, 4.76667, 4.93333, 5.13333, 6, 6.53333, 7.46667, 7.86667, 8.06667, 8.3, 9.16667, 9.6),
+"times": PackedFloat32Array(0, 0.1, 0.466667, 0.8, 1.46667, 1.9, 2.3, 2.46667, 2.83333, 3, 3.46667, 3.76667, 4.4, 4.76667, 4.93333, 5.13333, 6, 6.53333, 7.46667, 7.86667, 8.06667, 8.3, 9.16667, 9.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [0.8, 0.5, 2.0, 1.0, 0.54, 1.0, 0.1, 0.266667, 0.26, -0.4, 1.0, 0.361, 0.066, 1.0, 1.744, 0.157, 0.66, 0.269, 0.952, -0.232, 1.89, 0.258, 1.0, 0.326]
+"values": [0.8, 1.0, 0.5, 2.0, 0.54, 1.0, 0.1, 0.266667, 0.26, -0.4, 1.0, 0.361, 0.066, 1.0, 1.744, 0.157, 0.66, 0.269, 0.952, -0.232, 1.89, 0.258, 1.0, 0.326]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4i2u4"]
@@ -1022,6 +1243,7 @@ _data = {
 "Aperch": SubResource("Animation_guche"),
 "Asnap": SubResource("Animation_41njh"),
 "Atlan": SubResource("Animation_konm1"),
+"Barb": SubResource("Animation_72cdn"),
 "Bass": SubResource("Animation_odr27"),
 "Bcrap": SubResource("Animation_kdvfo"),
 "Belly": SubResource("Animation_3owyb"),
@@ -1036,12 +1258,20 @@ _data = {
 "Carp": SubResource("Animation_2yevn"),
 "Catf": SubResource("Animation_wcelk"),
 "Chub": SubResource("Animation_8mhsw"),
+"Cloud": SubResource("Animation_6rksd"),
+"Cosmic": SubResource("Animation_8i07w"),
 "Cpick": SubResource("Animation_lpaud"),
+"Dart": SubResource("Animation_n8rwx"),
+"Dragon": SubResource("Animation_m6qa7"),
+"Dream": SubResource("Animation_4x2fd"),
 "Drum": SubResource("Animation_nd5xq"),
 "Eel": SubResource("Animation_7wdtb"),
 "Gala": SubResource("Animation_jkql3"),
 "Glow": SubResource("Animation_wtpc0"),
+"Gold": SubResource("Animation_ql61l"),
 "Guppy": SubResource("Animation_06geq"),
+"Home": SubResource("Animation_xdq5e"),
+"Jack": SubResource("Animation_nr53d"),
 "Knife": SubResource("Animation_virb1"),
 "Lgar": SubResource("Animation_6f2qx"),
 "Minnow": SubResource("Animation_87lah"),
@@ -1049,6 +1279,8 @@ _data = {
 "Moss": SubResource("Animation_51c74"),
 "Musk": SubResource("Animation_wklf6"),
 "Neon": SubResource("Animation_ptalo"),
+"Night": SubResource("Animation_ebjqs"),
+"Padd": SubResource("Animation_aje2m"),
 "Perch": SubResource("Animation_ufobx"),
 "Pike": SubResource("Animation_jwctm"),
 "RESET": SubResource("Animation_k7xai"),
@@ -1062,6 +1294,8 @@ _data = {
 "Sock": SubResource("Animation_yb5qw"),
 "Ssun": SubResource("Animation_sdxum"),
 "Sturg": SubResource("Animation_k4w2e"),
+"Swirl": SubResource("Animation_muwgo"),
+"Violet": SubResource("Animation_yvlq1"),
 "Walleye": SubResource("Animation_pihsx"),
 "Wcrap": SubResource("Animation_ymo3n"),
 "Zebra": SubResource("Animation_e2mbh")

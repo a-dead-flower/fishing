@@ -29,7 +29,7 @@ func _ready():
 func _process(_delta: float) -> void:
 	
 	## Scrollbar shadow max-13
-	if $Menu/Fish/Pond.scroll_vertical > 427:
+	if $Menu/Fish/Pond.scroll_vertical > 1148 - 13:
 		$Menu/Fish/Shadow.visible = false
 	else: $Menu/Fish/Shadow.visible = true
 	

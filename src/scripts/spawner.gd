@@ -123,13 +123,27 @@ func generate():
 		
 	## Epic fish
 	if type == "Epic":
-		var fish = rng.randi_range(1, 1)
-		if fish == 1: return zebra()
+		var fish = rng.randi_range(1, 9)
+		match fish:
+			1: return zebra()
+			2: return padd()
+			3: return home()
+			4: return cloud()
+			5: return swirl()
+			6: return night()
+			7: return violet()
+			8: return dart()
+			9: return gold()
 		
 	## Legendary fish
 	if type == "Legendary":
-		var _fish = rng.randi_range(1, 1)
-		return zebra()
+		var fish = rng.randi_range(1, 5)
+		match fish:
+			1: return dream()
+			2: return barb()
+			3: return dragon()
+			4: return cosmic()
+			5: return jack()
 		
 	## Mythic fish
 	if type == "Mythic":
@@ -429,19 +443,6 @@ func sturg():
 		Globals.sturg_sell
 	]); return Globals.sturg_entity
 
-## Add zebra pleco
-func zebra():
-	var base = 400
-	fish_size = rng.randf_range(2.0, 8.0)
-	var value = base + (fish_size * 5)
-	fish_array = Globals.pond_caught
-	fish_name = "Zebra"; fish_token = "cm"
-	Globals.fish.append([
-		Globals.zebra_inv,
-		snapped(value,1),
-		str(snapped(fish_size,0.1),"cm"),
-		Globals.zebra_sell
-	]); return Globals.zebra_entity
 #endregion
 
 #region UNCOMMON
@@ -466,7 +467,7 @@ func bass():
 
 ## Add carp
 func carp():
-	var base = 80
+	var base = 110
 	fish_size = rng.randf_range(18.0, 45.0)
 	var value = base + (fish_size)
 	fish_array = Globals.pond_caught
@@ -480,7 +481,7 @@ func carp():
 
 ## Add eel
 func eel():
-	var base = 90
+	var base = 120
 	fish_size = rng.randf_range(0.2, 4.0)
 	var value = base + (fish_size*10)
 	fish_array = Globals.pond_caught
@@ -494,9 +495,9 @@ func eel():
 
 ## Add longnose gar
 func lgar():
-	var base = 90
+	var base = 120
 	fish_size = rng.randf_range(70, 120)
-	var value = base + (fish_size)
+	var value = base + (fish_size/2)
 	fish_array = Globals.pond_caught
 	fish_name = "Lgar"; fish_token = "cm"
 	Globals.fish.append([
@@ -506,15 +507,10 @@ func lgar():
 		Globals.lgar_sell
 	]); return Globals.lgar_entity
 
-
-#################################################################################
-##  TODO:STATS
-#################################################################################
-
 ## Add albino snapper
 func asnap():
-	var base = 90
-	fish_size = rng.randf_range(70, 120)
+	var base = 100
+	fish_size = rng.randf_range(30, 70)
 	var value = base + (fish_size)
 	fish_array = Globals.pond_caught
 	fish_name = "Asnap"; fish_token = "cm"
@@ -527,8 +523,8 @@ func asnap():
 
 ## Add spotted sunfish
 func ssun():
-	var base = 90
-	fish_size = rng.randf_range(70, 120)
+	var base = 100
+	fish_size = rng.randf_range(10, 20)
 	var value = base + (fish_size)
 	fish_array = Globals.pond_caught
 	fish_name = "Ssun"; fish_token = "cm"
@@ -541,8 +537,8 @@ func ssun():
 	
 ## Add albino perch
 func aperch():
-	var base = 90
-	fish_size = rng.randf_range(70, 120)
+	var base = 110
+	fish_size = rng.randf_range(15, 30)
 	var value = base + (fish_size)
 	fish_array = Globals.pond_caught
 	fish_name = "Aperch"; fish_token = "cm"
@@ -553,25 +549,25 @@ func aperch():
 		Globals.aperch_sell
 	]); return Globals.aperch_entity
 
-## Add catfisn
+## Add catfish
 func catf():
-	var base = 90
-	fish_size = rng.randf_range(70, 120)
-	var value = base + (fish_size)
+	var base = 120
+	fish_size = rng.randf_range(1, 2)
+	var value = base + (fish_size*10)
 	fish_array = Globals.pond_caught
-	fish_name = "Catf"; fish_token = "cm"
+	fish_name = "Catf"; fish_token = "m"
 	Globals.fish.append([
 		Globals.catf_inv,
 		snapped(value,1),
-		str(snapped(fish_size,0.1),"cm"),
+		str(snapped(fish_size,0.1),"m"),
 		Globals.catf_sell
 	]); return Globals.catf_entity
 
 ## Add brown trout
 func btrout():
-	var base = 90
-	fish_size = rng.randf_range(70, 120)
-	var value = base + (fish_size)
+	var base = 100
+	fish_size = rng.randf_range(40, 80)
+	var value = base + (fish_size*1.5)
 	fish_array = Globals.pond_caught
 	fish_name = "Btrout"; fish_token = "cm"
 	Globals.fish.append([
@@ -583,9 +579,9 @@ func btrout():
 
 ## Add bowfin
 func bfin():
-	var base = 90
-	fish_size = rng.randf_range(70, 120)
-	var value = base + (fish_size)
+	var base = 110
+	fish_size = rng.randf_range(45, 60)
+	var value = base + (fish_size*1.2)
 	fish_array = Globals.pond_caught
 	fish_name = "Bfin"; fish_token = "cm"
 	Globals.fish.append([
@@ -597,9 +593,9 @@ func bfin():
 
 ## Add rock hopper
 func rhop():
-	var base = 90
-	fish_size = rng.randf_range(70, 120)
-	var value = base + (fish_size)
+	var base = 110
+	fish_size = rng.randf_range(8, 17)
+	var value = base + (fish_size*2)
 	fish_array = Globals.pond_caught
 	fish_name = "Rhop"; fish_token = "cm"
 	Globals.fish.append([
@@ -611,9 +607,9 @@ func rhop():
 
 ## Add sauger
 func saug():
-	var base = 90
-	fish_size = rng.randf_range(70, 120)
-	var value = base + (fish_size)
+	var base = 100
+	fish_size = rng.randf_range(25, 40)
+	var value = base + (fish_size*2)
 	fish_array = Globals.pond_caught
 	fish_name = "Saug"; fish_token = "cm"
 	Globals.fish.append([
@@ -625,8 +621,8 @@ func saug():
 
 ## Add chain pickrel
 func cpick():
-	var base = 90
-	fish_size = rng.randf_range(70, 120)
+	var base = 120
+	fish_size = rng.randf_range(60, 80)
 	var value = base + (fish_size)
 	fish_array = Globals.pond_caught
 	fish_name = "Cpick"; fish_token = "cm"
@@ -639,9 +635,9 @@ func cpick():
 
 ## Add mooneye
 func moon():
-	var base = 90
-	fish_size = rng.randf_range(70, 120)
-	var value = base + (fish_size)
+	var base = 130
+	fish_size = rng.randf_range(30, 40)
+	var value = base + (fish_size*1.4)
 	fish_array = Globals.pond_caught
 	fish_name = "Moon"; fish_token = "cm"
 	Globals.fish.append([
@@ -653,8 +649,8 @@ func moon():
 
 ## Add blackjaw
 func bjaw():
-	var base = 90
-	fish_size = rng.randf_range(70, 120)
+	var base = 140
+	fish_size = rng.randf_range(20, 40)
 	var value = base + (fish_size)
 	fish_array = Globals.pond_caught
 	fish_name = "Bjaw"; fish_token = "cm"
@@ -667,9 +663,9 @@ func bjaw():
 
 ## Add mossy arrowhead
 func moss():
-	var base = 90
-	fish_size = rng.randf_range(70, 120)
-	var value = base + (fish_size)
+	var base = 145
+	fish_size = rng.randf_range(10, 20)
+	var value = base + (fish_size*2)
 	fish_array = Globals.pond_caught
 	fish_name = "Moss"; fish_token = "cm"
 	Globals.fish.append([
@@ -678,6 +674,7 @@ func moss():
 		str(snapped(fish_size,0.1),"cm"),
 		Globals.moss_sell
 	]); return Globals.moss_entity
+
 #endregion
 
 #region RARE
@@ -688,23 +685,23 @@ func moss():
 
 ## Add alligator gar
 func agar():
-	var base = 90
-	fish_size = rng.randf_range(70, 120)
-	var value = base + (fish_size)
+	var base = 220
+	fish_size = rng.randf_range(1.5, 3)
+	var value = base + (fish_size*15)
 	fish_array = Globals.pond_caught
-	fish_name = "Agar"; fish_token = "cm"
+	fish_name = "Agar"; fish_token = "m"
 	Globals.fish.append([
 		Globals.agar_inv,
 		snapped(value,1),
-		str(snapped(fish_size,0.1),"cm"),
+		str(snapped(fish_size,0.1),"m"),
 		Globals.agar_sell
 	]); return Globals.agar_entity
 
 ## Add angel fish
 func afish():
-	var base = 90
-	fish_size = rng.randf_range(70, 120)
-	var value = base + (fish_size)
+	var base = 210
+	fish_size = rng.randf_range(10, 20)
+	var value = base + (fish_size*2)
 	fish_array = Globals.pond_caught
 	fish_name = "Afish"; fish_token = "cm"
 	Globals.fish.append([
@@ -716,9 +713,9 @@ func afish():
 
 ## Add sockeye salmon
 func sock():
-	var base = 90
-	fish_size = rng.randf_range(70, 120)
-	var value = base + (fish_size)
+	var base = 220
+	fish_size = rng.randf_range(60, 90)
+	var value = base + (fish_size*1.4)
 	fish_array = Globals.pond_caught
 	fish_name = "Sock"; fish_token = "cm"
 	Globals.fish.append([
@@ -730,8 +727,8 @@ func sock():
 
 ## Add rainbow trout
 func rtrout():
-	var base = 90
-	fish_size = rng.randf_range(70, 120)
+	var base = 240
+	fish_size = rng.randf_range(50, 70)
 	var value = base + (fish_size)
 	fish_array = Globals.pond_caught
 	fish_name = "Rtrout"; fish_token = "cm"
@@ -744,8 +741,8 @@ func rtrout():
 
 ## Add atlantic salmon
 func atlan():
-	var base = 90
-	fish_size = rng.randf_range(70, 120)
+	var base = 230
+	fish_size = rng.randf_range(1, 2)
 	var value = base + (fish_size)
 	fish_array = Globals.pond_caught
 	fish_name = "Atlan"; fish_token = "cm"
@@ -758,9 +755,9 @@ func atlan():
 
 ## Add galaxy rasbora
 func gala():
-	var base = 90
-	fish_size = rng.randf_range(70, 120)
-	var value = base + (fish_size)
+	var base = 250
+	fish_size = rng.randf_range(1.5, 4)
+	var value = base + (fish_size*15)
 	fish_array = Globals.pond_caught
 	fish_name = "Gala"; fish_token = "cm"
 	Globals.fish.append([
@@ -772,23 +769,23 @@ func gala():
 
 ## Add redtail catfish
 func redc():
-	var base = 90
-	fish_size = rng.randf_range(70, 120)
-	var value = base + (fish_size)
+	var base = 230
+	fish_size = rng.randf_range(1, 2)
+	var value = base + (fish_size*20)
 	fish_array = Globals.pond_caught
-	fish_name = "Redc"; fish_token = "cm"
+	fish_name = "Redc"; fish_token = "m"
 	Globals.fish.append([
 		Globals.redc_inv,
 		snapped(value,1),
-		str(snapped(fish_size,0.1),"cm"),
+		str(snapped(fish_size,0.1),"m"),
 		Globals.redc_sell
 	]); return Globals.redc_entity
 
 ## Add sparkling bulbfin
 func bulb():
-	var base = 90
-	fish_size = rng.randf_range(70, 120)
-	var value = base + (fish_size)
+	var base = 210
+	fish_size = rng.randf_range(8, 10)
+	var value = base + (fish_size*10)
 	fish_array = Globals.pond_caught
 	fish_name = "Bulb"; fish_token = "cm"
 	Globals.fish.append([
@@ -800,8 +797,8 @@ func bulb():
 
 ## Add alligator snapping turtle
 func snap():
-	var base = 90
-	fish_size = rng.randf_range(70, 120)
+	var base = 230
+	fish_size = rng.randf_range(35, 80)
 	var value = base + (fish_size)
 	fish_array = Globals.pond_caught
 	fish_name = "Snap"; fish_token = "cm"
@@ -814,8 +811,8 @@ func snap():
 
 ## Add black ghost knifefish
 func knife():
-	var base = 90
-	fish_size = rng.randf_range(70, 120)
+	var base = 210
+	fish_size = rng.randf_range(30, 50)
 	var value = base + (fish_size)
 	fish_array = Globals.pond_caught
 	fish_name = "Knife"; fish_token = "cm"
@@ -828,18 +825,228 @@ func knife():
 
 ## Add glowing night winder
 func glow():
-	var base = 90
-	fish_size = rng.randf_range(70, 120)
-	var value = base + (fish_size)
+	var base = 240
+	fish_size = rng.randf_range(1.5, 3)
+	var value = base + (fish_size*15)
 	fish_array = Globals.pond_caught
-	fish_name = "Glow"; fish_token = "cm"
+	fish_name = "Glow"; fish_token = "m"
 	Globals.fish.append([
 		Globals.glow_inv,
 		snapped(value,1),
-		str(snapped(fish_size,0.1),"cm"),
+		str(snapped(fish_size,0.1),"m"),
 		Globals.glow_sell
 	]); return Globals.glow_entity
 
 #endregion
+
+#region EPIC
+
+#################################################################################
+##                                  EPIC                                       ##
+#################################################################################
+
+## Add zebra pleco
+func zebra():
+	var base = 380
+	fish_size = rng.randf_range(2.0, 8.0)
+	var value = base + (fish_size * 5)
+	fish_array = Globals.pond_caught
+	fish_name = "Zebra"; fish_token = "cm"
+	Globals.fish.append([
+		Globals.zebra_inv,
+		snapped(value,1),
+		str(snapped(fish_size,0.1),"cm"),
+		Globals.zebra_sell
+	]); return Globals.zebra_entity
+
+## Add paddlefish
+func padd():
+	var base = 370
+	fish_size = rng.randf_range(1.5, 2)
+	var value = base + (fish_size*15)
+	fish_array = Globals.pond_caught
+	fish_name = "Padd"; fish_token = "m"
+	Globals.fish.append([
+		Globals.padd_inv,
+		snapped(value,1),
+		str(snapped(fish_size,0.1),"m"),
+		Globals.padd_sell
+	]); return Globals.padd_entity
+
+## Add home runner
+func home():
+	var base = 390
+	fish_size = rng.randf_range(5, 10)
+	var value = base + (fish_size)
+	fish_array = Globals.pond_caught
+	fish_name = "Home"; fish_token = "cm"
+	Globals.fish.append([
+		Globals.home_inv,
+		snapped(value,1),
+		str(snapped(fish_size,0.1),"cm"),
+		Globals.home_sell
+	]); return Globals.home_entity
+
+## Add cloud dancer
+func cloud():
+	var base = 385
+	fish_size = rng.randf_range(40, 80)
+	var value = base + (fish_size)
+	fish_array = Globals.pond_caught
+	fish_name = "Cloud"; fish_token = "cm"
+	Globals.fish.append([
+		Globals.cloud_inv,
+		snapped(value,1),
+		str(snapped(fish_size,0.1),"cm"),
+		Globals.cloud_sell
+	]); return Globals.cloud_entity
+
+## Add swirlback turtle
+func swirl():
+	var base = 360
+	fish_size = rng.randf_range(15, 30)
+	var value = base + (fish_size*2)
+	fish_array = Globals.pond_caught
+	fish_name = "Swirl"; fish_token = "cm"
+	Globals.fish.append([
+		Globals.swirl_inv,
+		snapped(value,1),
+		str(snapped(fish_size,0.1),"cm"),
+		Globals.swirl_sell
+	]); return Globals.swirl_entity
+
+## Add glowing nighteye
+func night():
+	var base = 390
+	fish_size = rng.randf_range(70, 120)
+	var value = base + (fish_size)
+	fish_array = Globals.pond_caught
+	fish_name = "Night"; fish_token = "cm"
+	Globals.fish.append([
+		Globals.night_inv,
+		snapped(value,1),
+		str(snapped(fish_size,0.1),"cm"),
+		Globals.night_sell
+	]); return Globals.night_entity
+
+## Add violet goby
+func violet():
+	var base = 380
+	fish_size = rng.randf_range(30, 60)
+	var value = base + (fish_size)
+	fish_array = Globals.pond_caught
+	fish_name = "Violet"; fish_token = "cm"
+	Globals.fish.append([
+		Globals.violet_inv,
+		snapped(value,1),
+		str(snapped(fish_size,0.1),"cm"),
+		Globals.violet_sell
+	]); return Globals.violet_entity
+
+## add diamond darter
+func dart():
+	var base = 385
+	fish_size = rng.randf_range(10, 15)
+	var value = base + (fish_size*5)
+	fish_array = Globals.pond_caught
+	fish_name = "Dart"; fish_token = "cm"
+	Globals.fish.append([
+		Globals.dart_inv,
+		snapped(value,1),
+		str(snapped(fish_size,0.1),"cm"),
+		Globals.dart_sell
+	]); return Globals.dart_entity
+
+## add golden mahseer
+func gold():
+	var base = 390
+	fish_size = rng.randf_range(1.5, 3)
+	var value = base + (fish_size*15)
+	fish_array = Globals.pond_caught
+	fish_name = "Gold"; fish_token = "m"
+	Globals.fish.append([
+		Globals.gold_inv,
+		snapped(value,1),
+		str(snapped(fish_size,0.1),"m"),
+		Globals.gold_sell
+	]); return Globals.gold_entity
+
+#endregion
+
+#region LEGENDARY
+
+#################################################################################
+##                                LEGENDARY                                    ##
+#################################################################################
+
+## add dreamcatcher
+func dream():
+	var base = 750
+	fish_size = rng.randf_range(50, 80)
+	var value = base + (fish_size)
+	fish_array = Globals.pond_caught
+	fish_name = "Dream"; fish_token = "cm"
+	Globals.fish.append([
+		Globals.dream_inv,
+		snapped(value,1),
+		str(snapped(fish_size,0.1),"cm"),
+		Globals.dream_sell
+	]); return Globals.dream_entity
+
+## add giant barb
+func barb():
+	var base = 780
+	fish_size = rng.randf_range(2, 3)
+	var value = base + (fish_size*30)
+	fish_array = Globals.pond_caught
+	fish_name = "Barb"; fish_token = "m"
+	Globals.fish.append([
+		Globals.barb_inv,
+		snapped(value,1),
+		str(snapped(fish_size,0.1),"m"),
+		Globals.barb_sell
+	]); return Globals.barb_entity
+
+## add dragonfish
+func dragon():
+	var base = 800
+	fish_size = rng.randf_range(5, 8)
+	var value = base + (fish_size)
+	fish_array = Globals.pond_caught
+	fish_name = "Dragon"; fish_token = "m"
+	Globals.fish.append([
+		Globals.dragon_inv,
+		snapped(value,1),
+		str(snapped(fish_size,0.1),"m"),
+		Globals.dragon_sell
+	]); return Globals.dragon_entity
+
+## add cosmic
+func cosmic():
+	var base = 780
+	fish_size = rng.randf_range(60, 90)
+	var value = base + (fish_size)
+	fish_array = Globals.pond_caught
+	fish_name = "Cosmic"; fish_token = "cm"
+	Globals.fish.append([
+		Globals.cosmic_inv,
+		snapped(value,1),
+		str(snapped(fish_size,0.1),"cm"),
+		Globals.cosmic_sell
+	]); return Globals.cosmic_entity
+
+## add jackson pollock
+func jack():
+	var base = 760
+	fish_size = rng.randf_range(30, 50)
+	var value = base + (fish_size)
+	fish_array = Globals.pond_caught
+	fish_name = "Jack"; fish_token = "cm"
+	Globals.fish.append([
+		Globals.jack_inv,
+		snapped(value,1),
+		str(snapped(fish_size,0.1),"cm"),
+		Globals.jack_sell
+	]); return Globals.jack_entity
 
 #endregion

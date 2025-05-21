@@ -111,6 +111,7 @@ func cast_line(delta):
 		
 		## Line in water
 		if is_casting:
+			stop_sound()
 			Spawn.start_game()
 			is_catching = true
 		
@@ -224,7 +225,7 @@ func stop_sound():
 
 ## Start walking
 func start_sound():
-	if !walking:
+	if !walking and !is_catching:
 		$Sounds/Walk.play("RESET")
 		$Sounds/Walk.play("walk")
 		walking = true

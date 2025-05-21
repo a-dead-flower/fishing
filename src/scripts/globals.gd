@@ -26,6 +26,16 @@ const redc_inv = preload("res://res/fishes/redc/redc_inv.tscn")
 const bulb_inv = preload("res://res/fishes/bulb/bulb_inv.tscn")
 const snap_inv = preload("res://res/fishes/snap/snap_inv.tscn")
 const glow_inv = preload("res://res/fishes/glow/glow_inv.tscn")
+const padd_inv = preload("res://res/fishes/padd/padd_inv.tscn")
+const home_inv = preload("res://res/fishes/home/home_inv.tscn")
+const dart_inv = preload("res://res/fishes/dart/dart_inv.tscn")
+const gold_inv = preload("res://res/fishes/gold/gold_inv.tscn")
+const barb_inv = preload("res://res/fishes/barb/barb_inv.tscn")
+const jack_inv = preload("res://res/fishes/jack/jack_inv.tscn")
+const dream_inv = preload("res://res/fishes/dream/dream_inv.tscn")
+const night_inv = preload("res://res/fishes/night/night_inv.tscn")
+const swirl_inv = preload("res://res/fishes/swirl/swirl_inv.tscn")
+const cloud_inv = preload("res://res/fishes/cloud/cloud_inv.tscn")
 const knife_inv = preload("res://res/fishes/knife/knife_inv.tscn")
 const afish_inv = preload("res://res/fishes/afish/afish_inv.tscn")
 const cpick_inv = preload("res://res/fishes/cpick/cpick_inv.tscn")
@@ -42,6 +52,9 @@ const belly_inv = preload("res://res/fishes/belly/belly_inv.tscn")
 const asnap_inv = preload("res://res/fishes/asnap/asnap_inv.tscn")
 const sturg_inv = preload("res://res/fishes/sturg/sturg_inv.tscn")
 const atlan_inv = preload("res://res/fishes/atlan/atlan_inv.tscn")
+const cosmic_inv = preload("res://res/fishes/cosmic/cosmic_inv.tscn")
+const dragon_inv = preload("res://res/fishes/dragon/dragon_inv.tscn")
+const violet_inv = preload("res://res/fishes/violet/violet_inv.tscn")
 const minnow_inv = preload("res://res/fishes/minnow/minnow_inv.tscn")
 const aperch_inv = preload("res://res/fishes/aperch/aperch_inv.tscn")
 const btrout_inv = preload("res://res/fishes/btrout/btrout_inv.tscn")
@@ -74,6 +87,16 @@ const redc_sell = preload("res://res/fishes/redc/redc_sell.tscn")
 const bulb_sell = preload("res://res/fishes/bulb/bulb_sell.tscn")
 const snap_sell = preload("res://res/fishes/snap/snap_sell.tscn")
 const glow_sell = preload("res://res/fishes/glow/glow_sell.tscn")
+const padd_sell = preload("res://res/fishes/padd/padd_sell.tscn")
+const home_sell = preload("res://res/fishes/home/home_sell.tscn")
+const dart_sell = preload("res://res/fishes/dart/dart_sell.tscn")
+const gold_sell = preload("res://res/fishes/gold/gold_sell.tscn")
+const barb_sell = preload("res://res/fishes/barb/barb_sell.tscn")
+const jack_sell = preload("res://res/fishes/jack/jack_sell.tscn")
+const dream_sell = preload("res://res/fishes/dream/dream_sell.tscn")
+const night_sell = preload("res://res/fishes/night/night_sell.tscn")
+const swirl_sell = preload("res://res/fishes/swirl/swirl_sell.tscn")
+const cloud_sell = preload("res://res/fishes/cloud/cloud_sell.tscn")
 const knife_sell = preload("res://res/fishes/knife/knife_sell.tscn")
 const afish_sell = preload("res://res/fishes/afish/afish_sell.tscn")
 const cpick_sell = preload("res://res/fishes/cpick/cpick_sell.tscn")
@@ -90,6 +113,9 @@ const zebra_sell = preload("res://res/fishes/zebra/zebra_sell.tscn")
 const guppy_sell = preload("res://res/fishes/guppy/guppy_sell.tscn")
 const sturg_sell = preload("res://res/fishes/sturg/sturg_sell.tscn")
 const atlan_sell = preload("res://res/fishes/atlan/atlan_sell.tscn")
+const cosmic_sell = preload("res://res/fishes/cosmic/cosmic_sell.tscn")
+const dragon_sell = preload("res://res/fishes/dragon/dragon_sell.tscn")
+const violet_sell = preload("res://res/fishes/violet/violet_sell.tscn")
 const btrout_sell = preload("res://res/fishes/btrout/btrout_sell.tscn")
 const rtrout_sell = preload("res://res/fishes/rtrout/rtrout_sell.tscn")
 const aperch_sell = preload("res://res/fishes/aperch/aperch_sell.tscn")
@@ -122,6 +148,16 @@ const redc_entity = preload("res://res/fishes/redc/redc_entity.tscn")
 const bulb_entity = preload("res://res/fishes/bulb/bulb_entity.tscn")
 const snap_entity = preload("res://res/fishes/snap/snap_entity.tscn")
 const glow_entity = preload("res://res/fishes/glow/glow_entity.tscn")
+const padd_entity = preload("res://res/fishes/padd/padd_entity.tscn")
+const home_entity = preload("res://res/fishes/home/home_entity.tscn")
+const dart_entity = preload("res://res/fishes/dart/dart_entity.tscn")
+const gold_entity = preload("res://res/fishes/gold/gold_entity.tscn")
+const barb_entity = preload("res://res/fishes/barb/barb_entity.tscn")
+const jack_entity = preload("res://res/fishes/jack/jack_entity.tscn")
+const dream_entity = preload("res://res/fishes/dream/dream_entity.tscn")
+const night_entity = preload("res://res/fishes/night/night_entity.tscn")
+const swirl_entity = preload("res://res/fishes/swirl/swirl_entity.tscn")
+const cloud_entity = preload("res://res/fishes/cloud/cloud_entity.tscn")
 const knife_entity = preload("res://res/fishes/knife/knife_entity.tscn")
 const atlan_entity = preload("res://res/fishes/atlan/atlan_entity.tscn")
 const afish_entity = preload("res://res/fishes/afish/afish_entity.tscn")
@@ -138,6 +174,9 @@ const bream_entity = preload("res://res/fishes/bream/bream_entity.tscn")
 const zebra_entity = preload("res://res/fishes/zebra/zebra_entity.tscn")
 const perch_entity = preload("res://res/fishes/perch/perch_entity.tscn")
 const sturg_entity = preload("res://res/fishes/sturg/sturg_entity.tscn")
+const cosmic_entity = preload("res://res/fishes/cosmic/cosmic_entity.tscn")
+const dragon_entity = preload("res://res/fishes/dragon/dragon_entity.tscn")
+const violet_entity = preload("res://res/fishes/violet/violet_entity.tscn")
 const minnow_entity = preload("res://res/fishes/minnow/minnow_entity.tscn")
 const aperch_entity = preload("res://res/fishes/aperch/aperch_entity.tscn")
 const btrout_entity = preload("res://res/fishes/btrout/btrout_entity.tscn")
@@ -193,7 +232,7 @@ var keys_right = "D"
 var keys_inv = "E"
 var keys_int = "Space"
 
-var current_rod = ""
+var current_rod = "One"
 var current_bait = ""
 var current_lure = ""
 
@@ -224,7 +263,7 @@ var fish = []
 #region SETUP
 
 func _ready() -> void:
-	#add_test_fish()
+	add_test_fish()
 	set_settings()
 
 func set_settings() -> void:
@@ -240,6 +279,9 @@ func add_test_fish():
 	Spawn.aperch()
 	Spawn.btrout()
 	Spawn.rtrout()
+	Spawn.violet()
+	Spawn.dragon()
+	Spawn.cosmic()
 	Spawn.zebra()
 	Spawn.bream()
 	Spawn.bcrap()
@@ -256,6 +298,16 @@ func add_test_fish():
 	Spawn.afish()
 	Spawn.atlan()
 	Spawn.knife()
+	Spawn.cloud()
+	Spawn.swirl()
+	Spawn.night()
+	Spawn.dream()
+	Spawn.jack()
+	Spawn.gold()
+	Spawn.barb()
+	Spawn.dart()
+	Spawn.home()
+	Spawn.padd()
 	Spawn.glow()
 	Spawn.snap()
 	Spawn.bulb()
@@ -282,6 +334,69 @@ func add_test_fish():
 	Spawn.carp()
 	Spawn.lgar()
 	Spawn.eel()
+	
+	pond_caught = [
+		["Eel", "10cm", 1, true],
+		["Lgar", "10cm", 1, true],
+		["Carp", "10cm", 1, true],
+		["Musk", "10cm", 1, true],
+		["Ruby", "10cm", 1, true],
+		["Sapp", "10cm", 1, true],
+		["Chub", "10cm", 1, true],
+		["Pike", "10cm", 1, true],
+		["Drum", "10cm", 1, true],
+		["Neon", "10cm", 1, true],
+		["Ssun", "10cm", 1, true],
+		["Bass", "10cm", 1, true],
+		["Catf", "10cm", 1, true],
+		["Bfin", "10cm", 1, true],
+		["Saug", "10cm", 1, true],
+		["Rhop", "10cm", 1, true],
+		["Moon", "10cm", 1, true],
+		["Bjaw", "10cm", 1, true],
+		["Moss", "10cm", 1, true],
+		["Agar", "10cm", 1, true],
+		["Sock", "10cm", 1, true],
+		["Gala", "10cm", 1, true],
+		["Redc", "10cm", 1, true],
+		["Bulb", "10cm", 1, true],
+		["Snap", "10cm", 1, true],
+		["Glow", "10cm", 1, true],
+		["Padd", "10cm", 1, true],
+		["Home", "10cm", 1, true],
+		["Dart", "10cm", 1, true],
+		["Barb", "10cm", 1, true],
+		["Gold", "10cm", 1, true],
+		["Jack", "10cm", 1, true],
+		["Dream", "10cm", 1, true],
+		["Night", "10cm", 1, true],
+		["Swirl", "10cm", 1, true],
+		["Cloud", "10cm", 1, true],
+		["Knife", "10cm", 1, true],
+		["Atlan", "10cm", 1, true],
+		["Afish", "10cm", 1, true],
+		["Sturg", "10cm", 1, true],
+		["Cpick", "10cm", 1, true],
+		["Asnap", "10cm", 1, true],
+		["Brook", "10cm", 1, true],
+		["Bullh", "10cm", 1, true],
+		["Bgill", "10cm", 1, true],
+		["Wcrap", "10cm", 1, true],
+		["Belly", "10cm", 1, true],
+		["Guppy", "10cm", 1, true],
+		["Perch", "10cm", 1, true],
+		["Bcrap", "10cm", 1, true],
+		["Bream", "10cm", 1, true],
+		["Zebra", "10cm", 1, true],
+		["Cosmic", "10cm", 1, true],
+		["Dragon", "10cm", 1, true],
+		["Violet", "10cm", 1, true],
+		["Rtrout", "10cm", 1, true],
+		["Btrout", "10cm", 1, true],
+		["Aperch", "10cm", 1, true],
+		["Minnow", "10cm", 1, true],
+		["Walleye", "10cm", 1, true]
+		]
 
 
 #endregion

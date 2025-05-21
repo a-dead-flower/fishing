@@ -1,0 +1,260 @@
+[gd_scene load_steps=24 format=3 uid="uid://2qkaagjm3pp1"]
+
+[ext_resource type="FontFile" uid="uid://c11kcqv0xwtq8" path="res://res/fonts/Normal.ttf" id="1_ke2wh"]
+[ext_resource type="Script" path="res://src/scripts/invitem.gd" id="2_3y3hl"]
+[ext_resource type="PackedScene" uid="uid://df7hdje53ulfj" path="res://res/fishes/dream/dream_info.tscn" id="3_p170x"]
+[ext_resource type="FontFile" uid="uid://j364g1d5bwm4" path="res://res/fonts/Bold.ttf" id="4_qsjl1"]
+[ext_resource type="Texture2D" uid="uid://dttu7rj47iq2x" path="res://res/sprites/coin.png" id="5_2i3g8"]
+[ext_resource type="Texture2D" uid="uid://c5iwqqdc2ukoc" path="res://res/fishes/dream/dream_icon.png" id="6_xdjtc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t200f"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3jsan"]
+bg_color = Color(0.905882, 0.835294, 0.701961, 1)
+border_width_bottom = 4
+border_color = Color(0.843137, 0.709804, 0.580392, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xhv2x"]
+bg_color = Color(0.905882, 0.835294, 0.701961, 1)
+border_width_top = 4
+border_color = Color(0.843137, 0.709804, 0.580392, 0)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q1og2"]
+bg_color = Color(0.905882, 0.835294, 0.701961, 1)
+border_width_bottom = 4
+border_color = Color(0.843137, 0.709804, 0.580392, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="Gradient" id="Gradient_0q2c3"]
+colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_8l4mi"]
+gradient = SubResource("Gradient_0q2c3")
+width = 102
+height = 62
+
+[sub_resource type="LabelSettings" id="LabelSettings_3eh4d"]
+font = ExtResource("4_qsjl1")
+font_size = 24
+font_color = Color(0.203922, 0.109804, 0.152941, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uaxso"]
+bg_color = Color(0.843137, 0.709804, 0.580392, 1)
+border_width_top = 2
+border_color = Color(0.752941, 0.580392, 0.45098, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jbhqs"]
+atlas = ExtResource("5_2i3g8")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jfl8l"]
+atlas = ExtResource("5_2i3g8")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x4m12"]
+atlas = ExtResource("5_2i3g8")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g7lo6"]
+atlas = ExtResource("5_2i3g8")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kc6ax"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jbhqs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jfl8l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x4m12")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g7lo6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g7lo6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g7lo6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g7lo6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g7lo6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g7lo6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g7lo6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g7lo6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g7lo6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g7lo6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g7lo6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g7lo6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g7lo6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g7lo6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g7lo6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[sub_resource type="Animation" id="Animation_lkj63"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Price:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(373, 17)]
+}
+
+[sub_resource type="Animation" id="Animation_yjcj1"]
+resource_name = "down"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Price:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(373, 21)]
+}
+
+[sub_resource type="Animation" id="Animation_sg7up"]
+resource_name = "up"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Price:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(373, 17)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t0q7s"]
+_data = {
+"RESET": SubResource("Animation_lkj63"),
+"down": SubResource("Animation_yjcj1"),
+"up": SubResource("Animation_sg7up")
+}
+
+[node name="Button" type="Button" groups=["Button"]]
+offset_right = 498.0
+offset_bottom = 66.0
+theme_override_colors/font_hover_pressed_color = Color(0.203922, 0.109804, 0.152941, 1)
+theme_override_colors/font_hover_color = Color(0.203922, 0.109804, 0.152941, 1)
+theme_override_colors/font_pressed_color = Color(0.203922, 0.109804, 0.152941, 1)
+theme_override_colors/font_focus_color = Color(0.203922, 0.109804, 0.152941, 1)
+theme_override_colors/font_color = Color(0.203922, 0.109804, 0.152941, 1)
+theme_override_fonts/font = ExtResource("1_ke2wh")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/focus = SubResource("StyleBoxEmpty_t200f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3jsan")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xhv2x")
+theme_override_styles/normal = SubResource("StyleBoxFlat_q1og2")
+keep_pressed_outside = true
+text = "Dreamcatcher"
+icon = SubResource("GradientTexture2D_8l4mi")
+alignment = 0
+script = ExtResource("2_3y3hl")
+item_name = "Dreamcatcher"
+item_info = ExtResource("3_p170x")
+
+[node name="Price" type="Label" parent="."]
+layout_mode = 0
+offset_left = 373.0
+offset_top = 17.0
+offset_right = 419.0
+offset_bottom = 47.0
+text = "100"
+label_settings = SubResource("LabelSettings_3eh4d")
+horizontal_alignment = 2
+
+[node name="Panel" type="Panel" parent="Price"]
+layout_mode = 0
+offset_left = -365.0
+offset_top = -10.0
+offset_right = -277.0
+offset_bottom = 39.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_uaxso")
+
+[node name="Coin" type="AnimatedSprite2D" parent="Price"]
+position = Vector2(63, 15)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_kc6ax")
+autoplay = "default"
+frame_progress = 0.0238692
+
+[node name="Icon" type="TextureRect" parent="Price"]
+layout_mode = 0
+offset_left = -263.0
+offset_top = -29.0
+offset_right = -206.0
+offset_bottom = 17.0
+scale = Vector2(-2, 2)
+mouse_filter = 2
+texture = ExtResource("6_xdjtc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Press" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_t0q7s")
+}
+autoplay = "RESET"
+
+[connection signal="button_down" from="." to="." method="_on_down"]
+[connection signal="button_up" from="." to="." method="_on_up"]
+[connection signal="pressed" from="." to="." method="_on_pressed"]

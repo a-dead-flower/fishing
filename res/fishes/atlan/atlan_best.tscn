@@ -1,6 +1,7 @@
-[gd_scene load_steps=29 format=3 uid="uid://cap4oh6xidbnb"]
+[gd_scene load_steps=31 format=3 uid="uid://cap4oh6xidbnb"]
 
 [ext_resource type="Shader" path="res://src/shader/bestiary.gdshader" id="1_mk82m"]
+[ext_resource type="FontFile" uid="uid://b3g180178ibcm" path="res://res/fonts/Italics.ttf" id="1_qitur"]
 [ext_resource type="Texture2D" uid="uid://bdijh2no5vha2" path="res://res/fishes/atlan/atlan_icon.png" id="2_foet2"]
 [ext_resource type="Texture2D" uid="uid://clhe2hhfb5euu" path="res://res/sprites/stars.png" id="3_jeojc"]
 [ext_resource type="FontFile" uid="uid://j364g1d5bwm4" path="res://res/fonts/Bold.ttf" id="4_i4u72"]
@@ -21,6 +22,12 @@ corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_xpwka"]
+line_spacing = -1.0
+font = ExtResource("1_qitur")
+font_size = 18
+font_color = Color(0.203922, 0.109804, 0.152941, 1)
 
 [sub_resource type="Animation" id="Animation_e1udj"]
 length = 0.001
@@ -239,8 +246,9 @@ font = ExtResource("5_7uag5")
 font_size = 24
 font_color = Color(0.635294, 0.243137, 0.54902, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_nxgn0"]
-font = ExtResource("5_7uag5")
+[sub_resource type="LabelSettings" id="LabelSettings_37mpy"]
+line_spacing = -1.0
+font = ExtResource("1_qitur")
 font_size = 18
 font_color = Color(0.203922, 0.109804, 0.152941, 1)
 
@@ -256,6 +264,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Disable" type="Panel" parent="."]
+visible = false
 z_index = 1
 layout_mode = 1
 anchors_preset = 8
@@ -278,6 +287,16 @@ offset_top = -12.0
 offset_right = 258.0
 offset_bottom = -7.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_gwypj")
+
+[node name="Lore" type="Label" parent="Disable"]
+offset_left = 6.0
+offset_top = 1.0
+offset_right = 256.0
+offset_bottom = 189.0
+text = "Can be caught in rivers and lakes"
+label_settings = SubResource("LabelSettings_xpwka")
+autowrap_mode = 3
+clip_text = true
 
 [node name="Disable" type="AnimationPlayer" parent="Disable"]
 libraries = {
@@ -345,7 +364,7 @@ expand_mode = 1
 position = Vector2(238, 134)
 scale = Vector2(-1.14331, 1.14331)
 sprite_frames = SubResource("SpriteFrames_vwvy2")
-animation = &"1"
+animation = &"3"
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 0
@@ -353,7 +372,8 @@ offset_left = 154.0
 offset_top = -106.0
 offset_right = 394.0
 offset_bottom = -66.0
-text = "???"
+text = "Atlantic
+Salmon"
 label_settings = SubResource("LabelSettings_uhhwv")
 
 [node name="Line1" type="Panel" parent="Title"]
@@ -433,6 +453,6 @@ offset_top = 96.0
 offset_right = 405.0
 offset_bottom = 284.0
 text = "A primative fish famous for it's highly saught after roe. Just from the weight alone, this fish is funny"
-label_settings = SubResource("LabelSettings_nxgn0")
+label_settings = SubResource("LabelSettings_37mpy")
 autowrap_mode = 3
 clip_text = true
