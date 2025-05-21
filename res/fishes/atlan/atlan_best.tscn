@@ -452,7 +452,9 @@ offset_left = 155.0
 offset_top = 96.0
 offset_right = 405.0
 offset_bottom = 284.0
-text = "A primative fish famous for it's highly saught after roe. Just from the weight alone, this fish is funny"
+text = "An anadromous fish with
+a powerful sense of smell
+and natural affinity for navigation."
 label_settings = SubResource("LabelSettings_37mpy")
 autowrap_mode = 3
 clip_text = true
