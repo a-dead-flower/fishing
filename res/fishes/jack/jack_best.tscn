@@ -1,10 +1,11 @@
-[gd_scene load_steps=29 format=3 uid="uid://5pwtomq57cjq"]
+[gd_scene load_steps=30 format=3 uid="uid://5pwtomq57cjq"]
 
 [ext_resource type="Shader" path="res://src/shader/bestiary.gdshader" id="1_mu33j"]
 [ext_resource type="Texture2D" uid="uid://s5i3gcaulwik" path="res://res/fishes/jack/jack_icon.png" id="1_wa6ui"]
 [ext_resource type="Texture2D" uid="uid://clhe2hhfb5euu" path="res://res/sprites/stars.png" id="2_bbcp7"]
 [ext_resource type="FontFile" uid="uid://j364g1d5bwm4" path="res://res/fonts/Bold.ttf" id="3_lvlyj"]
 [ext_resource type="FontFile" uid="uid://c11kcqv0xwtq8" path="res://res/fonts/Normal.ttf" id="4_ltuhn"]
+[ext_resource type="FontFile" uid="uid://b3g180178ibcm" path="res://res/fonts/Italics.ttf" id="6_n4wuc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jcy50"]
 bg_color = Color(0.905882, 0.835294, 0.701961, 1)
@@ -240,8 +241,9 @@ font = ExtResource("4_ltuhn")
 font_size = 24
 font_color = Color(0.635294, 0.243137, 0.54902, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_nxgn0"]
-font = ExtResource("4_ltuhn")
+[sub_resource type="LabelSettings" id="LabelSettings_7gunl"]
+line_spacing = -1.0
+font = ExtResource("6_n4wuc")
 font_size = 18
 font_color = Color(0.203922, 0.109804, 0.152941, 1)
 
@@ -348,7 +350,7 @@ stretch_mode = 5
 position = Vector2(238, 134)
 scale = Vector2(-1.14331, 1.14331)
 sprite_frames = SubResource("SpriteFrames_dsy7i")
-animation = &"1"
+animation = &"2"
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 0
@@ -436,7 +438,7 @@ offset_left = 155.0
 offset_top = 96.0
 offset_right = 405.0
 offset_bottom = 284.0
-text = "These striped fish are notoriously shy so catching one is a big achievement."
-label_settings = SubResource("LabelSettings_nxgn0")
+text = "Colourful, abstract and chaotic. It is rumored to have been part of Pollock's personal fish collection. Catch it and maybe you can learn the secrets of the arts."
+label_settings = SubResource("LabelSettings_7gunl")
 autowrap_mode = 3
 clip_text = true

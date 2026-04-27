@@ -312,7 +312,7 @@ func change_lure(add, ammount, item_name, lure_id):
 			
 		## Add to array
 		match item_name:
-			"Blue":
+			"Blue Jig":
 				Globals.lure.append(
 				[str(random), ammount,
 				Globals.blue_inv, 

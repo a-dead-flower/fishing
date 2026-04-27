@@ -158,12 +158,12 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[sub_resource type="Gradient" id="Gradient_s8ihe"]
+[sub_resource type="Gradient" id="Gradient_6scet"]
 offsets = PackedFloat32Array(0, 0.260204, 0.459184)
 colors = PackedColorArray(0, 0, 0, 0.560784, 0, 0, 0, 0.517168, 0, 0, 0, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_li1y5"]
-gradient = SubResource("Gradient_s8ihe")
+gradient = SubResource("Gradient_6scet")
 width = 128
 fill = 1
 fill_from = Vector2(0.5, 0.5)
@@ -285,6 +285,7 @@ libraries = {
 autoplay = "enabled"
 
 [node name="Lore" type="Label" parent="Disable"]
+layout_mode = 0
 offset_left = 6.0
 offset_top = 1.0
 offset_right = 256.0
@@ -334,11 +335,12 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_hcb8u")
 [node name="Shadow" type="TextureRect" parent="Panel/Icon"]
 modulate = Color(1, 1, 1, 0.380392)
 layout_mode = 0
-offset_left = 1.5
-offset_top = 55.0
-offset_right = 252.5
-offset_bottom = 119.0
+offset_left = 26.0
+offset_top = 57.0
+offset_right = 235.0
+offset_bottom = 112.0
 texture = SubResource("GradientTexture2D_li1y5")
+expand_mode = 1
 
 [node name="Icon" type="TextureRect" parent="Panel/Icon"]
 layout_mode = 0
@@ -349,6 +351,7 @@ offset_bottom = 15.0
 scale = Vector2(4, 4)
 texture = ExtResource("2_bm3ad")
 expand_mode = 1
+stretch_mode = 5
 
 [node name="Stars" type="AnimatedSprite2D" parent="Panel"]
 position = Vector2(238, 134)

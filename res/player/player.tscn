@@ -1011,7 +1011,7 @@ offset_top = -20.0
 offset_right = -2.0
 grow_horizontal = 0
 grow_vertical = 0
-text = "0.0.13"
+text = "0.0.14"
 label_settings = SubResource("LabelSettings_kl0uw")
 
 [node name="Time" type="Panel" parent="Display/Control"]

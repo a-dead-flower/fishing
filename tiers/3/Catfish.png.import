@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctd0sf5fyq6uh"
-path="res://.godot/imported/peer_atlas.png-a16de9385397f61fe6546af9ae6f2dc3.ctex"
+uid="uid://bartyamg061bg"
+path="res://.godot/imported/Catfish.png-8b61c20cf3df75ffcc6293f41dc8eea9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://res/tilesets/peer_atlas.png"
-dest_files=["res://.godot/imported/peer_atlas.png-a16de9385397f61fe6546af9ae6f2dc3.ctex"]
+source_file="res://tiers/3/Catfish.png"
+dest_files=["res://.godot/imported/Catfish.png-8b61c20cf3df75ffcc6293f41dc8eea9.ctex"]
 
 [params]
 

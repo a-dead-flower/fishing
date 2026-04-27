@@ -1,8 +1,9 @@
-[gd_scene load_steps=29 format=3 uid="uid://c2esds2du4ywr"]
+[gd_scene load_steps=31 format=3 uid="uid://c2esds2du4ywr"]
 
 [ext_resource type="Shader" path="res://src/shader/bestiary.gdshader" id="1_8gty1"]
 [ext_resource type="Texture2D" uid="uid://f1qyx5syqskc" path="res://res/fishes/brook/brook_icon.png" id="1_injp0"]
 [ext_resource type="Texture2D" uid="uid://clhe2hhfb5euu" path="res://res/sprites/stars.png" id="2_1q2s2"]
+[ext_resource type="FontFile" uid="uid://b3g180178ibcm" path="res://res/fonts/Italics.ttf" id="2_ryfyt"]
 [ext_resource type="FontFile" uid="uid://j364g1d5bwm4" path="res://res/fonts/Bold.ttf" id="3_nab0t"]
 [ext_resource type="FontFile" uid="uid://c11kcqv0xwtq8" path="res://res/fonts/Normal.ttf" id="4_ukk62"]
 
@@ -122,6 +123,12 @@ _data = {
 "enabled": SubResource("Animation_2imon")
 }
 
+[sub_resource type="LabelSettings" id="LabelSettings_87dpw"]
+line_spacing = -1.0
+font = ExtResource("2_ryfyt")
+font_size = 18
+font_color = Color(0.203922, 0.109804, 0.152941, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5naqq"]
 bg_color = Color(0.905882, 0.835294, 0.701961, 1)
 border_width_left = 12
@@ -237,8 +244,9 @@ font = ExtResource("4_ukk62")
 font_size = 24
 font_color = Color(0.635294, 0.243137, 0.54902, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_j0yl0"]
-font = ExtResource("4_ukk62")
+[sub_resource type="LabelSettings" id="LabelSettings_ix1kn"]
+line_spacing = -1.0
+font = ExtResource("2_ryfyt")
 font_size = 18
 font_color = Color(0.203922, 0.109804, 0.152941, 1)
 
@@ -275,6 +283,17 @@ libraries = {
 "": SubResource("AnimationLibrary_8du6e")
 }
 autoplay = "enabled"
+
+[node name="Lore" type="Label" parent="Disable"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 1.0
+offset_right = 256.0
+offset_bottom = 189.0
+text = "Can be caught in rivers and lakes"
+label_settings = SubResource("LabelSettings_87dpw")
+autowrap_mode = 3
+clip_text = true
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -336,7 +355,7 @@ expand_mode = 1
 position = Vector2(238, 134)
 scale = Vector2(-1.14331, 1.14331)
 sprite_frames = SubResource("SpriteFrames_ko3ui")
-animation = &"1"
+animation = &"2"
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 0
@@ -423,7 +442,10 @@ offset_left = 155.0
 offset_top = 57.0
 offset_right = 405.0
 offset_bottom = 245.0
-text = "A small, docile fish that any aspiring angler could catch. Often found in freshwater, they don't put up much of a fight. Good for when you need a little extra cash but not much else."
-label_settings = SubResource("LabelSettings_j0yl0")
+text = "Despite its name, the
+brook trout istechnically
+a char and it belongs
+to the Salvelinus genus. They can breed with brown trout, producing a sterile Tiger Trout. This fish was also sacred to the Natives."
+label_settings = SubResource("LabelSettings_ix1kn")
 autowrap_mode = 3
 clip_text = true

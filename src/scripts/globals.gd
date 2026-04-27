@@ -206,7 +206,7 @@ const rod_three_inv = preload("res://res/equip/rods/rod_3/rod_3_inv.tscn")
 const rod_three_icon = preload("res://res/equip/rods/rod_3/rod_3_icon.tscn")
 
 
-var money = 500000
+var money = 0
 var speed = 450
 var stop_cast = false
 var time_of_day = 900

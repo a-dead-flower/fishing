@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ppyopuvm4rv1"
-path="res://.godot/imported/water_atlas.png-100db1e5a58012afb3e57167430b9b40.ctex"
+uid="uid://c1antkq1xum4u"
+path="res://.godot/imported/Black Crappie.png-063f70522727c75e7a8bef9a5c30b824.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://res/tilesets/water_atlas.png"
-dest_files=["res://.godot/imported/water_atlas.png-100db1e5a58012afb3e57167430b9b40.ctex"]
+source_file="res://tiers/2/_night/Black Crappie.png"
+dest_files=["res://.godot/imported/Black Crappie.png-063f70522727c75e7a8bef9a5c30b824.ctex"]
 
 [params]
 

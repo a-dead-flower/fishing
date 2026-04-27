@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1aji0e5a42sd"
-path="res://.godot/imported/grass_atlas.png-6afed898a7cb516b6f8dd2028b1a1369.ctex"
+uid="uid://dctt51peelomo"
+path="res://.godot/imported/Sockeye Salmon.png-6a006959fd307df7f2f498638c29cb6c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://res/tilesets/grass_atlas.png"
-dest_files=["res://.godot/imported/grass_atlas.png-6afed898a7cb516b6f8dd2028b1a1369.ctex"]
+source_file="res://tiers/1/Sockeye Salmon.png"
+dest_files=["res://.godot/imported/Sockeye Salmon.png-6a006959fd307df7f2f498638c29cb6c.ctex"]
 
 [params]
 

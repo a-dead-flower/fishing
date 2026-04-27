@@ -1,10 +1,11 @@
-[gd_scene load_steps=29 format=3 uid="uid://b0ryaf4corrwr"]
+[gd_scene load_steps=30 format=3 uid="uid://b0ryaf4corrwr"]
 
 [ext_resource type="Shader" path="res://src/shader/bestiary.gdshader" id="1_vrqg1"]
 [ext_resource type="Texture2D" uid="uid://b23g3otxvbmra" path="res://res/fishes/dart/dart_icon.png" id="2_lobxn"]
 [ext_resource type="Texture2D" uid="uid://clhe2hhfb5euu" path="res://res/sprites/stars.png" id="3_n0q43"]
 [ext_resource type="FontFile" uid="uid://j364g1d5bwm4" path="res://res/fonts/Bold.ttf" id="4_6sa2q"]
 [ext_resource type="FontFile" uid="uid://c11kcqv0xwtq8" path="res://res/fonts/Normal.ttf" id="5_3wpwb"]
+[ext_resource type="FontFile" uid="uid://b3g180178ibcm" path="res://res/fonts/Italics.ttf" id="6_sw5db"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jcy50"]
 bg_color = Color(0.905882, 0.835294, 0.701961, 1)
@@ -240,8 +241,9 @@ font = ExtResource("5_3wpwb")
 font_size = 24
 font_color = Color(0.635294, 0.243137, 0.54902, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_nxgn0"]
-font = ExtResource("5_3wpwb")
+[sub_resource type="LabelSettings" id="LabelSettings_dt7ya"]
+line_spacing = -1.0
+font = ExtResource("6_sw5db")
 font_size = 18
 font_color = Color(0.203922, 0.109804, 0.152941, 1)
 
@@ -436,7 +438,7 @@ offset_left = 155.0
 offset_top = 96.0
 offset_right = 405.0
 offset_bottom = 284.0
-text = "These striped fish are notoriously shy so catching one is a big achievement."
-label_settings = SubResource("LabelSettings_nxgn0")
+text = "These striped fish are notoriously shy so catching one is a big achievement. Without a swim bladder, they can stay at the bottom of rivers with little effort."
+label_settings = SubResource("LabelSettings_dt7ya")
 autowrap_mode = 3
 clip_text = true

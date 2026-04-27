@@ -1,10 +1,11 @@
-[gd_scene load_steps=29 format=3 uid="uid://up58qge3ihch"]
+[gd_scene load_steps=30 format=3 uid="uid://up58qge3ihch"]
 
 [ext_resource type="Shader" path="res://src/shader/bestiary.gdshader" id="1_vanq2"]
 [ext_resource type="Texture2D" uid="uid://c5iwqqdc2ukoc" path="res://res/fishes/dream/dream_icon.png" id="2_f3rb4"]
 [ext_resource type="Texture2D" uid="uid://clhe2hhfb5euu" path="res://res/sprites/stars.png" id="3_3hvxp"]
 [ext_resource type="FontFile" uid="uid://j364g1d5bwm4" path="res://res/fonts/Bold.ttf" id="4_4ml1g"]
 [ext_resource type="FontFile" uid="uid://c11kcqv0xwtq8" path="res://res/fonts/Normal.ttf" id="5_8rwe6"]
+[ext_resource type="FontFile" uid="uid://b3g180178ibcm" path="res://res/fonts/Italics.ttf" id="6_tmboq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jcy50"]
 bg_color = Color(0.905882, 0.835294, 0.701961, 1)
@@ -240,8 +241,9 @@ font = ExtResource("5_8rwe6")
 font_size = 24
 font_color = Color(0.635294, 0.243137, 0.54902, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_nxgn0"]
-font = ExtResource("5_8rwe6")
+[sub_resource type="LabelSettings" id="LabelSettings_8f4dc"]
+line_spacing = -1.0
+font = ExtResource("6_tmboq")
 font_size = 18
 font_color = Color(0.203922, 0.109804, 0.152941, 1)
 
@@ -257,6 +259,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Disable" type="Panel" parent="."]
+visible = false
 z_index = 1
 layout_mode = 1
 anchors_preset = 8
@@ -347,7 +350,7 @@ stretch_mode = 5
 position = Vector2(238, 134)
 scale = Vector2(-1.14331, 1.14331)
 sprite_frames = SubResource("SpriteFrames_dsy7i")
-animation = &"1"
+animation = &"2"
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 0
@@ -355,7 +358,8 @@ offset_left = 154.0
 offset_top = -106.0
 offset_right = 394.0
 offset_bottom = -66.0
-text = "???"
+text = "Dreamcatcher
+"
 label_settings = SubResource("LabelSettings_ca6ya")
 
 [node name="Line1" type="Panel" parent="Title"]
@@ -434,7 +438,7 @@ offset_left = 155.0
 offset_top = 57.0
 offset_right = 405.0
 offset_bottom = 245.0
-text = "These striped fish are notoriously shy so catching one is a big achievement."
-label_settings = SubResource("LabelSettings_nxgn0")
+text = "The scales of this fish have been found to be coated in concentrated dreams. What this actually means, researchers have not  disclosed. It is known, however, to be illusive and noctuernal "
+label_settings = SubResource("LabelSettings_8f4dc")
 autowrap_mode = 3
 clip_text = true

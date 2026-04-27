@@ -38,12 +38,12 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[sub_resource type="Gradient" id="Gradient_81jxp"]
+[sub_resource type="Gradient" id="Gradient_s8ihe"]
 offsets = PackedFloat32Array(0, 0.260204, 0.459184)
 colors = PackedColorArray(0, 0, 0, 0.560784, 0, 0, 0, 0.517168, 0, 0, 0, 0)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_j5hrl"]
-gradient = SubResource("Gradient_81jxp")
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_py3i2"]
+gradient = SubResource("Gradient_s8ihe")
 width = 128
 fill = 1
 fill_from = Vector2(0.5, 0.5)
@@ -426,15 +426,14 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_iq1ro")
 
 [node name="Shadow" type="TextureRect" parent="Panel/Icon"]
 modulate = Color(1, 1, 1, 0.380392)
-layout_mode = 0
-offset_left = 1.5
-offset_top = 55.0
-offset_right = 252.5
-offset_bottom = 119.0
-texture = SubResource("GradientTexture2D_j5hrl")
+offset_left = 1.0
+offset_top = 54.0
+offset_right = 252.0
+offset_bottom = 118.0
+texture = SubResource("GradientTexture2D_py3i2")
+stretch_mode = 5
 
 [node name="Icon" type="TextureRect" parent="Panel/Icon"]
-layout_mode = 0
 offset_left = -30.0
 offset_top = -37.0
 offset_right = 52.0
@@ -442,7 +441,7 @@ offset_bottom = 16.0
 scale = Vector2(4, 4)
 texture = ExtResource("2_5eoxw")
 expand_mode = 1
-stretch_mode = 3
+stretch_mode = 5
 
 [node name="Close" type="Button" parent="Panel" groups=["Button"]]
 layout_mode = 1
@@ -513,7 +512,7 @@ autoplay = "unfocus"
 position = Vector2(238, 134)
 scale = Vector2(-1.14331, 1.14331)
 sprite_frames = SubResource("SpriteFrames_a8lqw")
-animation = &"1"
+animation = &"3"
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 0

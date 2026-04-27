@@ -1,6 +1,7 @@
-[gd_scene load_steps=29 format=3 uid="uid://bk78shxswa74j"]
+[gd_scene load_steps=31 format=3 uid="uid://bk78shxswa74j"]
 
 [ext_resource type="Shader" path="res://src/shader/bestiary.gdshader" id="1_g4rjq"]
+[ext_resource type="FontFile" uid="uid://b3g180178ibcm" path="res://res/fonts/Italics.ttf" id="2_6wrvg"]
 [ext_resource type="Texture2D" uid="uid://dqxj5b4p6eyrs" path="res://res/fishes/barb/barb_icon.png" id="2_7aoj5"]
 [ext_resource type="Texture2D" uid="uid://clhe2hhfb5euu" path="res://res/sprites/stars.png" id="3_8qt8q"]
 [ext_resource type="FontFile" uid="uid://j364g1d5bwm4" path="res://res/fonts/Bold.ttf" id="4_m605i"]
@@ -130,6 +131,12 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
+[sub_resource type="LabelSettings" id="LabelSettings_q2fcs"]
+line_spacing = -1.0
+font = ExtResource("2_6wrvg")
+font_size = 18
+font_color = Color(0.203922, 0.109804, 0.152941, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5naqq"]
 bg_color = Color(0.905882, 0.835294, 0.701961, 1)
 border_width_left = 12
@@ -240,8 +247,9 @@ font = ExtResource("5_odckg")
 font_size = 24
 font_color = Color(0.635294, 0.243137, 0.54902, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_nxgn0"]
-font = ExtResource("5_odckg")
+[sub_resource type="LabelSettings" id="LabelSettings_311sc"]
+line_spacing = -1.0
+font = ExtResource("2_6wrvg")
 font_size = 18
 font_color = Color(0.203922, 0.109804, 0.152941, 1)
 
@@ -286,6 +294,16 @@ offset_top = -12.0
 offset_right = 258.0
 offset_bottom = -7.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_gwypj")
+
+[node name="Lore" type="Label" parent="Disable"]
+offset_left = 6.0
+offset_top = 1.0
+offset_right = 256.0
+offset_bottom = 189.0
+text = "Can be caught in rivers and lakes"
+label_settings = SubResource("LabelSettings_q2fcs")
+autowrap_mode = 3
+clip_text = true
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -436,7 +454,7 @@ offset_left = 155.0
 offset_top = 57.0
 offset_right = 405.0
 offset_bottom = 245.0
-text = "These striped fish are notoriously shy so catching one is a big achievement."
-label_settings = SubResource("LabelSettings_nxgn0")
+text = "As the largest species of Cyprinid in the world, the Giant Barb can reach 3 meters in length and weigh up to 300 kg. If you are trying to catch them, it's best to go prepared as it will not be an easy battle."
+label_settings = SubResource("LabelSettings_311sc")
 autowrap_mode = 3
 clip_text = true

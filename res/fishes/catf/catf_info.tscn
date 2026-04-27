@@ -42,7 +42,7 @@ corner_radius_bottom_left = 8
 offsets = PackedFloat32Array(0, 0.260204, 0.459184)
 colors = PackedColorArray(0, 0, 0, 0.560784, 0, 0, 0, 0.517168, 0, 0, 0, 0)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_j5hrl"]
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_r5wlp"]
 gradient = SubResource("Gradient_s8ihe")
 width = 128
 fill = 1
@@ -425,12 +425,11 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_iq1ro")
 
 [node name="Shadow" type="TextureRect" parent="Panel/Icon"]
 modulate = Color(1, 1, 1, 0.380392)
-layout_mode = 0
 offset_left = 1.5
-offset_top = 55.0
+offset_top = 48.0
 offset_right = 252.5
-offset_bottom = 119.0
-texture = SubResource("GradientTexture2D_j5hrl")
+offset_bottom = 112.0
+texture = SubResource("GradientTexture2D_r5wlp")
 
 [node name="Icon" type="TextureRect" parent="Panel/Icon"]
 offset_left = 35.0

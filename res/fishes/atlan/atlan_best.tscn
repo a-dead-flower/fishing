@@ -289,6 +289,7 @@ offset_bottom = -7.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_gwypj")
 
 [node name="Lore" type="Label" parent="Disable"]
+layout_mode = 0
 offset_left = 6.0
 offset_top = 1.0
 offset_right = 256.0
@@ -454,7 +455,7 @@ offset_right = 405.0
 offset_bottom = 284.0
 text = "An anadromous fish with
 a powerful sense of smell
-and natural affinity for navigation."
+and natural affinity for navigation. They smolt allowing them survive in salt water oceans."
 label_settings = SubResource("LabelSettings_37mpy")
 autowrap_mode = 3
 clip_text = true

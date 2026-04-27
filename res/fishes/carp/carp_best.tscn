@@ -1,8 +1,9 @@
-[gd_scene load_steps=28 format=3 uid="uid://b60r80rgx7lf8"]
+[gd_scene load_steps=30 format=3 uid="uid://b60r80rgx7lf8"]
 
 [ext_resource type="Shader" path="res://src/shader/bestiary.gdshader" id="1_irapg"]
 [ext_resource type="Texture2D" uid="uid://b0iyrhlp4kk8p" path="res://res/fishes/carp/carp_icon.png" id="1_wmo0r"]
 [ext_resource type="Texture2D" uid="uid://clhe2hhfb5euu" path="res://res/sprites/stars.png" id="2_n84hb"]
+[ext_resource type="FontFile" uid="uid://b3g180178ibcm" path="res://res/fonts/Italics.ttf" id="2_rlb2w"]
 [ext_resource type="FontFile" uid="uid://j364g1d5bwm4" path="res://res/fonts/Bold.ttf" id="3_stac5"]
 [ext_resource type="FontFile" uid="uid://c11kcqv0xwtq8" path="res://res/fonts/Normal.ttf" id="4_yo3li"]
 
@@ -105,6 +106,12 @@ _data = {
 "disable": SubResource("Animation_r8svp"),
 "enabled": SubResource("Animation_577kh")
 }
+
+[sub_resource type="LabelSettings" id="LabelSettings_f6kpl"]
+line_spacing = -1.0
+font = ExtResource("2_rlb2w")
+font_size = 18
+font_color = Color(0.203922, 0.109804, 0.152941, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5naqq"]
 bg_color = Color(0.905882, 0.835294, 0.701961, 1)
@@ -221,8 +228,9 @@ font = ExtResource("4_yo3li")
 font_size = 24
 font_color = Color(0.635294, 0.243137, 0.54902, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_j0yl0"]
-font = ExtResource("4_yo3li")
+[sub_resource type="LabelSettings" id="LabelSettings_eqgfl"]
+line_spacing = -1.0
+font = ExtResource("2_rlb2w")
 font_size = 18
 font_color = Color(0.203922, 0.109804, 0.152941, 1)
 
@@ -259,6 +267,16 @@ libraries = {
 "": SubResource("AnimationLibrary_8du6e")
 }
 autoplay = "enabled"
+
+[node name="Lore" type="Label" parent="Disable"]
+offset_left = 6.0
+offset_top = 1.0
+offset_right = 256.0
+offset_bottom = 189.0
+text = "Can be caught in rivers and lakes"
+label_settings = SubResource("LabelSettings_f6kpl")
+autowrap_mode = 3
+clip_text = true
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -320,7 +338,7 @@ expand_mode = 1
 position = Vector2(238, 134)
 scale = Vector2(-1.14331, 1.14331)
 sprite_frames = SubResource("SpriteFrames_ko3ui")
-animation = &"1"
+animation = &"2"
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 0
@@ -407,7 +425,9 @@ offset_left = 155.0
 offset_top = 57.0
 offset_right = 405.0
 offset_bottom = 245.0
-text = "A small, docile fish that any aspiring angler could catch. Often found in freshwater, they don't put up much of a fight. Good for when you need a little extra cash but not much else."
-label_settings = SubResource("LabelSettings_j0yl0")
+text = "Known as ecosystem engineers, their bottom-feeding behavior stirs up sediments, affecting
+water clarity and nutrient 
+cycling - sometimes impacting local species."
+label_settings = SubResource("LabelSettings_eqgfl")
 autowrap_mode = 3
 clip_text = true

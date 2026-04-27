@@ -1,10 +1,11 @@
-[gd_scene load_steps=29 format=3 uid="uid://bal1ixsignorm"]
+[gd_scene load_steps=30 format=3 uid="uid://bal1ixsignorm"]
 
 [ext_resource type="Texture2D" uid="uid://baip2ta3drarq" path="res://res/fishes/home/home_icon.png" id="1_7f6cl"]
 [ext_resource type="Shader" path="res://src/shader/bestiary.gdshader" id="1_qmukq"]
 [ext_resource type="Texture2D" uid="uid://clhe2hhfb5euu" path="res://res/sprites/stars.png" id="3_o0f0n"]
 [ext_resource type="FontFile" uid="uid://j364g1d5bwm4" path="res://res/fonts/Bold.ttf" id="4_ngcsq"]
 [ext_resource type="FontFile" uid="uid://c11kcqv0xwtq8" path="res://res/fonts/Normal.ttf" id="5_klpqk"]
+[ext_resource type="FontFile" uid="uid://b3g180178ibcm" path="res://res/fonts/Italics.ttf" id="6_37q44"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jcy50"]
 bg_color = Color(0.905882, 0.835294, 0.701961, 1)
@@ -237,8 +238,9 @@ font = ExtResource("5_klpqk")
 font_size = 24
 font_color = Color(0.635294, 0.243137, 0.54902, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_nxgn0"]
-font = ExtResource("5_klpqk")
+[sub_resource type="LabelSettings" id="LabelSettings_nq0p6"]
+line_spacing = -1.0
+font = ExtResource("6_37q44")
 font_size = 18
 font_color = Color(0.203922, 0.109804, 0.152941, 1)
 
@@ -422,7 +424,7 @@ offset_left = 155.0
 offset_top = 57.0
 offset_right = 405.0
 offset_bottom = 245.0
-text = "These striped fish are notoriously shy so catching one is a big achievement. They can only be found during night time when they come out to search for food."
-label_settings = SubResource("LabelSettings_nxgn0")
+text = "Sporting a shape and design most akin to a baseball, these fast fish are only able to be caught during the day. Capable of reaching speeds up to 100mph the Home Runner is not an easy catch."
+label_settings = SubResource("LabelSettings_nq0p6")
 autowrap_mode = 3
 clip_text = true

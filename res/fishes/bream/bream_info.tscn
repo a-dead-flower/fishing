@@ -499,7 +499,7 @@ autoplay = "unfocus"
 position = Vector2(238, 134)
 scale = Vector2(-1.14331, 1.14331)
 sprite_frames = SubResource("SpriteFrames_niycx")
-animation = &"1"
+animation = &"3"
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 0

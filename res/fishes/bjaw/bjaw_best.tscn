@@ -1,6 +1,7 @@
-[gd_scene load_steps=28 format=3 uid="uid://c526altat4hxw"]
+[gd_scene load_steps=30 format=3 uid="uid://c526altat4hxw"]
 
 [ext_resource type="Shader" path="res://src/shader/bestiary.gdshader" id="1_u6kng"]
+[ext_resource type="FontFile" uid="uid://b3g180178ibcm" path="res://res/fonts/Italics.ttf" id="2_uiswt"]
 [ext_resource type="Texture2D" uid="uid://bp5aj41w172ex" path="res://res/fishes/bjaw/bjaw_icon.png" id="2_vts4f"]
 [ext_resource type="Texture2D" uid="uid://clhe2hhfb5euu" path="res://res/sprites/stars.png" id="3_uob0d"]
 [ext_resource type="FontFile" uid="uid://j364g1d5bwm4" path="res://res/fonts/Bold.ttf" id="4_d02d8"]
@@ -105,6 +106,12 @@ _data = {
 "disable": SubResource("Animation_r8svp"),
 "enabled": SubResource("Animation_577kh")
 }
+
+[sub_resource type="LabelSettings" id="LabelSettings_agmiw"]
+line_spacing = -1.0
+font = ExtResource("2_uiswt")
+font_size = 18
+font_color = Color(0.203922, 0.109804, 0.152941, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5naqq"]
 bg_color = Color(0.905882, 0.835294, 0.701961, 1)
@@ -221,8 +228,9 @@ font = ExtResource("5_yb7i4")
 font_size = 24
 font_color = Color(0.635294, 0.243137, 0.54902, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_ofr1p"]
-font = ExtResource("5_yb7i4")
+[sub_resource type="LabelSettings" id="LabelSettings_ida7m"]
+line_spacing = -1.0
+font = ExtResource("2_uiswt")
 font_size = 18
 font_color = Color(0.203922, 0.109804, 0.152941, 1)
 
@@ -259,6 +267,16 @@ libraries = {
 "": SubResource("AnimationLibrary_8du6e")
 }
 autoplay = "enabled"
+
+[node name="Lore" type="Label" parent="Disable"]
+offset_left = 6.0
+offset_top = 1.0
+offset_right = 256.0
+offset_bottom = 189.0
+text = "Can be caught in rivers and lakes during the night"
+label_settings = SubResource("LabelSettings_agmiw")
+autowrap_mode = 3
+clip_text = true
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -406,7 +424,7 @@ offset_left = 155.0
 offset_top = 57.0
 offset_right = 405.0
 offset_bottom = 245.0
-text = "A large, fast fish part of the Centrarchidae family found in freshwater. They can swim at two and a half times their body length per second so can outswim any lures thrown their way."
-label_settings = SubResource("LabelSettings_ofr1p")
+text = "These colourful fish are nocturnal making them a harder catch. Their gold higlights still make them visible just be sure not to scare them as they are notoriously shy."
+label_settings = SubResource("LabelSettings_ida7m")
 autowrap_mode = 3
 clip_text = true
